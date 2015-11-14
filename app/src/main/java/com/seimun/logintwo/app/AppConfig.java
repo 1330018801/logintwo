@@ -4,9 +4,9 @@ package com.seimun.logintwo.app;
 public class AppConfig {
 
     // Server user login url
-    public static String URL_LOGIN = "http://localhost:8000/android_login_api/login/";
+    public static String URL_LOGIN = "http://192.168.0.102:8000/backend/login/";
 
     // Server user register url
-    public static String URL_REGISTER = "http://localhost:8000/android_login_api/register/";
+    public static String URL_REGISTER = "http://192.168.0.102:8000/backend/register/";
 
 }

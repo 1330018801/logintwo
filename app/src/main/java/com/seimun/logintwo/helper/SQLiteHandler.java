@@ -1,6 +1,5 @@
 package com.seimun.logintwo.helper;
 
-import android.app.TaskStackBuilder;
 import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
@@ -23,7 +22,8 @@ public class SQLiteHandler extends SQLiteOpenHelper {
     // Login table column name
     private static final String KEY_ID = "id";
     private static final String KEY_NAME = "name";
-    private static final String KEY_EMAIL = "email";
+    private static final String KEY_MOBILE = "mobile";
+    private static final String KEY_IDENTITY = "identity";
     private static final String KEY_UID = "uid";
     private static final String KEY_CREATED_AT = "created_at";
 
@@ -35,8 +35,8 @@ public class SQLiteHandler extends SQLiteOpenHelper {
     public void onCreate(SQLiteDatabase db) {
         String CREATE_LOGIN_TABLE = "CREATE TABLE " + TABLE_USER + "("
                 + KEY_ID + " INTEGER PRIMARY KEY," + KEY_NAME + " TEXT, "
-                + KEY_EMAIL + " TEXT UNIQUE," + KEY_UID + " TEXT,"
-                + KEY_CREATED_AT + " TEXT" + ")";
+                + KEY_MOBILE + " TEXT UNIQUE," + KEY_IDENTITY + " TEXT UNIQUE,"
+                + KEY_UID + " TEXT," + KEY_CREATED_AT + " TEXT" + ")";
         db.execSQL(CREATE_LOGIN_TABLE);
         Log.d(TAG, "Database tables created");
     }
@@ -47,12 +47,14 @@ public class SQLiteHandler extends SQLiteOpenHelper {
         onCreate(db);
     }
 
-    public void addUser(String name, String email, String uid, String created_at) {
+    public void addUser(String name, String mobile, String identity,
+                        String uid, String created_at) {
         SQLiteDatabase db = this.getWritableDatabase();
 
         ContentValues values = new ContentValues();
         values.put(KEY_NAME, name);
-        values.put(KEY_EMAIL, email);
+        values.put(KEY_MOBILE, mobile);
+        values.put(KEY_IDENTITY, identity);
         values.put(KEY_UID, uid);
         values.put(KEY_CREATED_AT, created_at);
 
@@ -73,9 +75,10 @@ public class SQLiteHandler extends SQLiteOpenHelper {
         cursor.moveToFirst();
         if (cursor.getCount() > 0) {
             user.put("name", cursor.getString(1));
-            user.put("email", cursor.getString(2));
-            user.put("uid", cursor.getString(3));
-            user.put("created_at", cursor.getString(4));
+            user.put("mobile", cursor.getString(2));
+            user.put("identity", cursor.getString(3));
+            user.put("uid", cursor.getString(4));
+            user.put("created_at", cursor.getString(5));
         }
         cursor.close();
         db.close();

@@ -14,6 +14,11 @@ import com.android.volley.Request.Method;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
+import com.seimun.logintwo.R;
+import com.seimun.logintwo.app.AppConfig;
+import com.seimun.logintwo.app.AppController;
+import com.seimun.logintwo.helper.SQLiteHandler;
+import com.seimun.logintwo.helper.SessionManager;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -21,19 +26,14 @@ import org.json.JSONObject;
 import java.util.HashMap;
 import java.util.Map;
 
-import com.seimun.logintwo.R;
-import com.seimun.logintwo.app.AppConfig;
-import com.seimun.logintwo.app.AppController;
-import com.seimun.logintwo.helper.SQLiteHandler;
-import com.seimun.logintwo.helper.SessionManager;
-
 public class RegisterActivity extends Activity {
 
     private static final String TAG = RegisterActivity.class.getSimpleName();
     private Button btnRegister;
     private Button btnLinkToLogin;
     private EditText inputFullName;
-    private EditText inputEmail;
+    private EditText inputMobile;
+    private EditText inputIdentity;
     private EditText inputPassword;
     private ProgressDialog pDialog;
     private SessionManager session;
@@ -45,7 +45,8 @@ public class RegisterActivity extends Activity {
         setContentView(R.layout.activity_register);
 
         inputFullName = (EditText)findViewById(R.id.name);
-        inputEmail = (EditText)findViewById(R.id.email);
+        inputMobile = (EditText)findViewById(R.id.mobile);
+        inputIdentity = (EditText)findViewById(R.id.identity);
         inputPassword = (EditText)findViewById(R.id.password);
         btnRegister = (Button)findViewById(R.id.btnResister);
         btnLinkToLogin = (Button)findViewById(R.id.btnLinkToRegisterScreen);
@@ -69,11 +70,13 @@ public class RegisterActivity extends Activity {
             @Override
             public void onClick(View view) {
                 String name = inputFullName.getText().toString().trim();
-                String email = inputEmail.getText().toString().trim();
+                String mobile = inputMobile.getText().toString().trim();
+                String identity = inputIdentity.getText().toString().trim();
                 String password = inputPassword.getText().toString().trim();
 
-                if (!name.isEmpty() && !email.isEmpty() && !password.isEmpty()) {
-                    registerUser(name, email, password);
+                if (!name.isEmpty() && !mobile.isEmpty()
+                        && !password.isEmpty() && !identity.isEmpty()) {
+                    registerUser(name, mobile, identity, password);
                 } else {
                     Toast.makeText(getApplicationContext(),
                             "Please enter your details!", Toast.LENGTH_LONG).show();
@@ -92,7 +95,8 @@ public class RegisterActivity extends Activity {
         });
     }
 
-    private void registerUser(final String name, final String email, final String password) {
+    private void registerUser(final String name, final String mobile,
+                              final String identity, final String password) {
         String tag_string_req = "req_register";
         pDialog.setMessage("Registering ...");
         showDialog();
@@ -111,10 +115,11 @@ public class RegisterActivity extends Activity {
                         String uid = jObj.getString("uid");
                         JSONObject user = jObj.getJSONObject("user");
                         String name = user.getString("name");
-                        String email = user.getString("email");
+                        String mobile = user.getString("mobile");
+                        String identity = user.getString("identity");
                         String created_at = user.getString("created_at");
 
-                        db.addUser(name, email, uid, created_at);
+                        db.addUser(name, mobile, identity, uid, created_at);
                         Toast.makeText(getApplicationContext(),
                                 "User successfully registered. Try login now",
                                 Toast.LENGTH_LONG).show();
@@ -142,7 +147,8 @@ public class RegisterActivity extends Activity {
             protected Map<String, String> getParams() {
                 Map<String, String> params = new HashMap<String, String>();
                 params.put("name", name);
-                params.put("email", email);
+                params.put("mobile", mobile);
+                params.put("identity", identity);
                 params.put("password", password);
 
                 return params;

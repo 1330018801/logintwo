@@ -14,6 +14,10 @@ import com.android.volley.Request.Method;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
+import com.seimun.logintwo.R;
+import com.seimun.logintwo.app.AppConfig;
+import com.seimun.logintwo.helper.SQLiteHandler;
+import com.seimun.logintwo.helper.SessionManager;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -21,17 +25,11 @@ import org.json.JSONObject;
 import java.util.HashMap;
 import java.util.Map;
 
-import com.seimun.logintwo.R;
-import com.seimun.logintwo.app.AppConfig;
-import com.seimun.logintwo.app.AppController;
-import com.seimun.logintwo.helper.SQLiteHandler;
-import com.seimun.logintwo.helper.SessionManager;
-
 public class LoginActivity extends Activity {
     private static final String TAG = RegisterActivity.class.getSimpleName();
     private Button btnLogin;
     private Button btnLinkToRegister;
-    private EditText inputEmail;
+    private EditText inputMobile;
     private EditText inputPassword;
     private ProgressDialog pDialog;
     private SessionManager session;
@@ -42,7 +40,7 @@ public class LoginActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
-        inputEmail = (EditText)findViewById(R.id.email);
+        inputMobile = (EditText)findViewById(R.id.mobile);
         inputPassword = (EditText)findViewById(R.id.password);
         btnLogin = (Button)findViewById(R.id.btnLogin);
         btnLinkToRegister = (Button)findViewById(R.id.btnLinkToRegisterScreen);
@@ -64,12 +62,12 @@ public class LoginActivity extends Activity {
         btnLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                String email = inputEmail.getText().toString().trim();
+                String mobile = inputMobile.getText().toString().trim();
                 String password = inputPassword.getText().toString().trim();
 
                 // Check empty data in the form
-                if (!email.isEmpty() && !password.isEmpty()) {
-                    checkLogin(email, password);
+                if (!mobile.isEmpty() && !password.isEmpty()) {
+                    checkLogin(mobile, password);
                 } else {
                     Toast.makeText(getApplicationContext(),
                             "Please enter the credentials!", Toast.LENGTH_LONG).show();
@@ -88,7 +86,7 @@ public class LoginActivity extends Activity {
         });
     }
 
-    private void checkLogin(final String email, final String password) {
+    private void checkLogin(final String mobile, final String password) {
         String tag_string_req = "req_login";
         pDialog.setMessage("Logging in ...");
         showDialog();
@@ -113,11 +111,12 @@ public class LoginActivity extends Activity {
                         String uid = jObj.getString("uid");
                         JSONObject user = jObj.getJSONObject("user");
                         String name = user.getString("name");
-                        String email = user.getString("email");
+                        String mobile = user.getString("mobile");
+                        String identity = user.getString("identity");
                         String created_at = user.getString("created_at");
 
                         // Inserting row in users table
-                        db.addUser(name, email, uid, created_at);
+                        db.addUser(name, mobile, identity, uid, created_at);
 
                         // Launch main activity
                         Intent intent = new Intent(LoginActivity.this, MainActivity.class);
@@ -148,7 +147,7 @@ public class LoginActivity extends Activity {
             @Override
             protected Map<String, String> getParams() {
                 Map<String, String> params = new HashMap<String, String>();
-                params.put("email", email);
+                params.put("mobile", mobile);
                 params.put("password", password);
 
                 return params;
