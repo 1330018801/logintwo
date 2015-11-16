@@ -38,7 +38,7 @@ public class SQLiteHandler extends SQLiteOpenHelper {
                 + KEY_MOBILE + " TEXT UNIQUE," + KEY_IDENTITY + " TEXT UNIQUE,"
                 + KEY_UID + " TEXT," + KEY_CREATED_AT + " TEXT" + ")";
         db.execSQL(CREATE_LOGIN_TABLE);
-        Log.d(TAG, "Database tables created");
+        Log.d(TAG, "SQLite数据库被创建");
     }
 
     @Override

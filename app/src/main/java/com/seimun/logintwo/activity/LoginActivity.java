@@ -16,6 +16,7 @@ import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.seimun.logintwo.R;
 import com.seimun.logintwo.app.AppConfig;
+import com.seimun.logintwo.app.AppController;
 import com.seimun.logintwo.helper.SQLiteHandler;
 import com.seimun.logintwo.helper.SessionManager;
 
@@ -26,7 +27,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class LoginActivity extends Activity {
-    private static final String TAG = RegisterActivity.class.getSimpleName();
+    private static final String TAG = LoginActivity.class.getSimpleName();
     private Button btnLogin;
     private Button btnLinkToRegister;
     private EditText inputMobile;
@@ -67,10 +68,11 @@ public class LoginActivity extends Activity {
 
                 // Check empty data in the form
                 if (!mobile.isEmpty() && !password.isEmpty()) {
+                    Log.e(TAG, "手机号码: " + mobile + "登陆密码: " + password);
                     checkLogin(mobile, password);
                 } else {
                     Toast.makeText(getApplicationContext(),
-                            "Please enter the credentials!", Toast.LENGTH_LONG).show();
+                            "请输入您的手机和密码进行登陆", Toast.LENGTH_LONG).show();
                 }
             }
         });
@@ -80,6 +82,7 @@ public class LoginActivity extends Activity {
             public void onClick(View view) {
                 Intent intent = new Intent(getApplicationContext(),
                         RegisterActivity.class);
+                Log.e(TAG, "切换到注册页面");
                 startActivity(intent);
                 finish();
             }
@@ -87,15 +90,19 @@ public class LoginActivity extends Activity {
     }
 
     private void checkLogin(final String mobile, final String password) {
+        // Tag used to cancel the request
         String tag_string_req = "req_login";
-        pDialog.setMessage("Logging in ...");
+        pDialog.setMessage("正在登陆中 ...");
         showDialog();
+
+        Log.e(TAG, "开始与后台通信");
 
         StringRequest strReq = new StringRequest(Method.POST,
                 AppConfig.URL_LOGIN, new Response.Listener<String>() {
+
             @Override
             public void onResponse(String response) {
-                Log.d(TAG, "Login Response: " + response.toString());
+                Log.e(TAG, "登陆响应: " + response.toString());
                 hideDialog();
 
                 try {
@@ -103,20 +110,26 @@ public class LoginActivity extends Activity {
                     boolean error = jObj.getBoolean("error");
 
                     if (!error) {
+                        Log.e(TAG, "登陆操作网络响应返回正确！");
 
                         // Create login session
                         session.setLogin(true);
 
+                        // 这里修改了一下接口信息的获取
                         // Now store the user in SQLite
                         String uid = jObj.getString("uid");
-                        JSONObject user = jObj.getJSONObject("user");
-                        String name = user.getString("name");
-                        String mobile = user.getString("mobile");
-                        String identity = user.getString("identity");
-                        String created_at = user.getString("created_at");
+                        //JSONObject user = jObj.getJSONObject("user");
+                        String name = jObj.getString("name");
+                        String mobile = jObj.getString("mobile");
+                        String identity = jObj.getString("identity");
+                        String created_at = jObj.getString("created_at");
+
+                        Log.e(TAG, "用户名：" + name);
 
                         // Inserting row in users table
                         db.addUser(name, mobile, identity, uid, created_at);
+
+                        Log.e(TAG, "添加用户到本地数据库成功");
 
                         // Launch main activity
                         Intent intent = new Intent(LoginActivity.this, MainActivity.class);
@@ -153,6 +166,7 @@ public class LoginActivity extends Activity {
                 return params;
             }
         };
+        AppController.getInstance().addToRequestQueue(strReq, tag_string_req);
     }
 
     private void showDialog() {

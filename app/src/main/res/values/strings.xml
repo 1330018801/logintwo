@@ -5,10 +5,13 @@
     <string name="hint_name">姓名</string>
     <string name="btn_login">登陆</string>
     <string name="btn_register">注册</string>
-    <string name="btn_link_to_register">还不是系统成员？现在开始注册</string>
+    <string name="btn_link_to_register">还不是系统用户？现在开始注册</string>
     <string name="btn_link_to_login">已经完成系统注册，开始登陆</string>
     <string name="welcome">三河市基本公共卫生系统</string>
     <string name="btn_logout">退出</string>
+    <string name="btn_info">个人基本信息</string>
+    <string name="btn_services">公卫服务列表</string>
+    <string name="btn_main">回到主界面</string>
     <string name="name">姓名</string>
     <string name="hint_identity">身份证号码</string>
 </resources>

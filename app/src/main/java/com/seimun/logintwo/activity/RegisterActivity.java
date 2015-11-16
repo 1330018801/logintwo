@@ -79,7 +79,7 @@ public class RegisterActivity extends Activity {
                     registerUser(name, mobile, identity, password);
                 } else {
                     Toast.makeText(getApplicationContext(),
-                            "Please enter your details!", Toast.LENGTH_LONG).show();
+                            "请完整输入注册所需的信息！", Toast.LENGTH_LONG).show();
                 }
             }
         });
@@ -98,30 +98,31 @@ public class RegisterActivity extends Activity {
     private void registerUser(final String name, final String mobile,
                               final String identity, final String password) {
         String tag_string_req = "req_register";
-        pDialog.setMessage("Registering ...");
+        pDialog.setMessage("正在注册中 ...");
         showDialog();
 
         StringRequest strReq = new StringRequest(Method.POST,
                 AppConfig.URL_REGISTER, new Response.Listener<String>() {
             @Override
             public void onResponse(String response) {
-                Log.d(TAG, "Register Response: " + response.toString());
+                Log.d(TAG, "注册操作网络通信响应: " + response.toString());
                 hideDialog();
 
                 try {
                     JSONObject jObj = new JSONObject(response);
                     boolean error = jObj.getBoolean("error");
                     if (!error) {
+
+                        //JSONObject user = jObj.getJSONObject("user");
                         String uid = jObj.getString("uid");
-                        JSONObject user = jObj.getJSONObject("user");
-                        String name = user.getString("name");
-                        String mobile = user.getString("mobile");
-                        String identity = user.getString("identity");
-                        String created_at = user.getString("created_at");
+                        String name = jObj.getString("name");
+                        String mobile = jObj.getString("mobile");
+                        String identity = jObj.getString("identity");
+                        String created_at = jObj.getString("created_at");
 
                         db.addUser(name, mobile, identity, uid, created_at);
                         Toast.makeText(getApplicationContext(),
-                                "User successfully registered. Try login now",
+                                "用户注册成功。正在进行登录操作",
                                 Toast.LENGTH_LONG).show();
                         Intent intent = new Intent(RegisterActivity.this, LoginActivity.class);
                         startActivity(intent);
