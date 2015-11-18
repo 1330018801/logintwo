@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="itemName">24sp</dimen>
+    <dimen name="itemClinic">16sp</dimen>
+    <dimen name="itemProvider">16sp</dimen>
+    <dimen name="itemTime">20sp</dimen>
+</resources>

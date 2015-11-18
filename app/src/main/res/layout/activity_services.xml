@@ -15,6 +15,22 @@
         android:gravity="center"
         android:orientation="vertical">
 
+        <ListView
+            android:id="@+id/services"
+            android:divider="@color/list_divider"
+            android:dividerHeight="1dp"
+            android:listSelector="@drawable/list_row_selector"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+        </ListView>
+
+        <TextView
+            android:id="@+id/empty"
+            android:gravity="center"
+            android:text="Loading feed data..."
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
         <Button
             android:id="@+id/btnMain"
             android:layout_width="fill_parent"
