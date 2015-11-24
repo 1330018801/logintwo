@@ -8,11 +8,15 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ListView;
+import android.widget.Toast;
+import android.widget.TextView;
+import android.widget.AdapterView;
 
+import com.android.volley.Request;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.VolleyLog;
-import com.android.volley.toolbox.JsonArrayRequest;
+import com.android.volley.toolbox.StringRequest;
 import com.seimun.logintwo.R;
 import com.seimun.logintwo.adapter.SummaryListAdapter;
 import com.seimun.logintwo.app.AppConfig;
@@ -21,13 +25,13 @@ import com.seimun.logintwo.helper.SQLiteHandler;
 import com.seimun.logintwo.helper.SessionManager;
 import com.seimun.logintwo.model.Summary;
 
-import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.util.ArrayList;
-import java.util.List;
 import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 public class ServicesActivity extends Activity {
     private static final String TAG = ServicesActivity.class.getSimpleName();
@@ -62,7 +66,7 @@ public class ServicesActivity extends Activity {
             logoutUser();
         }
 
-        HashMap<String, String> user = db.getUserDetails();
+        final HashMap<String, String> user = db.getUserDetails();
 
         pDialog = new ProgressDialog(this);
         pDialog.setMessage("Loading ...");
@@ -72,6 +76,15 @@ public class ServicesActivity extends Activity {
         getActionBar().setBackgroundDrawable(
                 new ColorDrawable(Color.parseColor("#1b1b1b")));
         */
+
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                // When clicked, show a toast with the TextView text or do whatever you need.
+                TextView title = (TextView)view.findViewById(R.id.service_title);
+                Toast.makeText(getApplicationContext(), title.getText(), Toast.LENGTH_SHORT).show();
+            }
+        });
+
         btnLogout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -88,39 +101,50 @@ public class ServicesActivity extends Activity {
             }
         });
 
-        String url = AppConfig.URL_SUMMARYS + user.get("resident_id") + "/";
-
-        Log.e(TAG, url);
-
-        JsonArrayRequest summaryReq = new JsonArrayRequest(url,
-                new Response.Listener<JSONArray>() {
+        final StringRequest summaryReq = new StringRequest(Request.Method.POST,
+                AppConfig.URL_SUMMARYS, new Response.Listener<String>() {
                     @Override
-                    public void onResponse(JSONArray response) {
-                        Log.d(TAG, response.toString());
+                    public void onResponse(String response) {
+                        Log.d(TAG, response);
                         hidePDialog();
-
-                        for (int i = 0; i < response.length(); i++) {
-                            try {
-                                JSONObject obj = response.getJSONObject(i);
-                                Summary summary = new Summary();
-                                summary.setTitle(obj.getString("title"));
-                                summary.setClinic(obj.getString("clinic"));
-                                summary.setProvider(obj.getString("provider"));
-                                summary.setServiceTime(obj.getString("service_time"));
-                                summaryList.add(summary);
-                            } catch (JSONException e) {
-                                e.printStackTrace();
+                        try {
+                            JSONObject obj = new JSONObject(response);
+                            if (!obj.getBoolean("error")) {
+                                int length = obj.getInt("length");
+                                for (int i = 0; i < length; i++) {
+                                    JSONObject item = (JSONObject)obj.getJSONArray("list").get(i);
+                                    Summary summary = new Summary();
+                                    summary.setTitle(item.getString("title"));
+                                    summary.setClinic(item.getString("clinic"));
+                                    summary.setProvider(item.getString("provider"));
+                                    summary.setServiceTime(item.getString("service_time"));
+                                    summaryList.add(summary);
+                                }
+                            } else {
+                                String errorMsg = obj.getString("error_msg");
+                                Toast.makeText(getApplicationContext(), errorMsg, Toast.LENGTH_LONG).show();
                             }
+                        } catch (JSONException e) {
+                            e.printStackTrace();
                         }
+
                         adapter.notifyDataSetChanged();
                     }
                 }, new Response.ErrorListener() {
+                    @Override
+                    public void onErrorResponse(VolleyError error) {
+                        VolleyLog.d(TAG, "Error: " + error.getMessage());
+                        hidePDialog();
+                    }
+        }) {
             @Override
-            public void onErrorResponse(VolleyError error) {
-                VolleyLog.d(TAG, "Error: " + error.getMessage());
-                hidePDialog();
+            protected Map<String, String> getParams() {
+                Map<String, String> params = new HashMap<String, String>();
+                params.put("resident_id", user.get("resident_id"));
+
+                return params;
             }
-        });
+        };
         AppController.getInstance().addToRequestQueue(summaryReq);
     }
 
