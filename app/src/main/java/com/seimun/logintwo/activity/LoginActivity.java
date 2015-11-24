@@ -92,7 +92,7 @@ public class LoginActivity extends Activity {
     private void checkLogin(final String mobile, final String password) {
         // Tag used to cancel the request
         String tag_string_req = "req_login";
-        pDialog.setMessage("正在登陆中 ...");
+        pDialog.setMessage("正在登陆中 ......");
         showDialog();
 
         Log.e(TAG, "开始与后台通信");
@@ -117,7 +117,7 @@ public class LoginActivity extends Activity {
 
                         // 这里修改了一下接口信息的获取
                         // Now store the user in SQLite
-                        String uid = jObj.getString("uid");
+                        String resident_id = jObj.getString("resident_id");
                         //JSONObject user = jObj.getJSONObject("user");
                         String name = jObj.getString("name");
                         String mobile = jObj.getString("mobile");
@@ -127,7 +127,7 @@ public class LoginActivity extends Activity {
                         Log.e(TAG, "用户名：" + name);
 
                         // Inserting row in users table
-                        db.addUser(name, mobile, identity, uid, created_at);
+                        db.addUser(name, mobile, identity, resident_id, created_at);
 
                         Log.e(TAG, "添加用户到本地数据库成功");
 

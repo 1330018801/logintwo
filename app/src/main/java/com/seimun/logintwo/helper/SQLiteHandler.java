@@ -24,7 +24,7 @@ public class SQLiteHandler extends SQLiteOpenHelper {
     private static final String KEY_NAME = "name";
     private static final String KEY_MOBILE = "mobile";
     private static final String KEY_IDENTITY = "identity";
-    private static final String KEY_UID = "uid";
+    private static final String KEY_UID = "resident_id";
     private static final String KEY_CREATED_AT = "created_at";
 
     public SQLiteHandler(Context context) {
@@ -48,14 +48,14 @@ public class SQLiteHandler extends SQLiteOpenHelper {
     }
 
     public void addUser(String name, String mobile, String identity,
-                        String uid, String created_at) {
+                        String resident_id, String created_at) {
         SQLiteDatabase db = this.getWritableDatabase();
 
         ContentValues values = new ContentValues();
         values.put(KEY_NAME, name);
         values.put(KEY_MOBILE, mobile);
         values.put(KEY_IDENTITY, identity);
-        values.put(KEY_UID, uid);
+        values.put(KEY_UID, resident_id);
         values.put(KEY_CREATED_AT, created_at);
 
         // Inserting Row
@@ -77,7 +77,7 @@ public class SQLiteHandler extends SQLiteOpenHelper {
             user.put("name", cursor.getString(1));
             user.put("mobile", cursor.getString(2));
             user.put("identity", cursor.getString(3));
-            user.put("uid", cursor.getString(4));
+            user.put("resident_id", cursor.getString(4));
             user.put("created_at", cursor.getString(5));
         }
         cursor.close();

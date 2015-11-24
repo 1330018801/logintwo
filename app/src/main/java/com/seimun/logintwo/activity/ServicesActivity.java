@@ -27,6 +27,7 @@ import org.json.JSONObject;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.HashMap;
 
 public class ServicesActivity extends Activity {
     private static final String TAG = ServicesActivity.class.getSimpleName();
@@ -61,7 +62,7 @@ public class ServicesActivity extends Activity {
             logoutUser();
         }
 
-        // HashMap<String, String> user = db.getUserDetails();
+        HashMap<String, String> user = db.getUserDetails();
 
         pDialog = new ProgressDialog(this);
         pDialog.setMessage("Loading ...");
@@ -87,7 +88,11 @@ public class ServicesActivity extends Activity {
             }
         });
 
-        JsonArrayRequest summaryReq = new JsonArrayRequest(AppConfig.URL_SUMMARYS,
+        String url = AppConfig.URL_SUMMARYS + user.get("resident_id") + "/";
+
+        Log.e(TAG, url);
+
+        JsonArrayRequest summaryReq = new JsonArrayRequest(url,
                 new Response.Listener<JSONArray>() {
                     @Override
                     public void onResponse(JSONArray response) {

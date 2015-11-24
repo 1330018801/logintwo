@@ -114,13 +114,13 @@ public class RegisterActivity extends Activity {
                     if (!error) {
 
                         //JSONObject user = jObj.getJSONObject("user");
-                        String uid = jObj.getString("uid");
+                        String resident_id = jObj.getString("resident_id");
                         String name = jObj.getString("name");
                         String mobile = jObj.getString("mobile");
                         String identity = jObj.getString("identity");
                         String created_at = jObj.getString("created_at");
 
-                        db.addUser(name, mobile, identity, uid, created_at);
+                        db.addUser(name, mobile, identity, resident_id, created_at);
                         Toast.makeText(getApplicationContext(),
                                 "用户注册成功。正在进行登录操作",
                                 Toast.LENGTH_LONG).show();
@@ -165,7 +165,7 @@ public class RegisterActivity extends Activity {
     }
 
     private void hideDialog() {
-        if (!pDialog.isShowing())
+        if (pDialog.isShowing())
             pDialog.dismiss();
     }
 }
