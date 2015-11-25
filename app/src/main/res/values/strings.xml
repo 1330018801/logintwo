@@ -14,4 +14,5 @@
     <string name="btn_main">回到主界面</string>
     <string name="name">姓名</string>
     <string name="hint_identity">身份证号码</string>
+    <string name="title_activity_antenatal">AntenatalActivity</string>
 </resources>

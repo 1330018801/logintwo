@@ -4,16 +4,27 @@ package com.seimun.logintwo.model;
  * Created by lijun on 11/16/15.
  */
 public class Summary {
+    private Integer record_id;
     private String title, clinic, provider, service_time;
 
     public Summary () {
     }
 
-    public Summary(String title, String clinic, String provider, String service_time) {
+    public Summary(Integer record_id, String title, String clinic,
+                   String provider, String service_time) {
+        this.record_id = record_id;
         this.title = title;
         this.clinic = clinic;
         this.provider = provider;
         this.service_time = service_time;
+    }
+
+    public Integer getRecordId() {
+        return record_id;
+    }
+
+    public void setRecordId(Integer record_id) {
+        this.record_id = record_id;
     }
 
     public String getTitle() {

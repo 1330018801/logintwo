@@ -13,4 +13,6 @@ public class AppConfig {
     // url to get service list
     public static String URL_SUMMARYS = "http://10.1.2.108:8000/backend/summarys/";
 
+    public static String URL_DETAIL = "http://10.1.2.108:8000/backend/detail/";
+
 }
