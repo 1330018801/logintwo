@@ -38,6 +38,8 @@ public class SQLiteHandler extends SQLiteOpenHelper {
     private static final String KEY_CLINIC = "clinic";
     private static final String KEY_PROVIDER = "provider";
     private static final String KEY_SERVICE_TIME = "service_time";
+    private static final String KEY_TYPE_ALIAS = "type_alias";
+    private static final String KEY_ITEM_ALIAS = "item_alias";
 
 
     public SQLiteHandler(Context context) {
@@ -56,7 +58,8 @@ public class SQLiteHandler extends SQLiteOpenHelper {
                 + KEY_SUMMARY_ID + " INTEGER PRIMARY KEY AUTOINCREMENT,"
                 + KEY_RECORD_ID + " TEXT," + KEY_TITLE + " TEXT, "
                 + KEY_CLINIC + " TEXT," + KEY_PROVIDER + " TEXT,"
-                + KEY_SERVICE_TIME + " TEXT" + ")";
+                + KEY_SERVICE_TIME + " TEXT," + KEY_TYPE_ALIAS + " TEXT,"
+                + KEY_ITEM_ALIAS + " TEXT" + ")";
         db.execSQL(CREATE_SUMMARY_TABLE);
 
         Log.d(TAG, "SQLite数据库被创建");
@@ -83,7 +86,7 @@ public class SQLiteHandler extends SQLiteOpenHelper {
         long id = db.insert(TABLE_USER, null, values);
         db.close();
 
-        Log.d(TAG, "New user inserted into sqlite: " + id);
+        Log.d(TAG, "New user inserted into SQLite: " + id);
     }
 
     public HashMap<String, String> getUserDetails() {
@@ -116,7 +119,8 @@ public class SQLiteHandler extends SQLiteOpenHelper {
     }
 
     public void addSummary(Integer record_id, String title, String clinic,
-                           String provider, String service_time) {
+                           String provider, String service_time,
+                           String type_alias, String item_alias) {
         SQLiteDatabase db = this.getWritableDatabase();
 
         ContentValues values = new ContentValues();
@@ -125,6 +129,8 @@ public class SQLiteHandler extends SQLiteOpenHelper {
         values.put(KEY_CLINIC, clinic);
         values.put(KEY_PROVIDER, provider);
         values.put(KEY_SERVICE_TIME, service_time);
+        values.put(KEY_TYPE_ALIAS, type_alias);
+        values.put(KEY_ITEM_ALIAS, item_alias);
 
         // Inserting Row
         long id = db.insert(TABLE_SUMMARY, null, values);
@@ -135,7 +141,8 @@ public class SQLiteHandler extends SQLiteOpenHelper {
 
     public void addSummary(Summary summary) {
         addSummary(summary.getRecordId(), summary.getTitle(), summary.getClinic(),
-                summary.getProvider(), summary.getServiceTime());
+                summary.getProvider(), summary.getServiceTime(), summary.getTypeAlias(),
+                summary.getItemAlias());
     }
 
     public Summary getSummaryDetails(int id) {
@@ -152,6 +159,8 @@ public class SQLiteHandler extends SQLiteOpenHelper {
             summary.setClinic(cursor.getString(3));
             summary.setProvider(cursor.getString(4));
             summary.setServiceTime(cursor.getString(5));
+            summary.setTypeAlias(cursor.getString(6));
+            summary.setItemAlias(cursor.getString(7));
         }
         cursor.close();
         db.close();

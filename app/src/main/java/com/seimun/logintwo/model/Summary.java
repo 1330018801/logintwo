@@ -5,22 +5,25 @@ package com.seimun.logintwo.model;
  */
 public class Summary {
     private Integer record_id;
-    private String title, clinic, provider, service_time;
+    private String title, clinic, provider, service_time, type_alias, item_alias;
 
     public Summary () {
     }
 
     public Summary(Integer record_id, String title, String clinic,
-                   String provider, String service_time) {
+                   String provider, String service_time, String type_alias,
+                   String item_alias) {
         this.record_id = record_id;
         this.title = title;
         this.clinic = clinic;
         this.provider = provider;
         this.service_time = service_time;
+        this.type_alias = type_alias;
+        this.item_alias = item_alias;
     }
 
     public Integer getRecordId() {
-        return record_id;
+        return this.record_id;
     }
 
     public void setRecordId(Integer record_id) {
@@ -28,7 +31,7 @@ public class Summary {
     }
 
     public String getTitle() {
-        return title;
+        return this.title;
     }
 
     public void setTitle(String title) {
@@ -36,7 +39,7 @@ public class Summary {
     }
 
     public String getClinic() {
-        return clinic;
+        return this.clinic;
     }
 
     public void setClinic(String clinic) {
@@ -44,7 +47,7 @@ public class Summary {
     }
 
     public String getProvider() {
-        return provider;
+        return this.provider;
     }
 
     public void setProvider(String provider) {
@@ -52,11 +55,26 @@ public class Summary {
     }
 
     public String getServiceTime() {
-        return service_time;
+        return this.service_time;
     }
 
     public void setServiceTime(String service_time) {
         this.service_time = service_time;
     }
 
+    public String getTypeAlias() {
+        return this.type_alias;
+    }
+
+    public void setTypeAlias(String type_alias) {
+        this.type_alias = type_alias;
+    }
+
+    public String getItemAlias() {
+        return this.item_alias;
+    }
+
+    public void setItemAlias(String item_alias) {
+        this.item_alias = item_alias;
+    }
 }

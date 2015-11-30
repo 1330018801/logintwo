@@ -85,10 +85,20 @@ public class ServicesActivity extends Activity {
                 Log.e(TAG, "Successfully get the summary instance: " + summary.getTitle());
                 //Toast.makeText(getApplicationContext(), summary.getTitle(), Toast.LENGTH_SHORT).show();
 
-                Intent intent = new Intent(ServicesActivity.this, AntenatalActivity.class);
-                intent.putExtra("record_id", summary.getRecordId());
-                startActivity(intent);
-                finish();
+                Log.d(TAG, "type_alias: " + summary.getTypeAlias() +
+                        ", item_alias: " + summary.getItemAlias());
+                String type_alias = summary.getTypeAlias();
+                String item_alias = summary.getItemAlias();
+                if (type_alias.equals("pregnant") && item_alias.equals("aftercare_1")) {
+                    Intent intent = new Intent(ServicesActivity.this, AntenatalActivity.class);
+                    intent.putExtra("record_id", summary.getRecordId());
+                    startActivity(intent);
+                    finish();
+                } else {
+                    Toast.makeText(getApplicationContext(),
+                            type_alias + ":" + item_alias + " not written",
+                            Toast.LENGTH_LONG).show();
+                }
 
                 /*
                 // Get the service detail information by volley
@@ -169,11 +179,13 @@ public class ServicesActivity extends Activity {
                                     JSONObject item = (JSONObject)obj.getJSONArray("list").get(i);
                                     Log.e(TAG, "item: " + i + ", " + item.getString("title"));
                                     Summary summary = new Summary();
-                                    summary.setRecordId(item.getInt("resident_id"));
+                                    summary.setRecordId(item.getInt("record_id"));
                                     summary.setTitle(item.getString("title"));
                                     summary.setClinic(item.getString("clinic"));
                                     summary.setProvider(item.getString("provider"));
                                     summary.setServiceTime(item.getString("service_time"));
+                                    summary.setTypeAlias(item.getString("type_alias"));
+                                    summary.setItemAlias(item.getString("item_alias"));
                                     summaryList.add(summary);
                                     db.addSummary(summary);
                                     Log.e(TAG, "summary length: " + summaryList.size());
