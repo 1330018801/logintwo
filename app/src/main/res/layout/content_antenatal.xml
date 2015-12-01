@@ -290,18 +290,11 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="既往史："
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:id="@+id/disease_history"/>
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="肝脏疾病"
-                android:id="@+id/textView445"/>
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="贫血"
-                android:id="@+id/textView446"
-                android:layout_marginLeft="5dp"/>
         </LinearLayout>
         <LinearLayout
             android:layout_width="wrap_content"
@@ -312,18 +305,11 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="家族史："
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:id="@+id/family_history"/>
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="其他"
-                android:id="@+id/textView448"/>
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text=""
-                android:id="@+id/textView449"
-                android:layout_marginLeft="5dp"/>
         </LinearLayout>
         <LinearLayout
             android:layout_width="wrap_content"
@@ -334,12 +320,11 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="个人史："
-                android:id="@+id/personal_history"/>
+                />
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="服用药物"
-                android:id="@+id/textView451"/>
+                android:id="@+id/personal_history"/>
         </LinearLayout>
         <LinearLayout
             android:layout_width="wrap_content"
@@ -350,12 +335,11 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="妇科手术史："
-                android:id="@+id/gynaecology_surgery_history"/>
+                />
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="无"
-                android:id="@+id/textView453"/>
+                android:id="@+id/gynaecology_surgery_history"/>
         </LinearLayout>
         <LinearLayout
             android:layout_width="wrap_content"
@@ -371,46 +355,38 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="流产："
-                android:id="@+id/miscarriage"
                 android:layout_marginLeft="10dp"/>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="0"
-                android:id="@+id/textView456"/>
+                android:id="@+id/miscarriage"/>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="死胎："
-                android:id="@+id/dead_fetus"
                 android:layout_marginLeft="10dp"/>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="0"
-                android:id="@+id/textView458"/>
+                android:id="@+id/dead_fetus"/>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="死产："
-                android:id="@+id/still_birth"
                 android:layout_marginLeft="10dp"/>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="0"
-                android:id="@+id/textView460"/>
+                android:id="@+id/still_birth"/>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="新生儿死亡："
-                android:id="@+id/newnatal_death"
                 android:layout_marginLeft="10dp"/>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="0"
-                android:id="@+id/textView462"/>
+                android:id="@+id/newnatal_death"/>
         </LinearLayout>
         <LinearLayout
             android:layout_width="wrap_content"
@@ -421,13 +397,11 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="出生缺陷儿："
-                android:id="@+id/birth_defect"
                 android:layout_marginLeft="54dp"/>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="0"
-                android:id="@+id/textView464"/>
+                android:id="@+id/birth_defect"/>
         </LinearLayout>
         <LinearLayout
             android:layout_width="wrap_content"
@@ -449,23 +423,20 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="心脏："
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:id="@+id/ausculate_heart"/>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="未见异常"
-                android:id="@+id/textView467"/>
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
                 android:text="肺部："
-                android:id="@+id/ausculate_lung"
                 android:layout_marginLeft="30dp"/>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="未见异常"
-                android:id="@+id/textView469"/>
+                android:id="@+id/ausculate_lung"/>
         </LinearLayout>
         <TextView
             android:layout_width="wrap_content"
@@ -482,23 +453,20 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="外阴："
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:id="@+id/vulva"/>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="未见异常"
-                android:id="@+id/textView472"/>
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
                 android:text="阴道："
-                android:id="@+id/vagina"
                 android:layout_marginLeft="30dp"/>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="未见异常"
-                android:id="@+id/textView474"/>
+                android:id="@+id/vagina"/>
         </LinearLayout>
         <LinearLayout
             android:layout_width="wrap_content"
@@ -509,23 +477,20 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="宫颈："
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:id="@+id/cervix"/>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="未见异常"
-                android:id="@+id/textView476"/>
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
                 android:text="子宫："
-                android:id="@+id/uteri"
                 android:layout_marginLeft="30dp"/>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="未见异常"
-                android:id="@+id/textView478"/>
+                android:id="@+id/uteri"/>
         </LinearLayout>
         <LinearLayout
             android:layout_width="wrap_content"
@@ -536,12 +501,11 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="附件："
-                android:id="@+id/accessory"/>
+                />
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="未见异常"
-                android:id="@+id/textView480"/>
+                android:id="@+id/accessory"/>
         </LinearLayout>
         <TextView
             android:layout_width="wrap_content"
@@ -564,12 +528,11 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="白细胞计数值："
-                android:id="@+id/leukocyte"/>
+                />
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="6"
-                android:id="@+id/textView484"/>
+                android:id="@+id/leukocyte"/>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -580,13 +543,11 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="血红蛋白值："
-                android:id="@+id/hemoglobin"
                 android:layout_marginLeft="30dp"/>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="140"
-                android:id="@+id/textView487"/>
+                android:id="@+id/hemoglobin"/>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -603,12 +564,11 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="血小板计数值："
-                android:id="@+id/thrombocyte"/>
+                />
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="200"
-                android:id="@+id/textView490"/>
+                android:id="@+id/thrombocyte"/>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -631,45 +591,38 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="尿蛋白："
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:id="@+id/urine_protein"/>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="-"
-                android:id="@+id/textView494"/>
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
                 android:text="尿糖："
-                android:id="@+id/urine_glucose"
                 android:layout_marginLeft="20dp"/>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="+"
-                android:id="@+id/textView496"/>
+                android:id="@+id/urine_glucose"/>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="尿酮体："
-                android:id="@+id/urine_ket"
                 android:layout_marginLeft="20dp"/>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="+"
-                android:id="@+id/textView498"/>
+                android:id="@+id/urine_ket"/>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="尿潜血："
-                android:id="@+id/urine_ery"
                 android:layout_marginLeft="20dp"/>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="-"
-                android:id="@+id/textView500"/>
+                android:id="@+id/urine_ery"/>
         </LinearLayout>
         <LinearLayout
             android:layout_width="wrap_content"
@@ -685,24 +638,20 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="ABO："
-                android:id="@+id/blood_type_abo"
                 android:layout_marginLeft="30dp"/>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="AB型"
-                android:id="@+id/textView503"/>
+                android:id="@+id/blood_type_abo"/>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Rh*："
-                android:id="@+id/blood_type_rh"
                 android:layout_marginLeft="30dp"/>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="不详"
-                android:id="@+id/textView505"/>
+                android:id="@+id/blood_type_rh"/>
         </LinearLayout>
         <LinearLayout
             android:layout_width="wrap_content"
@@ -713,12 +662,11 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="血糖*"
-                android:id="@+id/blood_glucose"/>
+                />
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="5"
-                android:id="@+id/textView507"
+                android:id="@+id/blood_glucose"
                 android:layout_marginLeft="10dp"/>
             <TextView
                 android:layout_width="wrap_content"
@@ -741,12 +689,11 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="血清谷丙转氨酶："
-                android:id="@+id/sgpt"/>
+                />
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="5"
-                android:id="@+id/textView511"/>
+                android:id="@+id/sgpt"/>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -757,13 +704,11 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="血清谷草转氨酶："
-                android:id="@+id/sgot"
                 android:layout_marginLeft="20dp"/>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="5"
-                android:id="@+id/textView514"/>
+                android:id="@+id/sgot"/>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -780,12 +725,11 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="白蛋白："
-                android:id="@+id/albumin"/>
+                />
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="5"
-                android:id="@+id/textView517"/>
+                android:id="@+id/albumin"/>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -796,13 +740,11 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="总胆红素："
-                android:id="@+id/tbil"
                 android:layout_marginLeft="20dp"/>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="5"
-                android:id="@+id/textView520"/>
+                android:id="@+id/tbil"/>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -819,12 +761,11 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="结合胆红素："
-                android:id="@+id/dbil"/>
+                />
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="5"
-                android:id="@+id/textView523"/>
+                android:id="@+id/dbil"/>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -846,12 +787,11 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="血清肌酐："
-                android:id="@+id/scr"/>
+                />
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="5"
-                android:id="@+id/textView527"/>
+                android:id="@+id/scr"/>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -862,13 +802,11 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="血尿素氮："
-                android:id="@+id/bun"
                 android:layout_marginLeft="30dp"/>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="5"
-                android:id="@+id/textView530"/>
+                android:id="@+id/bun"/>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -891,23 +829,20 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="乙型肝炎表面抗原："
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:id="@+id/surface_antigen"/>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="阳性"
-                android:id="@+id/textView534"/>
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
                 android:text="乙型肝炎表面抗体："
-                android:id="@+id/surface_antibody"
                 android:layout_marginLeft="20dp"/>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="阴性"
-                android:id="@+id/textView536"/>
+                android:id="@+id/surface_antibody"/>
         </LinearLayout>
         <LinearLayout
             android:layout_width="wrap_content"
@@ -918,23 +853,20 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="乙型肝炎e抗原："
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:id="@+id/e_antigen"/>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="阴性"
-                android:id="@+id/textView538"/>
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
                 android:text="乙型肝炎e抗体："
-                android:id="@+id/e_antibody"
                 android:layout_marginLeft="40dp"/>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="阴性"
-                android:id="@+id/textView540"/>
+                android:id="@+id/e_antibody"/>
         </LinearLayout>
         <LinearLayout
             android:layout_width="wrap_content"
@@ -945,12 +877,11 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="乙型肝炎核心抗体："
-                android:id="@+id/core_antibody"/>
+                />
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="阳性"
-                android:id="@+id/textView542"/>
+                android:id="@+id/core_antibody"/>
         </LinearLayout>
         <LinearLayout
             android:layout_width="wrap_content"
@@ -961,12 +892,11 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="总体评估："
-                android:id="@+id/total_evaluation"/>
+                />
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="未见异常"
-                android:id="@+id/textView544"/>
+                android:id="@+id/total_evaluation"/>
         </LinearLayout>
         <LinearLayout
             android:layout_width="wrap_content"
@@ -977,12 +907,11 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="保健指导："
-                android:id="@+id/guide"/>
+                />
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="营养"
-                android:id="@+id/textView546"/>
+                android:id="@+id/guide"/>
         </LinearLayout>
         <LinearLayout
             android:layout_width="wrap_content"
@@ -993,12 +922,11 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="转诊建议："
-                android:id="@+id/transfer"/>
+                />
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="无"
-                android:id="@+id/textView548"/>
+                android:id="@+id/transfer"/>
         </LinearLayout>
         <LinearLayout
             android:layout_width="wrap_content"
@@ -1009,22 +937,20 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="下次随访时间："
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:id="@+id/next_visit_date"/>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="2015-09-30"
-                android:id="@+id/textView550"/>
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
                 android:text="本次随访医生："
-                android:id="@+id/doctor_signature"/>
+                />
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="张医生"
-                android:id="@+id/textView552"/>
+                android:id="@+id/doctor_signature"/>
         </LinearLayout>
     </LinearLayout>
 </ScrollView>
