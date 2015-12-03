@@ -86,6 +86,16 @@ public class ServicesActivity extends Activity {
                     intent.putExtra("record_id", summary.getRecordId());
                     startActivity(intent);
                     finish();
+                } else if(type_alias.equals("pregnant") &&item_alias.equals("postpartum_visit")){
+                    Intent intent = new Intent(ServicesActivity.this, PostpartumVisitActivity.class);
+                    intent.putExtra("record_id", summary.getRecordId());
+                    startActivity(intent);
+                    finish();
+                } else if(type_alias.equals("hypertension") &&item_alias.equals("hypertension_aftercare")){
+                    Intent intent = new Intent(ServicesActivity.this, hypertension_aftercare.class);
+                    intent.putExtra("record_id", summary.getRecordId());
+                    startActivity(intent);
+                    finish();
                 } else {
                     Toast.makeText(getApplicationContext(),
                             type_alias + ":" + item_alias + " not written",
@@ -93,6 +103,8 @@ public class ServicesActivity extends Activity {
                 }
             }
         });
+
+
 
         btnLogout.setOnClickListener(new View.OnClickListener() {
             @Override

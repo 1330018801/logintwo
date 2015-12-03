@@ -15,4 +15,6 @@
     <string name="name">姓名</string>
     <string name="hint_identity">身份证号码</string>
     <string name="title_activity_antenatal">AntenatalActivity</string>
+    <string name="title_activity_hypertension_aftercare">hypertension_aftercare</string>
+    <string name="title_activity_postpartum_visit">PostpartumVisitActivity</string>
 </resources>
