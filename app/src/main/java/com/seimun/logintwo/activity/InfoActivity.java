@@ -175,6 +175,7 @@ public class InfoActivity extends Activity {
     private void logoutUser() {
         session.setLogin(false);
         db.deleteUsers();
+        db.deleteSummaries();
 
         Intent intent = new Intent(InfoActivity.this, LoginActivity.class);
         startActivity(intent);

@@ -78,7 +78,9 @@ public class ServicesActivity extends Activity {
 
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+
                 final Summary summary = db.getSummaryDetails(position + 1);
+
                 String type_alias = summary.getTypeAlias();
                 String item_alias = summary.getItemAlias();
                 if (type_alias.equals("pregnant") && item_alias.equals("aftercare_1")) {
@@ -178,6 +180,7 @@ public class ServicesActivity extends Activity {
     private void logoutUser() {
         session.setLogin(false);
         db.deleteUsers();
+        db.deleteSummaries();
 
         Intent intent = new Intent(ServicesActivity.this, LoginActivity.class);
         startActivity(intent);
