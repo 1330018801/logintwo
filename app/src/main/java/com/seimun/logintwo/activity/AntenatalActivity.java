@@ -215,6 +215,7 @@ public class AntenatalActivity extends Activity {
     private void logoutUser() {
         session.setLogin(false);
         db.deleteUsers();
+        db.deleteSummaries();
 
         Intent intent = new Intent(AntenatalActivity.this, LoginActivity.class);
         startActivity(intent);
