@@ -55,6 +55,18 @@
         <activity
             android:name=".activity.PostpartumVisitActivity"
             android:label="@string/title_activity_postpartum_visit"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".activity.DiabetesAftercareActivity"
+            android:label="@string/title_activity_diabetes_aftercare"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".activity.BodyExamActivity"
+            android:label="@string/title_activity_body_exam"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".AftercareActivity"
+            android:label="@string/title_activity_aftercare"
             android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 

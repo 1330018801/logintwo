@@ -16,6 +16,7 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.VolleyLog;
 import com.android.volley.toolbox.StringRequest;
+import com.seimun.logintwo.AftercareActivity;
 import com.seimun.logintwo.R;
 import com.seimun.logintwo.adapter.SummaryListAdapter;
 import com.seimun.logintwo.app.AppConfig;
@@ -95,6 +96,21 @@ public class ServicesActivity extends Activity {
                     finish();
                 } else if(type_alias.equals("hypertension") &&item_alias.equals("hypertension_aftercare")){
                     Intent intent = new Intent(ServicesActivity.this, hypertension_aftercare.class);
+                    intent.putExtra("record_id", summary.getRecordId());
+                    startActivity(intent);
+                    finish();
+                } else if(type_alias.equals("diabetes") &&item_alias.equals("diabetes_aftercare")){
+                    Intent intent = new Intent(ServicesActivity.this, DiabetesAftercareActivity.class);
+                    intent.putExtra("record_id", summary.getRecordId());
+                    startActivity(intent);
+                    finish();
+                } else if(item_alias.equals("body_exam")){
+                    Intent intent = new Intent(ServicesActivity.this, BodyExamActivity.class);
+                    intent.putExtra("record_id", summary.getRecordId());
+                    startActivity(intent);
+                    finish();
+                } else if(type_alias.equals("pregnant") && item_alias.equals("aftercare")) {
+                    Intent intent = new Intent(ServicesActivity.this, AftercareActivity.class);
                     intent.putExtra("record_id", summary.getRecordId());
                     startActivity(intent);
                     finish();
