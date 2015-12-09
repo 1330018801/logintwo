@@ -73,10 +73,7 @@ public class hypertension_aftercare extends AppCompatActivity {
                 finish();
             }
         });
-
-
         if (record_id != 0) {
-            Log.e(TAG, "开始从后台获取详情");
             final StringRequest detailReq = new StringRequest(
                     Request.Method.POST,
                     AppConfig.URL_DETAIL,
@@ -150,24 +147,54 @@ public class hypertension_aftercare extends AppCompatActivity {
                                     take_medicine_compliance.setText(detail.getString("take_medicine_compliance"));
                                     TextView medicine_untoward_effect = (TextView) findViewById(R.id.medicine_untoward_effect);
                                     medicine_untoward_effect.setText(detail.getString("medicine_untoward_effect"));
-                                    TextView take_medicine_1 = (TextView) findViewById(R.id.take_medicine_1);
-                                    take_medicine_1.setText(detail.getString("take_medicine_1"));
-                                    TextView take_medicine_1_day = (TextView) findViewById(R.id.take_medicine_1_day);
-                                    take_medicine_1_day.setText(detail.getString("take_medicine_1_day"));
-                                    TextView take_medicine_1_time = (TextView) findViewById(R.id.take_medicine_1_time);
-                                    take_medicine_1_time.setText(detail.getString("take_medicine_1_time"));
-                                    TextView take_medicine_2 = (TextView) findViewById(R.id.take_medicine_2);
-                                    take_medicine_2.setText(detail.getString("take_medicine_2"));
-                                    TextView take_medicine_2_day = (TextView) findViewById(R.id.take_medicine_2_day);
-                                    take_medicine_2_day.setText(detail.getString("take_medicine_2_day"));
-                                    TextView take_medicine_2_time = (TextView) findViewById(R.id.take_medicine_2_time);
-                                    take_medicine_2_time.setText(detail.getString("take_medicine_2_time"));
-                                    TextView take_medicine_3 = (TextView) findViewById(R.id.take_medicine_3);
-                                    take_medicine_3.setText(detail.getString("take_medicine_3"));
-                                    TextView take_medicine_3_day = (TextView) findViewById(R.id.take_medicine_3_day);
-                                    take_medicine_3_day.setText(detail.getString("take_medicine_3_day"));
-                                    TextView take_medicine_3_time = (TextView) findViewById(R.id.take_medicine_3_time);
-                                    take_medicine_3_time.setText(detail.getString("take_medicine_3_time"));
+                                    if(!detail.getString("take_medicine_1").equals("null")) {
+                                        TextView take_medicine_1 = (TextView) findViewById(R.id.take_medicine_1);
+                                        take_medicine_1.setText(detail.getString("take_medicine_1"));
+                                    }
+                                    if(!detail.getString("take_medicine_1_day").equals("null")) {
+                                        TextView take_medicine_1_day = (TextView) findViewById(R.id.take_medicine_1_day);
+                                        take_medicine_1_day.setText(detail.getString("take_medicine_1_day"));
+                                    }
+                                    if(!detail.getString("take_medicine_1_time").equals("null")) {
+                                        TextView take_medicine_1_time = (TextView) findViewById(R.id.take_medicine_1_time);
+                                        take_medicine_1_time.setText(detail.getString("take_medicine_1_time"));
+                                    }
+                                    if(!detail.getString("take_medicine_2").equals("null")) {
+                                        TextView take_medicine_2 = (TextView) findViewById(R.id.take_medicine_2);
+                                        take_medicine_2.setText(detail.getString("take_medicine_2"));
+                                    }
+                                    if(!detail.getString("take_medicine_2_day").equals("null")) {
+                                        TextView take_medicine_2_day = (TextView) findViewById(R.id.take_medicine_2_day);
+                                        take_medicine_2_day.setText(detail.getString("take_medicine_2_day"));
+                                    }
+                                    if(!detail.getString("take_medicine_2_time").equals("null")) {
+                                        TextView take_medicine_2_time = (TextView) findViewById(R.id.take_medicine_2_time);
+                                        take_medicine_2_time.setText(detail.getString("take_medicine_2_time"));
+                                    }
+                                    if(!detail.getString("take_medicine_3").equals("null")) {
+                                        TextView take_medicine_3 = (TextView) findViewById(R.id.take_medicine_3);
+                                        take_medicine_3.setText(detail.getString("take_medicine_3"));
+                                    }
+                                    if(!detail.getString("take_medicine_3_day").equals("null")) {
+                                        TextView take_medicine_3_day = (TextView) findViewById(R.id.take_medicine_3_day);
+                                        take_medicine_3_day.setText(detail.getString("take_medicine_3_day"));
+                                    }
+                                    if(!detail.getString("take_medicine_3_time").equals("null")) {
+                                        TextView take_medicine_3_time = (TextView) findViewById(R.id.take_medicine_3_time);
+                                        take_medicine_3_time.setText(detail.getString("take_medicine_3_time"));
+                                    }
+                                    if(!detail.getString("take_medicine_qt").equals("null")) {
+                                        TextView take_medicine_qt = (TextView) findViewById(R.id.take_medicine_qt);
+                                        take_medicine_qt.setText(detail.getString("take_medicine_qt"));
+                                    }
+                                    if(!detail.getString("take_medicine_qt_day").equals("null")) {
+                                        TextView take_medicine_qt_day = (TextView) findViewById(R.id.take_medicine_qt_day);
+                                        take_medicine_qt_day.setText(detail.getString("take_medicine_qt_day"));
+                                    }
+                                    if(!detail.getString("take_medicine_qt_time").equals("null")) {
+                                        TextView take_medicine_qt_time = (TextView) findViewById(R.id.take_medicine_qt_time);
+                                        take_medicine_qt_time.setText(detail.getString("take_medicine_qt_time"));
+                                    }
 
 
                                 } else {

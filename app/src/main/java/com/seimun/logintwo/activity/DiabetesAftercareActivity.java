@@ -40,22 +40,28 @@ public class DiabetesAftercareActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_diabetes_aftercare);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        btnLogout = (Button) findViewById(R.id.btnLogout);
-        btnMain = (Button) findViewById(R.id.btnMain);
+        btnLogout = (Button)findViewById(R.id.btnLogout);
+        btnMain = (Button)findViewById(R.id.btnMain);
+
 
         db = new SQLiteHandler(getApplicationContext());
         session = new SessionManager(getApplicationContext());
 
+
         if (!session.isLoggedIn()) {
             logoutUser();
+        }
             // final HashMap<String, String> user = db.getUserDetails();
 
+
             Intent intent = getIntent();
+
             final Integer record_id = intent.getIntExtra("record_id", 0);
             btnLogout.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -73,7 +79,9 @@ public class DiabetesAftercareActivity extends AppCompatActivity {
                 }
             });
 
+
             if (record_id != 0) {
+
                 Log.e(TAG, "开始从后台获取详情");
                 final StringRequest detailReq = new StringRequest(
                         Request.Method.POST,
@@ -158,31 +166,42 @@ public class DiabetesAftercareActivity extends AppCompatActivity {
                                         take_medicine_insulin.setText(detail.getString("take_medicine_insulin"));
                                         TextView take_medicine_insulin_volume = (TextView) findViewById(R.id.take_medicine_insulin_volume);
                                         take_medicine_insulin_volume.setText(detail.getString("take_medicine_insulin_volume"));
-                                        TextView take_medicine_1 = (TextView) findViewById(R.id.take_medicine_1);
-                                        take_medicine_1.setText(detail.getString("take_medicine_1"));
-                                        TextView take_medicine_1_day = (TextView) findViewById(R.id.take_medicine_1_day);
-                                        take_medicine_1_day.setText(detail.getString("take_medicine_1_day"));
-                                        TextView take_medicine_1_time = (TextView) findViewById(R.id.take_medicine_1_time);
-                                        take_medicine_1_time.setText(detail.getString("take_medicine_1_time"));
-                                        TextView take_medicine_2 = (TextView) findViewById(R.id.take_medicine_2);
-                                        take_medicine_2.setText(detail.getString("take_medicine_2"));
-                                        TextView take_medicine_2_day = (TextView) findViewById(R.id.take_medicine_2_day);
-                                        take_medicine_2_day.setText(detail.getString("take_medicine_2_day"));
-                                        TextView take_medicine_2_time = (TextView) findViewById(R.id.take_medicine_2_time);
-                                        take_medicine_2_time.setText(detail.getString("take_medicine_2_time"));
-                                        TextView take_medicine_3 = (TextView) findViewById(R.id.take_medicine_3);
-                                        take_medicine_3.setText(detail.getString("take_medicine_3"));
-                                        TextView take_medicine_3_day = (TextView) findViewById(R.id.take_medicine_3_day);
-                                        take_medicine_3_day.setText(detail.getString("take_medicine_3_day"));
-                                        TextView take_medicine_3_time = (TextView) findViewById(R.id.take_medicine_3_time);
-                                        take_medicine_3_time.setText(detail.getString("take_medicine_3_time"));
-
-
-
-
-
-
-
+                                        if(!detail.getString("take_medicine_1").equals("null")) {
+                                            TextView take_medicine_1 = (TextView) findViewById(R.id.take_medicine_1);
+                                            take_medicine_1.setText(detail.getString("take_medicine_1"));
+                                        }
+                                        if(!detail.getString("take_medicine_1_day").equals("null")) {
+                                            TextView take_medicine_1_day = (TextView) findViewById(R.id.take_medicine_1_day);
+                                            take_medicine_1_day.setText(detail.getString("take_medicine_1_day"));
+                                        }
+                                        if(!detail.getString("take_medicine_1_time").equals("null")) {
+                                            TextView take_medicine_1_time = (TextView) findViewById(R.id.take_medicine_1_time);
+                                            take_medicine_1_time.setText(detail.getString("take_medicine_1_time"));
+                                        }
+                                        if(!detail.getString("take_medicine_2").equals("null")) {
+                                            TextView take_medicine_2 = (TextView) findViewById(R.id.take_medicine_2);
+                                            take_medicine_2.setText(detail.getString("take_medicine_2"));
+                                        }
+                                        if(!detail.getString("take_medicine_2_day").equals("null")) {
+                                            TextView take_medicine_2_day = (TextView) findViewById(R.id.take_medicine_2_day);
+                                            take_medicine_2_day.setText(detail.getString("take_medicine_2_day"));
+                                        }
+                                        if(!detail.getString("take_medicine_2_time").equals("null")) {
+                                            TextView take_medicine_2_time = (TextView) findViewById(R.id.take_medicine_2_time);
+                                            take_medicine_2_time.setText(detail.getString("take_medicine_2_time"));
+                                        }
+                                        if(!detail.getString("take_medicine_3").equals("null")) {
+                                            TextView take_medicine_3 = (TextView) findViewById(R.id.take_medicine_3);
+                                            take_medicine_3.setText(detail.getString("take_medicine_3"));
+                                        }
+                                        if(!detail.getString("take_medicine_3_day").equals("null")) {
+                                            TextView take_medicine_3_day = (TextView) findViewById(R.id.take_medicine_3_day);
+                                            take_medicine_3_day.setText(detail.getString("take_medicine_3_day"));
+                                        }
+                                        if(!detail.getString("take_medicine_3_time").equals("null")) {
+                                            TextView take_medicine_3_time = (TextView) findViewById(R.id.take_medicine_3_time);
+                                            take_medicine_3_time.setText(detail.getString("take_medicine_3_time"));
+                                        }
 
                                     } else {
                                         String errorMsg = obj.getString("error_msg");
@@ -212,7 +231,7 @@ public class DiabetesAftercareActivity extends AppCompatActivity {
                 Toast.makeText(getApplicationContext(), "没有获得记录ID", Toast.LENGTH_LONG).show();
             }
         }
-    }
+
         private void logoutUser() {
             session.setLogin(false);
             db.deleteUsers();

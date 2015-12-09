@@ -49,6 +49,7 @@ public class BodyExamActivity extends AppCompatActivity {
         session = new SessionManager(getApplicationContext());
         if (!session.isLoggedIn()) {
             logoutUser();
+        }
             // final HashMap<String, String> user = db.getUserDetails();
 
             Intent intent = getIntent();
@@ -255,7 +256,7 @@ public class BodyExamActivity extends AppCompatActivity {
                 Toast.makeText(getApplicationContext(), "没有获得记录ID", Toast.LENGTH_LONG).show();
             }
         }
-    }
+
     private void logoutUser() {
         session.setLogin(false);
         db.deleteUsers();

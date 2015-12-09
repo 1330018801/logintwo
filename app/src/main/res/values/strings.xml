@@ -20,4 +20,14 @@
     <string name="title_activity_diabetes_aftercare">DiabetesAftercareActivity</string>
     <string name="title_activity_body_exam">BodyExamActivity</string>
     <string name="title_activity_aftercare">AftercareActivity</string>
+    <string name="title_activity_postpartum42_exam">Postpartum42ExamActivity</string>
+    <string name="title_activity_vaccine_card">VaccineCardActivity</string>
+    <string name="title_activity_vaccination">VaccinationActivity</string>
+    <string name="title_activity_newborn_family_visit">NewbornFamilyVisitActivity</string>
+    <string name="title_activity_aftercare1_to8_month">Aftercare1To8MonthActivity</string>
+    <string name="title_activity_aftercare12_to30_month">Aftercare12To30MonthActivity</string>
+    <string name="title_activity_aftercare3_to6_year">Aftercare3To6YearActivity</string>
+    <string name="title_activity_tcm_aftercare">TcmAftercareActivity</string>
+    <string name="title_activity_psychiatric_aftercare">PsychiatricAftercareActivity</string>
+    <string name="title_activity_old_identify">OldIdentifyActivity</string>
 </resources>

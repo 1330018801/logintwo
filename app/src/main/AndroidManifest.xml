@@ -67,7 +67,85 @@
         <activity
             android:name=".AftercareActivity"
             android:label="@string/title_activity_aftercare"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Postpartum42ExamActivity"
+            android:label="@string/title_activity_postpartum42_exam"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".VaccineCardActivity"
+            android:label="@string/title_activity_vaccine_card"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".VaccinationActivity"
+            android:label="@string/title_activity_vaccination"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".NewbornFamilyVisitActivity"
+            android:label="@string/title_activity_newborn_family_visit"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Aftercare1To8MonthActivity"
+            android:label="@string/title_activity_aftercare1_to8_month"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Aftercare12To30MonthActivity"
+            android:label="@string/title_activity_aftercare12_to30_month"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Aftercare3To6YearActivity"
+            android:label="@string/title_activity_aftercare3_to6_year"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".TcmAftercareActivity"
+            android:label="@string/title_activity_tcm_aftercare"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".PsychiatricAftercareActivity"
+            android:label="@string/title_activity_psychiatric_aftercare"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".OldIdentifyActivity"
+            android:label="@string/title_activity_old_identify"
+            android:theme="@style/AppTheme.NoActionBar"/>
+        <activity
+            android:name=".Aftercare3Month"
+            android:label="@string/title_activity_aftercare1_to8_month"
+            android:theme="@style/AppTheme.NoActionBar"/>
+        <activity
+            android:name=".Aftercare1Month"
+            android:label="@string/title_activity_aftercare1_to8_month"
+            android:theme="@style/AppTheme.NoActionBar"/>
+        <activity android:name=".activity.Aftercare6Month"
+            android:label="@string/title_activity_aftercare1_to8_month"
+            android:theme="@style/AppTheme.NoActionBar"/>/
+        <activity android:name=".activity.Aftercare8Month"
+            android:label="@string/title_activity_aftercare1_to8_month"
+            android:theme="@style/AppTheme.NoActionBar"/>
+        <activity
+            android:name=".activity.Aftercare12Month"
+            android:label="@string/title_activity_aftercare12_to30_month"
+            android:theme="@style/AppTheme.NoActionBar"/>
+        <activity
+            android:name=".activity.Aftercare18Month"
+            android:label="@string/title_activity_aftercare12_to30_month"
+            android:theme="@style/AppTheme.NoActionBar"/>
+        <activity
+            android:name=".activity.Aftercare24Month"
+            android:label="@string/title_activity_aftercare12_to30_month"
+            android:theme="@style/AppTheme.NoActionBar"/>
+        <activity
+            android:name=".activity.Aftercare30Month"
+            android:label="@string/title_activity_aftercare12_to30_month"
+            android:theme="@style/AppTheme.NoActionBar"/>
+        <activity
+            android:name=".activity.Aftercare3Year"
+            android:label="@string/title_activity_aftercare3_to6_year"
+            android:theme="@style/AppTheme.NoActionBar"/>
+        <activity
+            android:name=".activity.Aftercare4To6Year"
+            android:label="@string/title_activity_aftercare3_to6_year"
+            android:theme="@style/AppTheme.NoActionBar"/>
     </application>
 
 </manifest>

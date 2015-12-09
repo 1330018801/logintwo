@@ -1,7 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content" >
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -13,14 +10,13 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context=".activity.PostpartumVisitActivity"
-    tools:showIn="@layout/activity_postpartum_visit">
+    tools:context="com.seimun.logintwo.Postpartum42ExamActivity"
+    tools:showIn="@layout/activity_postpartum42_exam">
 
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_marginTop="40dp">
+        android:orientation="horizontal">
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -33,11 +29,11 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="服务项目："
-            android:layout_marginLeft="30dp"/>
+            android:layout_marginLeft="20dp"/>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="产后访视"/>
+            android:text="产后42天访视"/>
     </LinearLayout>
     <LinearLayout
         android:layout_width="wrap_content"
@@ -51,7 +47,6 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-
             android:id="@+id/visit_date"/>
         <TextView
             android:layout_width="wrap_content"
@@ -61,29 +56,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-
             android:id="@+id/doctor_signature"/>
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_marginTop="25dp">
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="体温：" />
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-
-            android:id="@+id/body_temperature"/>
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="°C"/>
-
     </LinearLayout>
     <LinearLayout
         android:layout_width="wrap_content"
@@ -97,37 +70,34 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-
             android:id="@+id/general_health_situation"/>
     </LinearLayout>
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:layout_marginTop="25dp">
+        android:layout_marginTop="15dp">
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="一般心理状况：" />
+            android:text="一般心理状况："/>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-
             android:id="@+id/general_mentality_situation"/>
     </LinearLayout>
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:layout_marginTop="25dp">
+        android:layout_marginTop="15dp">
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="血压：" />
+            android:text="血压："/>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-
             android:id="@+id/sbp"/>
         <TextView
             android:layout_width="wrap_content"
@@ -137,7 +107,6 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-
             android:id="@+id/dbp"
             android:layout_marginLeft="3dp"/>
         <TextView
@@ -220,7 +189,6 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-
             android:id="@+id/extra"/>
     </LinearLayout>
     <LinearLayout
@@ -239,7 +207,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/classification_abnormal"/>
+            android:id="@+id/classification_not_recovery"/>
     </LinearLayout>
     <LinearLayout
         android:layout_width="wrap_content"
@@ -267,48 +235,34 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="转诊：" />
+            android:text="处理：" />
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/transfer_treatment"/>
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="25dp"
-            android:text="原因：" />
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/transfer_treatment_reason"/>
+            android:id="@+id/dispose"/>
     </LinearLayout>
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_marginTop="5dp">
+        android:layout_marginTop="5dp"
+        android:orientation="horizontal">
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="转诊机构及科室：" />
+            android:text="原因："/>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/transfer_treatment_institution"/>
-    </LinearLayout>
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_marginTop="5dp">
+            android:id="@+id/dispose_transfer_treatment_reason"/>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="下次随访日期："/>
+            android:text="机构及科室："
+            android:layout_marginLeft="30dp"/>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/next_visit_date"/>
+            android:id="@+id/dispose_transfer_treatment_institution"/>
     </LinearLayout>
     <Button
         android:id="@+id/btnMain"
@@ -331,5 +285,5 @@
         android:textAllCaps="false"
         android:textColor="@color/white"
         android:textSize="22dp"/>
+
 </LinearLayout>
-</ScrollView>

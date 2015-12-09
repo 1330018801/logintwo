@@ -143,7 +143,7 @@ public class InfoActivity extends Activity {
                         surroundings_fuel_type.setText(jObj.getString("surroundings_fuel_type"));
                         surroundings_water.setText(jObj.getString("surroundings_water"));
                         surroundings_toilet.setText(jObj.getString("surroundings_toilet"));
-                        surrounding_livestock_fence.setText(jObj.getString("surrounding_livestock_fenc"));
+                        surrounding_livestock_fence.setText(jObj.getString("surrounding_livestock_fence"));
                     } else {
                         String errorMsg = jObj.getString("error_msg");
                         Toast.makeText(getApplicationContext(), errorMsg, Toast.LENGTH_LONG).show();

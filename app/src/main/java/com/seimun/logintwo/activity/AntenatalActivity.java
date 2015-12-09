@@ -257,6 +257,8 @@ public class AntenatalActivity extends Activity {
                                     next_visit_date.setText(detail.getString("next_visit_date"));
                                     TextView doctor_signature = (TextView)findViewById(R.id.doctor_signature);
                                     doctor_signature.setText(detail.getString("doctor_signature"));
+
+
                                 } else {
                                     String errorMsg = obj.getString("error_msg");
                                     Toast.makeText(getApplicationContext(), errorMsg, Toast.LENGTH_LONG).show();
