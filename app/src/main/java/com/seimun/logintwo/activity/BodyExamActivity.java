@@ -84,8 +84,6 @@ public class BodyExamActivity extends AppCompatActivity {
                                     if (!obj.getBoolean("error")) {
                                         JSONObject detail = obj.getJSONObject("detail");
                                         // Toast.makeText(getApplicationContext(), detail.getString("visit_date"), Toast.LENGTH_SHORT).show();
-                                        TextView visit_date = (TextView) findViewById(R.id.visit_date);
-                                        visit_date.setText(detail.getString("visit_date"));
                                         TextView  doctor= (TextView) findViewById(R.id.doctor);
                                         doctor.setText(detail.getString("doctor"));
                                         TextView body_temperature = (TextView) findViewById(R.id.body_temperature);
@@ -114,14 +112,54 @@ public class BodyExamActivity extends AppCompatActivity {
                                         mouth_lip.setText(detail.getString("mouth_lip"));
                                         TextView mouth_tooth = (TextView) findViewById(R.id.mouth_tooth);
                                         mouth_tooth.setText(detail.getString("mouth_tooth"));
-                                        TextView mouth_tooth_missing_upleft = (TextView) findViewById(R.id.mouth_tooth_missing_upleft);
-                                        mouth_tooth_missing_upleft.setText(detail.getString("mouth_tooth_missing_upleft"));
-                                        TextView mouth_tooth_missing_bottomleft = (TextView) findViewById(R.id.mouth_tooth_missing_bottomleft);
-                                        mouth_tooth_missing_bottomleft.setText(detail.getString("mouth_tooth_missing_bottomleft"));
-                                        TextView mouth_tooth_missing_upright = (TextView) findViewById(R.id.mouth_tooth_missing_upright);
-                                        mouth_tooth_missing_upright.setText(detail.getString("mouth_tooth_missing_upright"));
-                                        TextView mouth_tooth_missing_bottomright = (TextView) findViewById(R.id.mouth_tooth_missing_bottomright);
-                                        mouth_tooth_missing_bottomright.setText(detail.getString("mouth_tooth_missing_bottomright"));
+                                        if(!detail.getString("mouth_tooth_missing_upleft").equals("null")) {
+                                            TextView mouth_tooth_missing_upleft = (TextView) findViewById(R.id.mouth_tooth_missing_upleft);
+                                            mouth_tooth_missing_upleft.setText(detail.getString("mouth_tooth_missing_upleft"));
+                                        }
+                                        if(!detail.getString("mouth_tooth_missing_bottomleft").equals("null")) {
+                                            TextView mouth_tooth_missing_bottomleft = (TextView) findViewById(R.id.mouth_tooth_missing_bottomleft);
+                                            mouth_tooth_missing_bottomleft.setText(detail.getString("mouth_tooth_missing_bottomleft"));
+                                        }
+                                        if(!detail.getString("mouth_tooth_missing_upright").equals("null")) {
+                                            TextView mouth_tooth_missing_upright = (TextView) findViewById(R.id.mouth_tooth_missing_upright);
+                                            mouth_tooth_missing_upright.setText(detail.getString("mouth_tooth_missing_upright"));
+                                        }
+                                        if(!detail.getString("mouth_tooth_missing_bottomright").equals("null")) {
+                                            TextView mouth_tooth_missing_bottomright = (TextView) findViewById(R.id.mouth_tooth_missing_bottomright);
+                                            mouth_tooth_missing_bottomright.setText(detail.getString("mouth_tooth_missing_bottomright"));
+                                        }
+                                        if(!detail.getString("mouth_tooth_decayed_upleft").equals("null")) {
+                                            TextView mouth_tooth_decayed_upleft = (TextView) findViewById(R.id.mouth_tooth_decayed_upleft);
+                                            mouth_tooth_decayed_upleft.setText(detail.getString("mouth_tooth_decayed_upleft"));
+                                        }
+                                        if(!detail.getString("mouth_tooth_decayed_bottomleft").equals("null")) {
+                                            TextView mouth_tooth_decayed_bottomleft = (TextView) findViewById(R.id.mouth_tooth_decayed_bottomleft);
+                                            mouth_tooth_decayed_bottomleft.setText(detail.getString("mouth_tooth_decayed_bottomleft"));
+                                        }
+                                        if(!detail.getString("mouth_tooth_decayed_upright").equals("null")) {
+                                            TextView mouth_tooth_decayed_upright = (TextView) findViewById(R.id.mouth_tooth_decayed_upright);
+                                            mouth_tooth_decayed_upright.setText(detail.getString("mouth_tooth_decayed_upright"));
+                                        }
+                                        if(!detail.getString("mouth_tooth_decayed_bottomright").equals("null")) {
+                                            TextView mouth_tooth_decayed_bottomright = (TextView) findViewById(R.id.mouth_tooth_decayed_bottomright);
+                                            mouth_tooth_decayed_bottomright.setText(detail.getString("mouth_tooth_decayed_bottomright"));
+                                        }
+                                        if(!detail.getString("mouth_tooth_denture_upleft").equals("null")) {
+                                            TextView mouth_tooth_denture_upleft = (TextView) findViewById(R.id.mouth_tooth_denture_upleft);
+                                            mouth_tooth_denture_upleft.setText(detail.getString("mouth_tooth_denture_upleft"));
+                                        }
+                                        if(!detail.getString("mouth_tooth_denture_bottomleft").equals("null")) {
+                                            TextView mouth_tooth_denture_bottomleft = (TextView) findViewById(R.id.mouth_tooth_denture_bottomleft);
+                                            mouth_tooth_denture_bottomleft.setText(detail.getString("mouth_tooth_denture_bottomleft"));
+                                        }
+                                        if(!detail.getString("mouth_tooth_denture_upright").equals("null")) {
+                                            TextView mouth_tooth_denture_upright = (TextView) findViewById(R.id.mouth_tooth_denture_upright);
+                                            mouth_tooth_denture_upright.setText(detail.getString("mouth_tooth_denture_upright"));
+                                        }
+                                        if(!detail.getString("mouth_tooth_denture_bottomright").equals("null")) {
+                                            TextView mouth_tooth_denture_bottomright = (TextView) findViewById(R.id.mouth_tooth_denture_bottomright);
+                                            mouth_tooth_denture_bottomright.setText(detail.getString("mouth_tooth_denture_bottomright"));
+                                        }
                                         TextView mouth_throat = (TextView) findViewById(R.id.mouth_throat);
                                         mouth_throat.setText(detail.getString("mouth_throat"));
                                         TextView eyesight_left = (TextView) findViewById(R.id.eyesight_left);
@@ -180,52 +218,98 @@ public class BodyExamActivity extends AppCompatActivity {
                                         stomach_shifting_dullness.setText(detail.getString("stomach_shifting_dullness"));
                                         TextView stomach_shifting_dullness_extra = (TextView) findViewById(R.id.stomach_shifting_dullness_extra);
                                         stomach_shifting_dullness_extra.setText(detail.getString("stomach_shifting_dullness_extra"));
-                                        TextView hemoglobin = (TextView) findViewById(R.id.hemoglobin);
-                                        hemoglobin.setText(detail.getString("hemoglobin"));
-                                        TextView leucocyte = (TextView) findViewById(R.id.leucocyte);
-                                        leucocyte.setText(detail.getString("leucocyte"));
-                                        TextView blood_platelets = (TextView) findViewById(R.id.blood_platelets);
-                                        blood_platelets.setText(detail.getString("blood_platelets"));
-                                        TextView blood_routine_test_extra = (TextView) findViewById(R.id.blood_routine_test_extra);
-                                        blood_routine_test_extra .setText(detail.getString("blood_routine_test_extra"));
-                                        TextView urine_protein = (TextView) findViewById(R.id.urine_protein);
-                                        urine_protein.setText(detail.getString("urine_protein"));
-                                        TextView urine_glucose = (TextView) findViewById(R.id.urine_glucose);
-                                        urine_glucose .setText(detail.getString("urine_glucose"));
-                                        TextView ketone_bodies = (TextView) findViewById(R.id.ketone_bodies);
-                                        ketone_bodies.setText(detail.getString("ketone_bodies"));
-                                        TextView occult_blood = (TextView) findViewById(R.id.occult_blood);
-                                        occult_blood.setText(detail.getString("occult_blood"));
-                                        TextView routine_urine_test_extra = (TextView) findViewById(R.id.routine_urine_test_extra);
-                                        routine_urine_test_extra.setText(detail.getString("routine_urine_test_extra"));
-                                        TextView blood_glucose_mmol = (TextView) findViewById(R.id.blood_glucose_mmol);
-                                        blood_glucose_mmol.setText(detail.getString("blood_glucose_mmol"));
-                                        TextView blood_glucose_mg = (TextView) findViewById(R.id.blood_glucose_mg);
-                                        blood_glucose_mg .setText(detail.getString("blood_glucose_mg"));
-                                        TextView electr_gram = (TextView) findViewById(R.id.electr_gram);
-                                        electr_gram .setText(detail.getString("electr_gram"));
-                                        TextView electr_gram_abnormal = (TextView) findViewById(R.id.electr_gram_abnormal);
-                                        electr_gram_abnormal .setText(detail.getString("electr_gram_abnormal"));
-                                        TextView alt = (TextView) findViewById(R.id.alt);
-                                        alt .setText(detail.getString("alt"));
-                                        TextView ast = (TextView) findViewById(R.id.ast);
-                                        ast.setText(detail.getString("ast"));
-                                        TextView tbil = (TextView) findViewById(R.id.tbil);
-                                        tbil.setText(detail.getString("tbil"));
-                                        TextView scr = (TextView) findViewById(R.id.scr);
-                                        scr .setText(detail.getString("scr"));
-                                        TextView bun = (TextView) findViewById(R.id.bun);
-                                        bun .setText(detail.getString("bun"));
-                                        TextView tc = (TextView) findViewById(R.id.tc);
-                                        tc.setText(detail.getString("tc"));
-                                        TextView tg = (TextView) findViewById(R.id.tg);
-                                        tg.setText(detail.getString("tg"));
-                                        TextView ldl_c = (TextView) findViewById(R.id.ldl_c);
-                                        ldl_c .setText(detail.getString("ldl_c"));
-                                        TextView hdl_c = (TextView) findViewById(R.id.hdl_c);
-                                        hdl_c .setText(detail.getString("hdl_c"));
-                                        TextView b_ultrasonic = (TextView) findViewById(R.id.b_ultrasonic);
-                                        b_ultrasonic.setText(detail.getString("b_ultrasonic"));
+                                        if(!detail.getString("hemoglobin").equals("null")) {
+                                            TextView hemoglobin = (TextView) findViewById(R.id.hemoglobin);
+                                            hemoglobin.setText(detail.getString("hemoglobin"));
+                                        }
+                                        if(!detail.getString("leucocyte").equals("null")) {
+                                            TextView leucocyte = (TextView) findViewById(R.id.leucocyte);
+                                            leucocyte.setText(detail.getString("leucocyte"));
+                                        }
+                                        if(!detail.getString("blood_platelets").equals("null")) {
+                                            TextView blood_platelets = (TextView) findViewById(R.id.blood_platelets);
+                                            blood_platelets.setText(detail.getString("blood_platelets"));
+                                        }
+                                        if(!detail.getString("blood_routine_test_extra").equals("null")) {
+                                            TextView blood_routine_test_extra = (TextView) findViewById(R.id.blood_routine_test_extra);
+                                            blood_routine_test_extra.setText(detail.getString("blood_routine_test_extra"));
+                                        }
+                                        if(!detail.getString("urine_protein").equals("urine_protein")) {
+                                            TextView urine_protein = (TextView) findViewById(R.id.urine_protein);
+                                            urine_protein.setText(detail.getString("urine_protein"));
+                                        }
+                                        if(!detail.getString("urine_glucose").equals("null")) {
+                                            TextView urine_glucose = (TextView) findViewById(R.id.urine_glucose);
+                                            urine_glucose.setText(detail.getString("urine_glucose"));
+                                        }
+                                        if(!detail.getString("ketone_bodies").equals("null")) {
+                                            TextView ketone_bodies = (TextView) findViewById(R.id.ketone_bodies);
+                                            ketone_bodies.setText(detail.getString("ketone_bodies"));
+                                        }
+                                        if(!detail.getString("occult_blood").equals("null")) {
+                                            TextView occult_blood = (TextView) findViewById(R.id.occult_blood);
+                                            occult_blood.setText(detail.getString("occult_blood"));
+                                        }
+                                        if(!detail.getString("routine_urine_test_extra").equals("null")) {
+                                            TextView routine_urine_test_extra = (TextView) findViewById(R.id.routine_urine_test_extra);
+                                            routine_urine_test_extra.setText(detail.getString("routine_urine_test_extra"));
+                                        }
+                                        if(!detail.getString("blood_glucose_mmol").equals("null")) {
+                                            TextView blood_glucose_mmol = (TextView) findViewById(R.id.blood_glucose_mmol);
+                                            blood_glucose_mmol.setText(detail.getString("blood_glucose_mmol"));
+                                        }
+                                        if(!detail.getString("blood_glucose_mg").equals("null")) {
+                                            TextView blood_glucose_mg = (TextView) findViewById(R.id.blood_glucose_mg);
+                                            blood_glucose_mg.setText(detail.getString("blood_glucose_mg"));
+                                        }
+                                        if(!detail.getString("electr_gram").equals("null")) {
+                                            TextView electr_gram = (TextView) findViewById(R.id.electr_gram);
+                                            electr_gram.setText(detail.getString("electr_gram"));
+                                        }
+                                        if(!detail.getString("electr_gram_abnormal").equals("null")) {
+                                            TextView electr_gram_abnormal = (TextView) findViewById(R.id.electr_gram_abnormal);
+                                            electr_gram_abnormal.setText(detail.getString("electr_gram_abnormal"));
+                                        }
+                                        if(!detail.getString("alt").equals("null")) {
+                                            TextView alt = (TextView) findViewById(R.id.alt);
+                                            alt.setText(detail.getString("alt"));
+                                        }
+                                        if(!detail.getString("ast").equals("null")) {
+                                            TextView ast = (TextView) findViewById(R.id.ast);
+                                            ast.setText(detail.getString("ast"));
+                                        }
+                                        if(!detail.getString("tbil").equals("null")) {
+                                            TextView tbil = (TextView) findViewById(R.id.tbil);
+                                            tbil.setText(detail.getString("tbil"));
+                                        }
+                                        if(!detail.getString("scr").equals("null")) {
+                                            TextView scr = (TextView) findViewById(R.id.scr);
+                                            scr.setText(detail.getString("scr"));
+                                        }
+                                        if(!detail.getString("bun").equals("null")) {
+                                            TextView bun = (TextView) findViewById(R.id.bun);
+                                            bun.setText(detail.getString("bun"));
+                                        }
+                                        if(!detail.getString("tc").equals("null")) {
+                                            TextView tc = (TextView) findViewById(R.id.tc);
+                                            tc.setText(detail.getString("tc"));
+                                        }
+                                        if(!detail.getString("tg").equals("null")) {
+                                            TextView tg = (TextView) findViewById(R.id.tg);
+                                            tg.setText(detail.getString("tg"));
+                                        }
+                                        if(!detail.getString("ldl_c").equals("null")) {
+                                            TextView ldl_c = (TextView) findViewById(R.id.ldl_c);
+                                            ldl_c.setText(detail.getString("ldl_c"));
+                                        }
+                                        if(!detail.getString("hdl_c").equals("null")) {
+                                            TextView hdl_c = (TextView) findViewById(R.id.hdl_c);
+                                            hdl_c.setText(detail.getString("hdl_c"));
+                                        }
+                                        if(!detail.getString("b_ultrasonic").equals("null")) {
+                                            TextView b_ultrasonic = (TextView) findViewById(R.id.b_ultrasonic);
+                                            b_ultrasonic.setText(detail.getString("b_ultrasonic"));
+                                        }
 
 
                                     } else {

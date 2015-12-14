@@ -115,12 +115,12 @@ public class ServicesActivity extends Activity {
                     intent.putExtra("record_id", summary.getRecordId());
                     startActivity(intent);
                     finish();
-                } else if(item_alias.equals("body_exam_table")){
+                } else if(item_alias.equals("body_exam_table")||item_alias.equals("physical_examination")){
                     Intent intent = new Intent(ServicesActivity.this, BodyExamActivity.class);
                     intent.putExtra("record_id", summary.getRecordId());
                     startActivity(intent);
                     finish();
-                } else if(type_alias.equals("pregnant") && item_alias.equals("aftercare_2")|| item_alias.equals("aftercare_3")|| item_alias.equals("aftercare_4")) {
+                } else if(type_alias.equals("pregnant") &&( item_alias.equals("aftercare_2")|| item_alias.equals("aftercare_3")|| item_alias.equals("aftercare_4")|| item_alias.equals("aftercare_5"))) {
                     Intent intent = new Intent(ServicesActivity.this, AftercareActivity.class);
                     intent.putExtra("record_id", summary.getRecordId());
                     startActivity(intent);
