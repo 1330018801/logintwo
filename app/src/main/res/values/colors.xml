@@ -17,6 +17,7 @@
     <color name="colorPrimaryDark">#666666</color>
     <color name="colorAccent">#428bca</color>
     <color name="btn_register">#228822</color>
+    <color name="activitytheme">#43CD80</color>
 
     <color name="list_divider">#d9d9d9</color>
     <color name="list_row_start_color">#ffffff</color>

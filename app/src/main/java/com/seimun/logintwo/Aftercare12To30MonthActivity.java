@@ -1,9 +1,8 @@
 package com.seimun.logintwo;
 
+
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
@@ -45,7 +44,10 @@ public class Aftercare12To30MonthActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_aftercare12_to30_month);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        toolbar.setTitle("");
         setSupportActionBar(toolbar);
+        toolbar.setNavigationIcon(R.drawable.back);
+
 
         btnLogout = (Button)findViewById(R.id.btnLogout);
         btnMain = (Button)findViewById(R.id.btnMain);
@@ -68,12 +70,14 @@ public class Aftercare12To30MonthActivity extends AppCompatActivity {
             }
         });
 
-        btnMain.setOnClickListener(new View.OnClickListener() {
+        btnMain.setOnClickListener(new View.OnClickListener(){
+
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(Aftercare12To30MonthActivity.this, ServicesActivity.class);
                 startActivity(intent);
                 finish();
+
             }
         });
 

@@ -1,8 +1,10 @@
 package com.seimun.logintwo.activity;
 
-import android.app.Activity;
+
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -26,7 +28,7 @@ import org.json.JSONObject;
 import java.util.HashMap;
 import java.util.Map;
 
-public class AntenatalActivity extends Activity {
+public class AntenatalActivity extends AppCompatActivity {
     private static final String TAG = DetailActivity.class.getSimpleName();
 
     private Button btnLogout;
@@ -39,6 +41,10 @@ public class AntenatalActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_antenatal);
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        toolbar.setTitle("");
+        setSupportActionBar(toolbar);
+        toolbar.setNavigationIcon(R.drawable.back);
 
         btnLogout = (Button)findViewById(R.id.btnLogout);
         btnMain = (Button)findViewById(R.id.btnMain);
@@ -60,14 +66,16 @@ public class AntenatalActivity extends Activity {
             }
         });
 
-        btnMain.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(AntenatalActivity.this, ServicesActivity.class);
-                startActivity(intent);
-                finish();
-            }
-        });
+        btnMain.setOnClickListener(new View.OnClickListener(){
+
+           @Override
+           public void onClick(View view) {
+               Intent intent = new Intent(AntenatalActivity.this, ServicesActivity.class);
+               startActivity(intent);
+               finish();
+
+           }
+       });
 
         if (record_id != 0) {
             Log.e(TAG, "开始从后台获取详情");

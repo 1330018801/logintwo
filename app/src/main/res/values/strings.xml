@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">三河市基本公共卫生系统注册登陆</string>
-    <string name="hint_mobile">手机号码</string>
-    <string name="hint_password">密码</string>
+    <string name="hint_mobile">请输入手机号码</string>
+    <string name="hint_password">请输入密码</string>
     <string name="hint_name">姓名</string>
     <string name="btn_login">登陆</string>
     <string name="btn_register">注册</string>
@@ -14,20 +14,21 @@
     <string name="btn_main">回到主界面</string>
     <string name="name">姓名</string>
     <string name="hint_identity">身份证号码</string>
-    <string name="title_activity_antenatal">AntenatalActivity</string>
-    <string name="title_activity_hypertension_aftercare">hypertension_aftercare</string>
-    <string name="title_activity_postpartum_visit">PostpartumVisitActivity</string>
-    <string name="title_activity_diabetes_aftercare">DiabetesAftercareActivity</string>
-    <string name="title_activity_body_exam">BodyExamActivity</string>
-    <string name="title_activity_aftercare">AftercareActivity</string>
-    <string name="title_activity_postpartum42_exam">Postpartum42ExamActivity</string>
-    <string name="title_activity_vaccine_card">VaccineCardActivity</string>
-    <string name="title_activity_vaccination">VaccinationActivity</string>
-    <string name="title_activity_newborn_family_visit">NewbornFamilyVisitActivity</string>
-    <string name="title_activity_aftercare1_to8_month">Aftercare1To8MonthActivity</string>
-    <string name="title_activity_aftercare12_to30_month">Aftercare12To30MonthActivity</string>
-    <string name="title_activity_aftercare3_to6_year">Aftercare3To6YearActivity</string>
-    <string name="title_activity_tcm_aftercare">TcmAftercareActivity</string>
-    <string name="title_activity_psychiatric_aftercare">PsychiatricAftercareActivity</string>
-    <string name="title_activity_old_identify">OldIdentifyActivity</string>
+    <string name="title_activity_antenatal">孕产妇第一次随访</string>
+    <string name="title_activity_hypertension_aftercare">高血压随访</string>
+    <string name="title_activity_postpartum_visit">产后访视</string>
+    <string name="title_activity_diabetes_aftercare">Ⅱ型糖尿病随访</string>
+    <string name="title_activity_body_exam">健康体检</string>
+    <string name="title_activity_aftercare">孕产妇随访</string>
+    <string name="title_activity_postpartum42_exam">产后42天访视</string>
+    <string name="title_activity_vaccine_card">预防接种卡</string>
+    <string name="title_activity_vaccination">预防接种记录</string>
+    <string name="title_activity_newborn_family_visit">新生儿家庭访视</string>
+    <string name="title_activity_aftercare1_to8_month">1岁以内儿童体检</string>
+    <string name="title_activity_aftercare12_to30_month">1~2岁儿童体检</string>
+    <string name="title_activity_aftercare3_to6_year">3~6岁儿童体检</string>
+    <string name="title_activity_tcm_aftercare">儿童中医药管理</string>
+    <string name="title_activity_psychiatric_aftercare">重性精神疾病患者随访</string>
+    <string name="title_activity_old_identify">老年人中医体质辨识</string>
+    <string name="title_activity_main2">Main2Activity</string>
 </resources>

@@ -2,8 +2,6 @@ package com.seimun.logintwo;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
@@ -31,7 +29,8 @@ import org.json.JSONObject;
 import java.util.HashMap;
 import java.util.Map;
 
-public class Postpartum42ExamActivity extends AppCompatActivity {private static final String TAG = DetailActivity.class.getSimpleName();
+public class Postpartum42ExamActivity extends AppCompatActivity {
+    private static final String TAG = DetailActivity.class.getSimpleName();
 
     private Button btnLogout;
     private Button btnMain;
@@ -44,7 +43,10 @@ public class Postpartum42ExamActivity extends AppCompatActivity {private static 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_postpartum42_exam);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        toolbar.setTitle("");
         setSupportActionBar(toolbar);
+        toolbar.setNavigationIcon(R.drawable.back);
+
 
         btnLogout = (Button)findViewById(R.id.btnLogout);
         btnMain = (Button)findViewById(R.id.btnMain);
@@ -66,12 +68,14 @@ public class Postpartum42ExamActivity extends AppCompatActivity {private static 
             }
         });
 
-        btnMain.setOnClickListener(new View.OnClickListener() {
+        btnMain.setOnClickListener(new View.OnClickListener(){
+
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(Postpartum42ExamActivity.this, ServicesActivity.class);
                 startActivity(intent);
                 finish();
+
             }
         });
 

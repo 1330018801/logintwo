@@ -1,65 +1,91 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
-    android:background="@color/bg_login"
-    android:gravity="center"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/login"
     android:orientation="vertical"
     android:padding="10dp">
 
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/icon"
+            android:layout_marginTop="40dp"
+            android:layout_gravity="center"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="三河市公共卫生系统"
+            android:textSize="20dp"
+            android:layout_gravity="center"
+            style="@style/Base.TextAppearance.AppCompat.Body1"/>
     <LinearLayout
-        android:layout_width="fill_parent"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
         android:orientation="vertical"
         android:paddingLeft="20dp"
         android:paddingRight="20dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp">
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="40dp"
+                android:src="@drawable/phone"/>
         <EditText
             android:id="@+id/mobile"
-            android:layout_width="fill_parent"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="10dp"
-            android:background="@color/white"
             android:hint="@string/hint_mobile"
-            android:inputType="textEmailAddress"
+            android:inputType="phone"
             android:padding="10dp"
             android:singleLine="true"
             android:textColor="@color/input_login"
             android:textColorHint="@color/input_login_hint"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp">
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="40dp"
+                android:src="@drawable/lock"/>
         <EditText
             android:id="@+id/password"
-            android:layout_width="fill_parent"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="10dp"
-            android:background="@color/white"
             android:hint="@string/hint_password"
             android:inputType="textPassword"
             android:padding="10dp"
             android:singleLine="true"
             android:textColor="@color/input_login"
             android:textColorHint="@color/input_login_hint"/>
+        </LinearLayout>
         <Button
             android:id="@+id/btnLogin"
-            android:layout_width="fill_parent"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
             android:padding="10dp"
-            android:background="@color/btn_login_bg"
+            android:background="@drawable/shape"
             android:text="@string/btn_login"
             android:textAlignment="center"
             android:textSize="22dp"
-            android:textColor="@color/btn_login"/>
+            android:textColor="#FFF" />
         <Button
             android:id="@+id/btnLinkToRegisterScreen"
-            android:layout_width="fill_parent"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="40dp"
+            android:layout_marginTop="10dp"
             android:background="@null"
             android:text="@string/btn_link_to_register"
             android:textAllCaps="false"
-            android:textColor="@color/white"
+            android:textColor="#A8A8A8"
             android:textAlignment="center"
             android:textSize="16dp"/>
     </LinearLayout>
+
 
 </LinearLayout>

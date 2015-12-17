@@ -1,8 +1,9 @@
 package com.seimun.logintwo.activity;
 
-import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -25,7 +26,7 @@ import org.json.JSONObject;
 import java.util.HashMap;
 import java.util.Map;
 
-public class InfoActivity extends Activity {
+public class InfoActivity extends AppCompatActivity {
     private static final String TAG = InfoActivity.class.getSimpleName();
 
     private Button btnLogout;
@@ -39,6 +40,7 @@ public class InfoActivity extends Activity {
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_info);
+
 
         btnLogout = (Button)findViewById(R.id.btnLogout);
         btnMain = (Button)findViewById(R.id.btnMain);

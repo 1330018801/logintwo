@@ -2,8 +2,6 @@ package com.seimun.logintwo;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
@@ -37,6 +35,7 @@ public class OldIdentifyActivity extends AppCompatActivity {
     private Button btnLogout;
     private Button btnMain;
 
+
     private SQLiteHandler db;
     private SessionManager session;
 
@@ -45,7 +44,9 @@ public class OldIdentifyActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_old_identify);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        toolbar.setTitle("");
         setSupportActionBar(toolbar);
+        toolbar.setNavigationIcon(R.drawable.back);
 
         btnLogout = (Button)findViewById(R.id.btnLogout);
         btnMain = (Button)findViewById(R.id.btnMain);
@@ -68,12 +69,16 @@ public class OldIdentifyActivity extends AppCompatActivity {
             }
         });
 
-        btnMain.setOnClickListener(new View.OnClickListener() {
+
+
+        btnMain.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view) {
+
                 Intent intent = new Intent(OldIdentifyActivity.this, ServicesActivity.class);
                 startActivity(intent);
                 finish();
+
             }
         });
 

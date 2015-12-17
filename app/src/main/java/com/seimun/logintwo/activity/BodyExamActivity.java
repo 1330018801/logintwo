@@ -41,7 +41,10 @@ public class BodyExamActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_body_exam);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        toolbar.setTitle("");
         setSupportActionBar(toolbar);
+        toolbar.setNavigationIcon(R.drawable.back);
+
         btnLogout = (Button) findViewById(R.id.btnLogout);
         btnMain = (Button) findViewById(R.id.btnMain);
 
@@ -61,14 +64,16 @@ public class BodyExamActivity extends AppCompatActivity {
                 }
             });
 
-            btnMain.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    Intent intent = new Intent(BodyExamActivity.this, ServicesActivity.class);
-                    startActivity(intent);
-                    finish();
-                }
-            });
+        btnMain.setOnClickListener(new View.OnClickListener(){
+
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(BodyExamActivity.this, ServicesActivity.class);
+                startActivity(intent);
+                finish();
+
+            }
+        });
 
             if (record_id != 0) {
                 Log.e(TAG, "开始从后台获取详情");

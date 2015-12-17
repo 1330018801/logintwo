@@ -41,7 +41,10 @@ public class PostpartumVisitActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_postpartum_visit);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        toolbar.setTitle("");
         setSupportActionBar(toolbar);
+        toolbar.setNavigationIcon(R.drawable.back);
+
 
         btnLogout = (Button)findViewById(R.id.btnLogout);
         btnMain = (Button)findViewById(R.id.btnMain);
@@ -63,12 +66,14 @@ public class PostpartumVisitActivity extends AppCompatActivity {
             }
         });
 
-        btnMain.setOnClickListener(new View.OnClickListener() {
+        btnMain.setOnClickListener(new View.OnClickListener(){
+
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(PostpartumVisitActivity.this, ServicesActivity.class);
                 startActivity(intent);
                 finish();
+
             }
         });
 

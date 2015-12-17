@@ -1,9 +1,10 @@
 package com.seimun.logintwo.activity;
 
-import android.app.Activity;
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
@@ -16,10 +17,7 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.VolleyLog;
 import com.android.volley.toolbox.StringRequest;
-import com.seimun.logintwo.Aftercare12To30MonthActivity;
-import com.seimun.logintwo.Aftercare1To8MonthActivity;
 import com.seimun.logintwo.Aftercare3Month;
-import com.seimun.logintwo.Aftercare3To6YearActivity;
 import com.seimun.logintwo.AftercareActivity;
 import com.seimun.logintwo.NewbornFamilyVisitActivity;
 import com.seimun.logintwo.OldIdentifyActivity;
@@ -44,7 +42,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class ServicesActivity extends Activity {
+public class ServicesActivity extends AppCompatActivity {
     private static final String TAG = ServicesActivity.class.getSimpleName();
 
     private ProgressDialog pDialog;

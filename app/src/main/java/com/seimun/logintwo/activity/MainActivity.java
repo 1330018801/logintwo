@@ -1,8 +1,8 @@
 package com.seimun.logintwo.activity;
 
-import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -13,7 +13,7 @@ import com.seimun.logintwo.helper.SessionManager;
 
 import java.util.HashMap;
 
-public class MainActivity extends Activity {
+public class MainActivity extends AppCompatActivity {
 
     private TextView txtName;
     private TextView txtMobile;

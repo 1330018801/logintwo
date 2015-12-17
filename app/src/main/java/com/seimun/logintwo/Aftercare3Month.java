@@ -46,6 +46,7 @@ public class Aftercare3Month extends Aftercare1To8MonthActivity {
         setContentView(R.layout.activity_aftercare1_to8_month);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+       
         btnLogout = (Button)findViewById(R.id.btnLogout);
         btnMain = (Button)findViewById(R.id.btnMain);
 
@@ -67,12 +68,14 @@ public class Aftercare3Month extends Aftercare1To8MonthActivity {
             }
         });
 
-        btnMain.setOnClickListener(new View.OnClickListener() {
+        btnMain.setOnClickListener(new View.OnClickListener(){
+
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(Aftercare3Month.this, ServicesActivity.class);
                 startActivity(intent);
                 finish();
+
             }
         });
 

@@ -44,7 +44,10 @@ public class Aftercare6Month extends Aftercare1To8MonthActivity{
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_aftercare1_to8_month);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        toolbar.setTitle("");
         setSupportActionBar(toolbar);
+        toolbar.setNavigationIcon(R.drawable.back);
+
         btnLogout = (Button)findViewById(R.id.btnLogout);
         btnMain = (Button)findViewById(R.id.btnMain);
 

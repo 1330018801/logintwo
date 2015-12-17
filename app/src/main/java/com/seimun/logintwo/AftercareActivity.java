@@ -1,12 +1,12 @@
 package com.seimun.logintwo;
 
+
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -45,9 +45,14 @@ public class AftercareActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_aftercare);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        toolbar.setTitle("");
         setSupportActionBar(toolbar);
+        toolbar.setNavigationIcon(R.drawable.back);
+
+
         btnLogout = (Button) findViewById(R.id.btnLogout);
         btnMain = (Button) findViewById(R.id.btnMain);
+
 
         db = new SQLiteHandler(getApplicationContext());
         session = new SessionManager(getApplicationContext());
@@ -73,6 +78,21 @@ public class AftercareActivity extends AppCompatActivity {
                     finish();
                 }
             });
+
+        toolbar.setNavigationOnClickListener(new View.OnClickListener(){
+
+            @Override
+            public void onClick(View view) {
+
+                Intent intent = new Intent(AftercareActivity.this, ServicesActivity.class);
+                startActivity(intent);
+                finish();
+
+            }
+        });
+
+
+
             if (record_id != 0) {
                 Log.e(TAG, "开始从后台获取详情");
                 final StringRequest detailReq = new StringRequest(
@@ -143,8 +163,8 @@ public class AftercareActivity extends AppCompatActivity {
                     public void onErrorResponse(VolleyError error) {
                         VolleyLog.d(TAG, "Error: " + error.getMessage());
                     }
-                }
-                ) {
+                })
+                {
                     @Override
                     protected Map<String, String> getParams() {
                         Map<String, String> params = new HashMap<String, String>();
