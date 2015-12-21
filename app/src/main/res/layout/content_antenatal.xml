@@ -16,31 +16,39 @@
         tools:context="com.seimun.mobile_health.Aftercare1"
         tools:showIn="@layout/activity_aftercare1">
         <LinearLayout
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_marginTop="40dp">
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="服务类别："
-                android:id="@+id/textView401"/>
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_marginTop="45dp">
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="孕产妇健康服务"
-                android:id="@+id/textView402"/>
-            <TextView
+                android:textSize="22sp"/>
+            <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="服务项目："
-                android:id="@+id/textView403"
-                android:layout_marginLeft="10dp"/>
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="第1次产前随访"
-                android:id="@+id/textView404"/>
+                android:layout_marginTop="10dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="随访医生：" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/doctor_signature"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=" 填表时间："
+                    android:layout_marginLeft="20dp"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/visit_date"/>
+            </LinearLayout>
+
         </LinearLayout>
         <LinearLayout
             android:layout_width="wrap_content"
@@ -50,27 +58,15 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text=" 填表时间："
-                />
+                android:text="填表孕周："/>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/visit_date"/>
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="填表孕周："
-                android:layout_marginLeft="30dp"/>
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/weeks"
-                />
+                android:id="@+id/weeks" />
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="周"
-                android:id="@+id/textView409"
                 android:layout_marginLeft="3dp"/>
         </LinearLayout>
         <LinearLayout
@@ -81,13 +77,11 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="孕妇年龄："
-                />
+                android:text="孕妇年龄：" />
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/age"
-                />
+                android:id="@+id/age" />
         </LinearLayout>
         <LinearLayout
             android:layout_width="wrap_content"
@@ -97,8 +91,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="丈夫姓名："
-                />
+                android:text="丈夫姓名：" />
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -122,8 +115,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="丈夫电话："
-                />
+                android:text="丈夫电话：" />
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -137,8 +129,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="孕次："
-                />
+                android:text="孕次：" />
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -147,7 +138,6 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="产次"
-                android:id="@+id/textView420"
                 android:layout_marginLeft="30dp"/>
             <TextView
                 android:layout_width="wrap_content"
@@ -162,7 +152,6 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="次"
-                android:id="@+id/textView423"
                 android:layout_marginLeft="3dp"/>
             <TextView
                 android:layout_width="wrap_content"
@@ -177,7 +166,6 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="次"
-                android:id="@+id/textView426"
                 android:layout_marginLeft="3dp"/>
         </LinearLayout>
         <LinearLayout
@@ -188,8 +176,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="末次月经："
-                />
+                android:text="末次月经：" />
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -212,8 +199,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="身高："
-                />
+                android:text="身高：" />
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -222,7 +208,6 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="cm"
-                android:id="@+id/textView433"
                 android:layout_marginLeft="3dp"/>
             <TextView
                 android:layout_width="wrap_content"
@@ -237,7 +222,6 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Kg"
-                android:id="@+id/textView436"
                 android:layout_marginLeft="3dp"/>
             <TextView
                 android:layout_width="wrap_content"
@@ -257,8 +241,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="血压："
-                android:id="@+id/textView439"/>
+                android:text="血压："/>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -267,7 +250,6 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="/"
-                android:id="@+id/textView441"
                 android:layout_marginLeft="3dp"/>
             <TextView
                 android:layout_width="wrap_content"
@@ -278,7 +260,6 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="mmHg"
-                android:id="@+id/textView443"
                 android:layout_marginLeft="3dp"/>
         </LinearLayout>
         <LinearLayout
@@ -289,8 +270,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="既往史："
-                />
+                android:text="既往史：" />
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -304,8 +284,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="家族史："
-                />
+                android:text="家族史：" />
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -319,8 +298,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="个人史："
-                />
+                android:text="个人史：" />
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -334,8 +312,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="妇科手术史："
-                />
+                android:text="妇科手术史：" />
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -349,8 +326,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="孕产史"
-                android:id="@+id/textView454"/>
+                android:text="孕产史"/>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -396,8 +372,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="出生缺陷儿："
-                android:layout_marginLeft="54dp"/>
+                android:text="出生缺陷儿："/>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -411,8 +386,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="听诊"
-                android:id="@+id/textView465"/>
+                android:text="听诊"/>
         </LinearLayout>
         <LinearLayout
             android:layout_width="wrap_content"
@@ -422,8 +396,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="心脏："
-                />
+                android:text="心脏：" />
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -431,8 +404,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="肺部："
-                android:layout_marginLeft="30dp"/>
+                android:text="肺部："/>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -442,7 +414,6 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="妇科检查"
-            android:id="@+id/textView470"
             android:layout_marginTop="25dp"/>
         <LinearLayout
             android:layout_width="wrap_content"
@@ -452,8 +423,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="外阴："
-                />
+                android:text="外阴：" />
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -461,8 +431,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="阴道："
-                android:layout_marginLeft="30dp"/>
+                android:text="阴道："/>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -476,8 +445,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="宫颈："
-                />
+                android:text="宫颈：" />
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -485,8 +453,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="子宫："
-                android:layout_marginLeft="30dp"/>
+                android:text="子宫："/>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -500,8 +467,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="附件："
-                />
+                android:text="附件：" />
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -511,13 +477,11 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="辅助检查"
-            android:id="@+id/textView481"
             android:layout_marginTop="25dp"/>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="血常规"
-            android:id="@+id/textView482"
             android:layout_marginTop="5dp"/>
         <LinearLayout
             android:layout_width="wrap_content"
@@ -527,8 +491,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="白细胞计数值："
-                />
+                android:text="白细胞计数值：" />
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -537,7 +500,6 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="10^9/L"
-                android:id="@+id/textView485"
                 android:layout_marginLeft="3dp"/>
             <TextView
                 android:layout_width="wrap_content"
@@ -552,7 +514,6 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="g/L"
-                android:id="@+id/textView488"
                 android:layout_marginLeft="3dp"/>
         </LinearLayout>
         <LinearLayout
@@ -563,8 +524,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="血小板计数值："
-                />
+                android:text="血小板计数值：" />
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -573,14 +533,12 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="10^9/L"
-                android:id="@+id/textView491"
                 android:layout_marginLeft="3dp"/>
         </LinearLayout>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="尿常规"
-            android:id="@+id/textView492"
             android:layout_marginTop="5dp"/>
         <LinearLayout
             android:layout_width="wrap_content"
@@ -590,8 +548,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="尿蛋白："
-                />
+                android:text="尿蛋白：" />
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -632,8 +589,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="血型"
-                android:id="@+id/textView501"/>
+                android:text="血型"/>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -661,8 +617,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="血糖*"
-                />
+                android:text="血糖*" />
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -672,14 +627,12 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="mmol/L"
-                android:id="@+id/textView508"
                 android:layout_marginLeft="3dp"/>
         </LinearLayout>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="肝功能"
-            android:id="@+id/textView509"/>
+            android:text="肝功能"/>
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -688,8 +641,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="血清谷丙转氨酶："
-                />
+                android:text="血清谷丙转氨酶：" />
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -698,7 +650,6 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="U/L"
-                android:id="@+id/textView512"
                 android:layout_marginLeft="3dp"/>
             <TextView
                 android:layout_width="wrap_content"
@@ -713,7 +664,6 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="U/L"
-                android:id="@+id/textView515"
                 android:layout_marginLeft="3dp"/>
         </LinearLayout>
         <LinearLayout
@@ -724,8 +674,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="白蛋白："
-                />
+                android:text="白蛋白：" />
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -734,7 +683,6 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="g/L"
-                android:id="@+id/textView518"
                 android:layout_marginLeft="3dp"/>
             <TextView
                 android:layout_width="wrap_content"
@@ -749,7 +697,6 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="μmol/L"
-                android:id="@+id/textView521"
                 android:layout_marginLeft="3dp"/>
         </LinearLayout>
         <LinearLayout
@@ -760,8 +707,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="结合胆红素："
-                />
+                android:text="结合胆红素：" />
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -770,14 +716,12 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="μmol/L"
-                android:id="@+id/textView524"
                 android:layout_marginLeft="3dp"/>
         </LinearLayout>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="肾功能"
-            android:id="@+id/textView525"/>
+            android:text="肾功能"/>
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -786,8 +730,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="血清肌酐："
-                />
+                android:text="血清肌酐：" />
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -796,7 +739,6 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="μmol/L"
-                android:id="@+id/textView528"
                 android:layout_marginLeft="3dp"/>
             <TextView
                 android:layout_width="wrap_content"
@@ -811,14 +753,12 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="mmol/L"
-                android:id="@+id/textView531"
                 android:layout_marginLeft="3dp"/>
         </LinearLayout>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="乙型肝炎五项："
-            android:id="@+id/textView532"
             android:layout_marginTop="5dp"/>
         <LinearLayout
             android:layout_width="wrap_content"
@@ -828,8 +768,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="乙型肝炎表面抗原："
-                />
+                android:text="乙型肝炎表面抗原：" />
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -876,8 +815,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="乙型肝炎核心抗体："
-                />
+                android:text="乙型肝炎核心抗体：" />
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -891,8 +829,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="总体评估："
-                />
+                android:text="总体评估：" />
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -906,8 +843,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="保健指导："
-                />
+                android:text="保健指导：" />
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -921,8 +857,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="转诊建议："
-                />
+                android:text="转诊建议：" />
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -959,21 +894,12 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="下次随访时间："
-                />
+                android:text="下次随访时间：" />
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/next_visit_date"/>
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="本次随访医生："
-                />
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/doctor_signature"/>
+
         </LinearLayout>
         <Button
             android:id="@+id/btnMain"

@@ -100,6 +100,8 @@ public class DiabetesAftercareActivity extends AppCompatActivity {
                                         JSONObject detail = obj.getJSONObject("detail");
                                         // Toast.makeText(getApplicationContext(), detail.getString("visit_date"), Toast.LENGTH_SHORT).show();
                                         TextView visit_date = (TextView) findViewById(R.id.visit_date);
+                                        TextView doctor_signature = (TextView) findViewById(R.id.doctor_signature);
+                                        doctor_signature.setText(detail.getString("doctor_signature"));
                                         visit_date.setText(detail.getString("visit_date"));
                                         TextView visit_way = (TextView) findViewById(R.id.visit_way);
                                         visit_way.setText(detail.getString("visit_way"));

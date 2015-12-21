@@ -2,6 +2,8 @@ package com.seimun.logintwo.activity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentActivity;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
@@ -14,6 +16,7 @@ import com.android.volley.Request;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
+import com.seimun.logintwo.Main2Activity;
 import com.seimun.logintwo.R;
 import com.seimun.logintwo.app.AppConfig;
 import com.seimun.logintwo.app.AppController;
@@ -25,6 +28,8 @@ import org.json.JSONObject;
 
 import java.util.HashMap;
 import java.util.Map;
+
+import layout.MyFragment;
 
 public class InfoActivity extends AppCompatActivity {
     private static final String TAG = InfoActivity.class.getSimpleName();
@@ -64,7 +69,7 @@ public class InfoActivity extends AppCompatActivity {
         btnMain.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(InfoActivity.this, MainActivity.class);
+                Intent intent = new Intent(InfoActivity.this, Main2Activity.class);
                 startActivity(intent);
                 finish();
             }

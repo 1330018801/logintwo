@@ -19,6 +19,7 @@ import com.android.volley.VolleyLog;
 import com.android.volley.toolbox.StringRequest;
 import com.seimun.logintwo.Aftercare3Month;
 import com.seimun.logintwo.AftercareActivity;
+import com.seimun.logintwo.Main2Activity;
 import com.seimun.logintwo.NewbornFamilyVisitActivity;
 import com.seimun.logintwo.OldIdentifyActivity;
 import com.seimun.logintwo.Postpartum42ExamActivity;
@@ -41,6 +42,8 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+
+import layout.MyFragment;
 
 public class ServicesActivity extends AppCompatActivity {
     private static final String TAG = ServicesActivity.class.getSimpleName();
@@ -228,7 +231,7 @@ public class ServicesActivity extends AppCompatActivity {
         btnMain.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(ServicesActivity.this, MainActivity.class);
+                Intent intent = new Intent(ServicesActivity.this, Main2Activity.class);
                 startActivity(intent);
                 finish();
             }

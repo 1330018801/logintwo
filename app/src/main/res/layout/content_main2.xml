@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.seimun.logintwo.Main2Activity"
+    tools:showIn="@layout/activity_main2">
+
+    <FrameLayout
+        android:id="@+id/main_content"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
+
+    <RadioGroup
+        android:id="@+id/tab_menu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@color/list_divider">
+
+        <RadioButton
+            android:id="@+id/id_tab_baogao"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_weight="1"
+            android:button="@null"
+            android:checked="true"
+            android:drawableTop="@drawable/tab_select_baogao"
+            android:gravity="center_horizontal|bottom"
+            android:paddingTop="2dp"
+            android:text="健康报告"
+            android:textColor="@color/tab_selector_color" />
+
+        <RadioButton
+            android:id="@+id/id_tab_yangsheng"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_weight="1"
+            android:button="@null"
+            android:drawableTop="@drawable/tab_select_jiaoyu"
+            android:gravity="center_horizontal|bottom"
+            android:paddingTop="2dp"
+            android:text="健康教育"
+            android:textColor="@color/tab_selector_color" />
+
+        <RadioButton
+            android:id="@+id/id_tab_ziliao"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_weight="1"
+            android:button="@null"
+            android:drawableTop="@drawable/tab_select_my"
+            android:gravity="center_horizontal|bottom"
+            android:paddingTop="2dp"
+            android:text="个人资料"
+            android:textColor="@color/tab_selector_color" />
+
+        </RadioGroup>
+
+</LinearLayout>

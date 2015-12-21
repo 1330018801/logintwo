@@ -31,4 +31,7 @@
     <string name="title_activity_psychiatric_aftercare">重性精神疾病患者随访</string>
     <string name="title_activity_old_identify">老年人中医体质辨识</string>
     <string name="title_activity_main2">Main2Activity</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
