@@ -55,7 +55,7 @@ public class SQLiteHandler extends SQLiteOpenHelper {
         db.execSQL(CREATE_LOGIN_TABLE);
 
         String CREATE_SUMMARY_TABLE = "CREATE TABLE " + TABLE_SUMMARY + "("
-                + KEY_SUMMARY_ID + " INTEGER PRIMARY KEY AUTOINCREMENT,"
+                + KEY_SUMMARY_ID + " INTEGER PRIMARY KEY,"
                 + KEY_RECORD_ID + " TEXT," + KEY_TITLE + " TEXT, "
                 + KEY_CLINIC + " TEXT," + KEY_PROVIDER + " TEXT,"
                 + KEY_SERVICE_TIME + " TEXT," + KEY_TYPE_ALIAS + " TEXT,"
