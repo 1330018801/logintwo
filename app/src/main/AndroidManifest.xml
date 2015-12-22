@@ -65,51 +65,51 @@
             android:label="@string/title_activity_body_exam"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".AftercareActivity"
+            android:name=".activity.AftercareActivity"
             android:label="@string/title_activity_aftercare"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".Postpartum42ExamActivity"
+            android:name=".activity.Postpartum42ExamActivity"
             android:label="@string/title_activity_postpartum42_exam"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".VaccineCardActivity"
+            android:name=".activity.VaccineCardActivity"
             android:label="@string/title_activity_vaccine_card"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".VaccinationActivity"
+            android:name=".activity.VaccinationActivity"
             android:label="@string/title_activity_vaccination"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".NewbornFamilyVisitActivity"
+            android:name=".activity.NewbornFamilyVisitActivity"
             android:label="@string/title_activity_newborn_family_visit"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".Aftercare1To8MonthActivity"
+            android:name=".activity.Aftercare1To8MonthActivity"
             android:label="@string/title_activity_aftercare1_to8_month"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".Aftercare12To30MonthActivity"
+            android:name=".activity.Aftercare12To30MonthActivity"
             android:label="@string/title_activity_aftercare12_to30_month"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".Aftercare3To6YearActivity"
+            android:name=".activity.Aftercare3To6YearActivity"
             android:label="@string/title_activity_aftercare3_to6_year"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".TcmAftercareActivity"
+            android:name=".activity.TcmAftercareActivity"
             android:label="@string/title_activity_tcm_aftercare"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".PsychiatricAftercareActivity"
+            android:name=".activity.PsychiatricAftercareActivity"
             android:label="@string/title_activity_psychiatric_aftercare"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".OldIdentifyActivity"
+            android:name=".activity.OldIdentifyActivity"
             android:label="@string/title_activity_old_identify"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".Aftercare3Month"
+            android:name=".activity.Aftercare3Month"
             android:label="@string/title_activity_aftercare1_to8_month"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
@@ -158,7 +158,7 @@
             android:value="@integer/google_play_services_version" />
 
         <activity
-            android:name=".Main2Activity"
+            android:name=".activity.Main2Activity"
             android:label="@string/title_activity_main2"
             android:theme="@style/AppTheme.NoActionBar"
             android:launchMode="singleTask"></activity>

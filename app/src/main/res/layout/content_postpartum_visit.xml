@@ -156,11 +156,15 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/breast_abnormal"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp">
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="恶露："
-            android:layout_marginLeft="40dp"/>
+            android:text="恶露："/>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -187,11 +191,15 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/uterus_abnormal"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp">
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="伤口："
-            android:layout_marginLeft="40dp"/>
+            android:text="伤口："/>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -265,10 +273,14 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/transfer_treatment"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp">
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="25dp"
             android:text="原因：" />
         <TextView
             android:layout_width="wrap_content"

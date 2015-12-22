@@ -1,4 +1,4 @@
-package com.seimun.logintwo;
+package com.seimun.logintwo.activity;
 
 
 import android.content.Intent;
@@ -6,7 +6,6 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
-import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -17,9 +16,7 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.VolleyLog;
 import com.android.volley.toolbox.StringRequest;
-import com.seimun.logintwo.activity.DetailActivity;
-import com.seimun.logintwo.activity.LoginActivity;
-import com.seimun.logintwo.activity.ServicesActivity;
+import com.seimun.logintwo.R;
 import com.seimun.logintwo.app.AppConfig;
 import com.seimun.logintwo.app.AppController;
 import com.seimun.logintwo.helper.SQLiteHandler;
@@ -73,23 +70,11 @@ public class AftercareActivity extends AppCompatActivity {
             btnMain.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    Intent intent = new Intent(AftercareActivity.this, ServicesActivity.class);
+                    Intent intent = new Intent(AftercareActivity.this, Main2Activity.class);
                     startActivity(intent);
                     finish();
                 }
             });
-
-        toolbar.setNavigationOnClickListener(new View.OnClickListener(){
-
-            @Override
-            public void onClick(View view) {
-
-                Intent intent = new Intent(AftercareActivity.this, ServicesActivity.class);
-                startActivity(intent);
-                finish();
-
-            }
-        });
 
 
 

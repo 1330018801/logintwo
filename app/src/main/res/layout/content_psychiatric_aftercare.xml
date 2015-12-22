@@ -13,7 +13,7 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context="com.seimun.logintwo.PsychiatricAftercareActivity"
+    tools:context=".activity.PsychiatricAftercareActivity"
     tools:showIn="@layout/activity_psychiatric_aftercare">
 
     <LinearLayout
@@ -93,11 +93,15 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/insight"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp">
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="睡眠情况："
-            android:layout_marginLeft="40dp"/>
+            android:text="睡眠情况："/>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -135,11 +139,15 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/society_function_individual_life_care"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp">
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="家务劳动："
-            android:layout_marginLeft="40dp"/>
+            android:text="家务劳动："/>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -172,11 +180,15 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/society_function_learn_ability"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp">
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="社会人际交往："
-            android:layout_marginLeft="70dp"/>
+            android:text="社会人际交往："/>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -219,20 +231,6 @@
             android:layout_height="wrap_content"
             android:text="次"
             android:layout_marginLeft="3dp"/>
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="肇祸："
-            android:layout_marginLeft="30dp"/>
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/disease_family_society_effect_accident"/>
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="次"
-            android:layout_marginLeft="3dp"/>
     </LinearLayout>
     <LinearLayout
         android:layout_width="wrap_content"
@@ -242,7 +240,21 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="自伤：" />
+            android:text="肇祸："/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/disease_family_society_effect_accident"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="次"
+            android:layout_marginLeft="3dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="自伤："
+            android:layout_marginLeft="40dp"/>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -252,11 +264,15 @@
             android:layout_height="wrap_content"
             android:text="次"
             android:layout_marginLeft="3dp"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp">
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="自杀："
-            android:layout_marginLeft="40dp"/>
+            android:text="自杀："/>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -360,11 +376,15 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/take_medicine_compliance"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp">
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="治疗效果："
-            android:layout_marginLeft="40dp"/>
+            android:text="治疗效果："/>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -591,11 +611,15 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/transfer_treatment"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp">
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="原因："
-            android:layout_marginLeft="20dp"/>
+            android:text="原因："/>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

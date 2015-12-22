@@ -14,7 +14,6 @@ import com.android.volley.Request.Method;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
-import com.seimun.logintwo.Main2Activity;
 import com.seimun.logintwo.R;
 import com.seimun.logintwo.app.AppConfig;
 import com.seimun.logintwo.app.AppController;

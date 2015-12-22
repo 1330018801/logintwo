@@ -27,7 +27,7 @@ public class MyFragment extends Fragment {
     private TextView txtMobile;
     private Button btnLogout;
     private Button btnInfo;
-    private Button btnServices;
+
 
     private SQLiteHandler db;
     private SessionManager session;
@@ -46,7 +46,7 @@ public class MyFragment extends Fragment {
         txtMobile = (TextView)view.findViewById(R.id.mobile);
         btnLogout = (Button)view.findViewById(R.id.btnLogout);
         btnInfo = (Button)view.findViewById(R.id.btnInfo);
-        btnServices = (Button)view.findViewById(R.id.btnServices);
+
 
         db = new SQLiteHandler(getContext());
         session = new SessionManager(getContext());
@@ -78,14 +78,7 @@ public class MyFragment extends Fragment {
             }
         });
 
-        btnServices.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(getActivity(), ServicesActivity.class);
-                startActivity(intent);
-               return;
-            }
-        });
+
         return view;
     }
 

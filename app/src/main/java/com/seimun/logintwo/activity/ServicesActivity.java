@@ -4,7 +4,6 @@ import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
@@ -17,17 +16,7 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.VolleyLog;
 import com.android.volley.toolbox.StringRequest;
-import com.seimun.logintwo.Aftercare3Month;
-import com.seimun.logintwo.AftercareActivity;
-import com.seimun.logintwo.Main2Activity;
-import com.seimun.logintwo.NewbornFamilyVisitActivity;
-import com.seimun.logintwo.OldIdentifyActivity;
-import com.seimun.logintwo.Postpartum42ExamActivity;
-import com.seimun.logintwo.PsychiatricAftercareActivity;
 import com.seimun.logintwo.R;
-import com.seimun.logintwo.TcmAftercareActivity;
-import com.seimun.logintwo.VaccinationActivity;
-import com.seimun.logintwo.VaccineCardActivity;
 import com.seimun.logintwo.adapter.SummaryListAdapter;
 import com.seimun.logintwo.app.AppConfig;
 import com.seimun.logintwo.app.AppController;
@@ -42,8 +31,6 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-
-import layout.MyFragment;
 
 public class ServicesActivity extends AppCompatActivity {
     private static final String TAG = ServicesActivity.class.getSimpleName();

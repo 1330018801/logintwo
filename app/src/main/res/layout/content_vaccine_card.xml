@@ -13,7 +13,7 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context="com.seimun.logintwo.VaccineCardActivity"
+    tools:context=".activity.VaccineCardActivity"
     tools:showIn="@layout/activity_vaccine_card">
     <LinearLayout
         android:layout_width="match_parent"
@@ -73,11 +73,15 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/gender"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp">
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="出生日期："
-            android:layout_marginLeft="30dp"/>
+            android:text="出生日期："/>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -100,7 +104,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="与儿童关系："
-            android:layout_marginLeft="40dp"/>
+            android:layout_marginLeft="30dp"/>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

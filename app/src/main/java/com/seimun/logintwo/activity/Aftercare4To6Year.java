@@ -14,7 +14,6 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.VolleyLog;
 import com.android.volley.toolbox.StringRequest;
-import com.seimun.logintwo.Aftercare3To6YearActivity;
 import com.seimun.logintwo.R;
 import com.seimun.logintwo.app.AppConfig;
 import com.seimun.logintwo.app.AppController;
@@ -73,7 +72,7 @@ public class Aftercare4To6Year extends Aftercare3To6YearActivity {
         btnMain.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(Aftercare4To6Year.this, ServicesActivity.class);
+                Intent intent = new Intent(Aftercare4To6Year.this, Main2Activity.class);
                 startActivity(intent);
                 finish();
             }

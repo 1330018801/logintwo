@@ -1,4 +1,4 @@
-package com.seimun.logintwo;
+package com.seimun.logintwo.activity;
 
 import android.content.Intent;
 import android.net.Uri;
@@ -19,9 +19,7 @@ import com.android.volley.toolbox.StringRequest;
 import com.google.android.gms.appindexing.Action;
 import com.google.android.gms.appindexing.AppIndex;
 import com.google.android.gms.common.api.GoogleApiClient;
-import com.seimun.logintwo.activity.DetailActivity;
-import com.seimun.logintwo.activity.LoginActivity;
-import com.seimun.logintwo.activity.ServicesActivity;
+import com.seimun.logintwo.R;
 import com.seimun.logintwo.app.AppConfig;
 import com.seimun.logintwo.app.AppController;
 import com.seimun.logintwo.helper.SQLiteHandler;
@@ -82,7 +80,7 @@ public class VaccineCardActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                Intent intent = new Intent(VaccineCardActivity.this, ServicesActivity.class);
+                Intent intent = new Intent(VaccineCardActivity.this, Main2Activity.class);
                 startActivity(intent);
                 finish();
 
@@ -92,7 +90,7 @@ public class VaccineCardActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                Intent intent=new Intent(VaccineCardActivity.this, ServicesActivity.class);
+                Intent intent=new Intent(VaccineCardActivity.this, Main2Activity.class);
                 startActivity(intent);
                 finish();
             }

@@ -1,4 +1,4 @@
-package com.seimun.logintwo;
+package com.seimun.logintwo.activity;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -15,9 +15,7 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.VolleyLog;
 import com.android.volley.toolbox.StringRequest;
-import com.seimun.logintwo.activity.DetailActivity;
-import com.seimun.logintwo.activity.LoginActivity;
-import com.seimun.logintwo.activity.ServicesActivity;
+import com.seimun.logintwo.R;
 import com.seimun.logintwo.app.AppConfig;
 import com.seimun.logintwo.app.AppController;
 import com.seimun.logintwo.helper.SQLiteHandler;
@@ -32,8 +30,7 @@ import java.util.Map;
 public class VaccinationActivity extends AppCompatActivity {
     private static final String TAG = DetailActivity.class.getSimpleName();
 
-    private Button btnLogout;
-    private Button btnMain;
+
 
     private SQLiteHandler db;
     private SessionManager session;
@@ -48,8 +45,7 @@ public class VaccinationActivity extends AppCompatActivity {
         toolbar.setNavigationIcon(R.drawable.back);
 
 
-        btnLogout = (Button)findViewById(R.id.btnLogout);
-        btnMain = (Button)findViewById(R.id.btnMain);
+
 
         db = new SQLiteHandler(getApplicationContext());
         session = new SessionManager(getApplicationContext());
@@ -60,21 +56,14 @@ public class VaccinationActivity extends AppCompatActivity {
 
         Intent intent = getIntent();
         final Integer record_id = intent.getIntExtra("record_id", 0);
-        btnLogout.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                logoutUser();
-            }
-        });
 
-        btnMain.setOnClickListener(new View.OnClickListener(){
 
+        toolbar.setNavigationOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(VaccinationActivity.this, ServicesActivity.class);
+            public void onClick(View v) {
+                Intent intent = new Intent(VaccinationActivity.this,Main2Activity.class);
                 startActivity(intent);
                 finish();
-
             }
         });
 

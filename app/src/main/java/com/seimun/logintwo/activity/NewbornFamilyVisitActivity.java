@@ -1,4 +1,4 @@
-package com.seimun.logintwo;
+package com.seimun.logintwo.activity;
 
 
 import android.content.Intent;
@@ -16,9 +16,7 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.VolleyLog;
 import com.android.volley.toolbox.StringRequest;
-import com.seimun.logintwo.activity.DetailActivity;
-import com.seimun.logintwo.activity.LoginActivity;
-import com.seimun.logintwo.activity.ServicesActivity;
+import com.seimun.logintwo.R;
 import com.seimun.logintwo.app.AppConfig;
 import com.seimun.logintwo.app.AppController;
 import com.seimun.logintwo.helper.SQLiteHandler;
@@ -71,7 +69,7 @@ public class NewbornFamilyVisitActivity extends AppCompatActivity {
 
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(NewbornFamilyVisitActivity.this, ServicesActivity.class);
+                Intent intent = new Intent(NewbornFamilyVisitActivity.this, Main2Activity.class);
                 startActivity(intent);
                 finish();
 

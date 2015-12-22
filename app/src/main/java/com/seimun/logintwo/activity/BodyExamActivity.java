@@ -68,7 +68,7 @@ public class BodyExamActivity extends AppCompatActivity {
 
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(BodyExamActivity.this, ServicesActivity.class);
+                Intent intent = new Intent(BodyExamActivity.this, Main2Activity.class);
                 startActivity(intent);
                 finish();
 

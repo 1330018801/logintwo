@@ -27,7 +27,7 @@ import org.json.JSONObject;
 import java.util.HashMap;
 import java.util.Map;
 
-public class PostpartumVisitActivity extends AppCompatActivity {
+public class Postpartum42ExamActivity extends AppCompatActivity {
     private static final String TAG = DetailActivity.class.getSimpleName();
 
     private Button btnLogout;
@@ -39,7 +39,7 @@ public class PostpartumVisitActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_postpartum_visit);
+        setContentView(R.layout.activity_postpartum42_exam);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         toolbar.setTitle("");
         setSupportActionBar(toolbar);
@@ -70,7 +70,7 @@ public class PostpartumVisitActivity extends AppCompatActivity {
 
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(PostpartumVisitActivity.this, Main2Activity.class);
+                Intent intent = new Intent(Postpartum42ExamActivity.this, Main2Activity.class);
                 startActivity(intent);
                 finish();
 
@@ -95,8 +95,6 @@ public class PostpartumVisitActivity extends AppCompatActivity {
                                     visit_date.setText(detail.getString("visit_date"));
                                     TextView doctor_signature = (TextView) findViewById(R.id.doctor_signature);
                                     doctor_signature.setText(detail.getString("doctor_signature"));
-                                    TextView body_temperature = (TextView) findViewById(R.id.body_temperature);
-                                    body_temperature.setText(detail.getString("body_temperature"));
                                     TextView general_health_situation = (TextView) findViewById(R.id.general_health_situation);
                                     general_health_situation.setText(detail.getString("general_health_situation"));
                                     TextView general_mentality_situation = (TextView) findViewById(R.id.general_mentality_situation);
@@ -125,22 +123,18 @@ public class PostpartumVisitActivity extends AppCompatActivity {
                                     extra.setText(detail.getString("extra"));
                                     TextView classification = (TextView) findViewById(R.id.classification);
                                     classification.setText(detail.getString("classification"));
-                                    TextView classification_abnormal = (TextView) findViewById(R.id.classification_abnormal);
-                                    classification_abnormal.setText(detail.getString("classification_abnormal"));
+                                    TextView classification_not_recovery = (TextView)findViewById(R.id.classification_not_recovery);
+                                    classification_not_recovery.setText(detail.getString("classification_not_recovery"));
                                     TextView guide = (TextView) findViewById(R.id.guide);
                                     guide.setText(detail.getString("guide"));
                                     TextView guide_extra = (TextView) findViewById(R.id.guide_extra);
                                     guide_extra.setText(detail.getString("guide_extra"));
-                                    TextView transfer_treatment = (TextView) findViewById(R.id.transfer_treatment);
-                                    transfer_treatment.setText(detail.getString("transfer_treatment"));
-                                    TextView transfer_treatment_reason = (TextView) findViewById(R.id.transfer_treatment_reason);
-                                    transfer_treatment_reason.setText(detail.getString("transfer_treatment_reason"));
-                                    TextView transfer_treatment_institution = (TextView) findViewById(R.id.transfer_treatment_institution);
-                                    transfer_treatment_institution.setText(detail.getString("transfer_treatment_institution"));
-                                    TextView next_visit_date = (TextView) findViewById(R.id.next_visit_date);
-                                    next_visit_date.setText(detail.getString("next_visit_date"));
-
-
+                                    TextView dispose = (TextView) findViewById(R.id.dispose);
+                                    dispose.setText(detail.getString("dispose"));
+                                    TextView dispose_transfer_treatment_reason = (TextView) findViewById(R.id.dispose_transfer_treatment_reason);
+                                    dispose_transfer_treatment_reason.setText(detail.getString("dispose_transfer_treatment_reason"));
+                                    TextView dispose_transfer_treatment_institution = (TextView) findViewById(R.id.dispose_transfer_treatment_institution);
+                                    dispose_transfer_treatment_institution.setText(detail.getString("dispose_transfer_treatment_institution"));
 
                                 } else {
                                     String errorMsg = obj.getString("error_msg");
@@ -176,7 +170,7 @@ public class PostpartumVisitActivity extends AppCompatActivity {
         session.setLogin(false);
         db.deleteUsers();
 
-        Intent intent = new Intent(PostpartumVisitActivity.this, LoginActivity.class);
+        Intent intent = new Intent(Postpartum42ExamActivity.this, LoginActivity.class);
         startActivity(intent);
         finish();
     }

@@ -75,7 +75,7 @@ public class DiabetesAftercareActivity extends AppCompatActivity {
 
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(DiabetesAftercareActivity.this, ServicesActivity.class);
+                Intent intent = new Intent(DiabetesAftercareActivity.this, Main2Activity.class);
                 startActivity(intent);
                 finish();
 

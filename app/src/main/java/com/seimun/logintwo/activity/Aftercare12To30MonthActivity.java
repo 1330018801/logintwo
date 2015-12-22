@@ -1,4 +1,4 @@
-package com.seimun.logintwo;
+package com.seimun.logintwo.activity;
 
 
 import android.content.Intent;
@@ -16,9 +16,7 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.VolleyLog;
 import com.android.volley.toolbox.StringRequest;
-import com.seimun.logintwo.activity.DetailActivity;
-import com.seimun.logintwo.activity.LoginActivity;
-import com.seimun.logintwo.activity.ServicesActivity;
+import com.seimun.logintwo.R;
 import com.seimun.logintwo.app.AppConfig;
 import com.seimun.logintwo.app.AppController;
 import com.seimun.logintwo.helper.SQLiteHandler;
@@ -30,7 +28,7 @@ import org.json.JSONObject;
 import java.util.HashMap;
 import java.util.Map;
 
-public class Aftercare3To6YearActivity extends AppCompatActivity {
+public class Aftercare12To30MonthActivity extends AppCompatActivity {
     private static final String TAG = DetailActivity.class.getSimpleName();
 
     private Button btnLogout;
@@ -42,7 +40,7 @@ public class Aftercare3To6YearActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_aftercare3_to6_year);
+        setContentView(R.layout.activity_aftercare12_to30_month);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         toolbar.setTitle("");
         setSupportActionBar(toolbar);
@@ -74,12 +72,13 @@ public class Aftercare3To6YearActivity extends AppCompatActivity {
 
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(Aftercare3To6YearActivity.this, ServicesActivity.class);
+                Intent intent = new Intent(Aftercare12To30MonthActivity.this, Main2Activity.class);
                 startActivity(intent);
                 finish();
 
             }
         });
+
         if (record_id != 0) {
             Log.e(TAG, "开始从后台获取详情");
             final StringRequest detailReq = new StringRequest(
@@ -98,26 +97,14 @@ public class Aftercare3To6YearActivity extends AppCompatActivity {
                                     visit_date.setText(detail.getString("visit_date"));
                                     TextView doctor_signature = (TextView) findViewById(R.id.doctor_signature);
                                     doctor_signature .setText(detail.getString("doctor_signature"));
-                                    TextView pneumonia = (TextView) findViewById(R.id.pneumonia);
-                                    pneumonia .setText(detail.getString("pneumonia"));
-                                    TextView diarrhea = (TextView) findViewById(R.id.diarrhea);
-                                    diarrhea.setText(detail.getString("diarrhea"));
-                                    TextView traumatism = (TextView) findViewById(R.id.traumatism);
-                                    traumatism .setText(detail.getString("traumatism"));
-                                    TextView two_visit_extra = (TextView) findViewById(R.id.two_visit_extra);
-                                    two_visit_extra .setText(detail.getString("two_visit_extra"));
-                                    TextView guide = (TextView) findViewById(R.id.guide);
-                                    guide .setText(detail.getString("guide"));
-                                    TextView guide_extra = (TextView) findViewById(R.id.guide_extra);
-                                    guide_extra .setText(detail.getString("guide_extra"));
+                                    TextView two_visit_disease = (TextView) findViewById(R.id.two_visit_disease);
+                                    two_visit_disease .setText(detail.getString("two_visit_disease"));
                                     TextView transfer_treatment_suggestion = (TextView) findViewById(R.id.transfer_treatment_suggestion);
-                                    transfer_treatment_suggestion .setText(detail.getString("transfer_treatment_suggestion"));
-                                    TextView transfer_treatment_suggestion_reason = (TextView) findViewById(R.id.transfer_treatment_suggestion_reason);
-                                    transfer_treatment_suggestion_reason .setText(detail.getString("transfer_treatment_suggestion_reason"));
+                                    transfer_treatment_suggestion.setText(detail.getString("transfer_treatment_suggestion"));
+                                    TextView guide = (TextView) findViewById(R.id.guide);
+                                    guide.setText(detail.getString("guide"));
                                     TextView next_visit_date = (TextView) findViewById(R.id.next_visit_date);
                                     next_visit_date .setText(detail.getString("next_visit_date"));
-                                    TextView transfer_treatment_suggestion_institution = (TextView) findViewById(R.id.transfer_treatment_suggestion_institution);
-                                    transfer_treatment_suggestion_institution.setText(detail.getString("transfer_treatment_suggestion_institution"));
                                     TextView weight = (TextView) findViewById(R.id.weight);
                                     weight .setText(detail.getString("weight"));
                                     TextView weight_grade = (TextView) findViewById(R.id.weight_grade);
@@ -125,21 +112,31 @@ public class Aftercare3To6YearActivity extends AppCompatActivity {
                                     TextView height = (TextView) findViewById(R.id.height);
                                     height .setText(detail.getString("height"));
                                     TextView height_grade = (TextView) findViewById(R.id.height_grade);
-                                    height_grade.setText(detail.getString("height_grade"));
-                                    TextView body_growth_evaluate = (TextView) findViewById(R.id.body_growth_evaluate);
-                                    body_growth_evaluate .setText(detail.getString("body_growth_evaluate"));
-                                    TextView tooth = (TextView) findViewById(R.id.tooth);
-                                    tooth .setText(detail.getString("tooth"));
+                                    height_grade .setText(detail.getString("height_grade"));
+                                    TextView outdoor_activities = (TextView) findViewById(R.id.outdoor_activities);
+                                    outdoor_activities .setText(detail.getString("outdoor_activities"));
+                                    TextView complexion = (TextView) findViewById(R.id.complexion);
+                                    complexion .setText(detail.getString("complexion"));
+                                    TextView skin = (TextView) findViewById(R.id.skin);
+                                    skin.setText(detail.getString("skin"));
+                                    TextView eye_appearance = (TextView) findViewById(R.id.eye_appearance);
+                                    eye_appearance .setText(detail.getString("eye_appearance"));
+                                    TextView ear_appearance = (TextView) findViewById(R.id.ear_appearance);
+                                    ear_appearance .setText(detail.getString("ear_appearance"));
                                     TextView decayed_tooth = (TextView) findViewById(R.id.decayed_tooth);
                                     decayed_tooth .setText(detail.getString("decayed_tooth"));
+                                    TextView tooth = (TextView) findViewById(R.id.tooth);
+                                    tooth.setText(detail.getString("tooth"));
                                     TextView heart_lung = (TextView) findViewById(R.id.heart_lung);
                                     heart_lung .setText(detail.getString("heart_lung"));
                                     TextView abdomen = (TextView) findViewById(R.id.abdomen);
                                     abdomen .setText(detail.getString("abdomen"));
-                                    TextView hemoglobin_value = (TextView) findViewById(R.id.hemoglobin_value);
-                                    hemoglobin_value .setText(detail.getString("hemoglobin_value"));
-                                    TextView extra = (TextView) findViewById(R.id.extra);
-                                    extra .setText(detail.getString("extra"));
+                                    TextView all_fours = (TextView) findViewById(R.id.all_fours);
+                                    all_fours .setText(detail.getString("all_fours"));
+                                    TextView transfer_treatment_suggestion_reason = (TextView) findViewById(R.id.transfer_treatment_suggestion_reason);
+                                    transfer_treatment_suggestion_reason .setText(detail.getString("transfer_treatment_suggestion_reason"));
+                                    TextView transfer_treatment_suggestion_institution = (TextView) findViewById(R.id.transfer_treatment_suggestion_institution);
+                                    transfer_treatment_suggestion_institution .setText(detail.getString("transfer_treatment_suggestion_institution"));
 
 
 
@@ -177,10 +174,9 @@ public class Aftercare3To6YearActivity extends AppCompatActivity {
         session.setLogin(false);
         db.deleteUsers();
 
-        Intent intent = new Intent(Aftercare3To6YearActivity.this, LoginActivity.class);
+        Intent intent = new Intent(Aftercare12To30MonthActivity.this, LoginActivity.class);
         startActivity(intent);
         finish();
     }
 
 }
-

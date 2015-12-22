@@ -71,7 +71,7 @@ public class hypertension_aftercare extends AppCompatActivity {
 
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(hypertension_aftercare.this, ServicesActivity.class);
+                Intent intent = new Intent(hypertension_aftercare.this, Main2Activity.class);
                 startActivity(intent);
                 finish();
 

@@ -70,7 +70,7 @@ public class AntenatalActivity extends AppCompatActivity {
 
            @Override
            public void onClick(View view) {
-               Intent intent = new Intent(AntenatalActivity.this, ServicesActivity.class);
+               Intent intent = new Intent(AntenatalActivity.this, Main2Activity.class);
                startActivity(intent);
                finish();
 
@@ -143,18 +143,30 @@ public class AntenatalActivity extends AppCompatActivity {
                                     dbp.setText(detail.getString("dbp"));
                                     TextView ausculate_heart = (TextView)findViewById(R.id.ausculate_heart);
                                     ausculate_heart.setText(detail.getString("ausculate_heart"));
+                                    TextView ausculate_heart_abnormal = (TextView)findViewById(R.id.ausculate_heart_abnormal);
+                                    ausculate_heart_abnormal.setText(detail.getString("ausculate_heart_abnormal"));
                                     TextView ausculate_lung = (TextView)findViewById(R.id.ausculate_lung);
                                     ausculate_lung.setText(detail.getString("ausculate_lung"));
+                                    TextView ausculate_lung_abnormal = (TextView)findViewById(R.id.ausculate_lung_abnormal);
+                                    ausculate_lung_abnormal.setText(detail.getString("ausculate_lung_abnormal"));
                                     TextView vulva = (TextView)findViewById(R.id.vulva);
                                     vulva.setText(detail.getString("vulva"));
+                                    TextView vulva_abnormal = (TextView)findViewById(R.id.vulva_abnormal);
+                                    vulva_abnormal.setText(detail.getString("vulva_abnormal"));
                                     TextView vagina = (TextView)findViewById(R.id.vagina);
                                     vagina.setText(detail.getString("vagina"));
+                                    TextView vagina_abnormal = (TextView)findViewById(R.id.vagina_abnormal);
+                                    vagina_abnormal.setText(detail.getString("vagina_abnormal"));
                                     TextView cervix = (TextView)findViewById(R.id.cervix);
                                     cervix.setText(detail.getString("cervix"));
                                     TextView uteri = (TextView)findViewById(R.id.uteri);
                                     uteri.setText(detail.getString("uteri"));
+                                    TextView uteri_abnormal = (TextView)findViewById(R.id.uteri_abnormal);
+                                    uteri_abnormal.setText(detail.getString("uteri_abnormal"));
                                     TextView accessory = (TextView)findViewById(R.id.accessory);
                                     accessory.setText(detail.getString("accessory"));
+                                    TextView accessory_abnormal = (TextView)findViewById(R.id.accessory_abnormal);
+                                    accessory_abnormal.setText(detail.getString("accessory_abnormal"));
                                     if(!detail.getString("hemoglobin").equals("null")) {
                                         TextView hemoglobin = (TextView) findViewById(R.id.hemoglobin);
                                         hemoglobin.setText(detail.getString("hemoglobin"));

@@ -1,4 +1,4 @@
-package com.seimun.logintwo;
+package com.seimun.logintwo.activity;
 
 
 import android.content.Intent;
@@ -16,13 +16,12 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.VolleyLog;
 import com.android.volley.toolbox.StringRequest;
-import com.seimun.logintwo.activity.DetailActivity;
-import com.seimun.logintwo.activity.LoginActivity;
-import com.seimun.logintwo.activity.ServicesActivity;
+import com.seimun.logintwo.R;
 import com.seimun.logintwo.app.AppConfig;
 import com.seimun.logintwo.app.AppController;
 import com.seimun.logintwo.helper.SQLiteHandler;
 import com.seimun.logintwo.helper.SessionManager;
+
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -30,7 +29,7 @@ import org.json.JSONObject;
 import java.util.HashMap;
 import java.util.Map;
 
-public class Aftercare12To30MonthActivity extends AppCompatActivity {
+public class Aftercare1To8MonthActivity extends AppCompatActivity {
     private static final String TAG = DetailActivity.class.getSimpleName();
 
     private Button btnLogout;
@@ -39,10 +38,11 @@ public class Aftercare12To30MonthActivity extends AppCompatActivity {
     private SQLiteHandler db;
     private SessionManager session;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_aftercare12_to30_month);
+        setContentView(R.layout.activity_aftercare1_to8_month);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         toolbar.setTitle("");
         setSupportActionBar(toolbar);
@@ -58,7 +58,7 @@ public class Aftercare12To30MonthActivity extends AppCompatActivity {
         if (!session.isLoggedIn()) {
             logoutUser();
         }
-        // final HashMap<String, String> user = db.getUserDetails();
+       // final HashMap<String, String> user = db.getUserDetails();
 
 
         Intent intent = getIntent();
@@ -74,7 +74,7 @@ public class Aftercare12To30MonthActivity extends AppCompatActivity {
 
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(Aftercare12To30MonthActivity.this, ServicesActivity.class);
+                Intent intent = new Intent(Aftercare1To8MonthActivity.this, Main2Activity.class);
                 startActivity(intent);
                 finish();
 
@@ -101,6 +101,8 @@ public class Aftercare12To30MonthActivity extends AppCompatActivity {
                                     doctor_signature .setText(detail.getString("doctor_signature"));
                                     TextView two_visit_disease = (TextView) findViewById(R.id.two_visit_disease);
                                     two_visit_disease .setText(detail.getString("two_visit_disease"));
+                                    TextView growth_evaluate = (TextView) findViewById(R.id.growth_evaluate);
+                                    growth_evaluate .setText(detail.getString("growth_evaluate"));
                                     TextView transfer_treatment_suggestion = (TextView) findViewById(R.id.transfer_treatment_suggestion);
                                     transfer_treatment_suggestion.setText(detail.getString("transfer_treatment_suggestion"));
                                     TextView guide = (TextView) findViewById(R.id.guide);
@@ -115,26 +117,40 @@ public class Aftercare12To30MonthActivity extends AppCompatActivity {
                                     height .setText(detail.getString("height"));
                                     TextView height_grade = (TextView) findViewById(R.id.height_grade);
                                     height_grade .setText(detail.getString("height_grade"));
+                                    TextView head_circumference = (TextView) findViewById(R.id.head_circumference);
+                                    head_circumference.setText(detail.getString("head_circumference"));
                                     TextView outdoor_activities = (TextView) findViewById(R.id.outdoor_activities);
                                     outdoor_activities .setText(detail.getString("outdoor_activities"));
+                                    TextView take_vitamin_d = (TextView) findViewById(R.id.take_vitamin_d);
+                                    take_vitamin_d .setText(detail.getString("take_vitamin_d"));
                                     TextView complexion = (TextView) findViewById(R.id.complexion);
                                     complexion .setText(detail.getString("complexion"));
                                     TextView skin = (TextView) findViewById(R.id.skin);
                                     skin.setText(detail.getString("skin"));
+                                    TextView bregma = (TextView) findViewById(R.id.bregma);
+                                    bregma .setText(detail.getString("bregma"));
+                                    TextView bregma_length = (TextView) findViewById(R.id.bregma_length);
+                                    bregma_length .setText(detail.getString("bregma_length"));
+                                    TextView bregma_width = (TextView) findViewById(R.id.bregma_width);
+                                    bregma_width .setText(detail.getString("bregma_width"));
                                     TextView eye_appearance = (TextView) findViewById(R.id.eye_appearance);
                                     eye_appearance .setText(detail.getString("eye_appearance"));
                                     TextView ear_appearance = (TextView) findViewById(R.id.ear_appearance);
                                     ear_appearance .setText(detail.getString("ear_appearance"));
-                                    TextView decayed_tooth = (TextView) findViewById(R.id.decayed_tooth);
-                                    decayed_tooth .setText(detail.getString("decayed_tooth"));
-                                    TextView tooth = (TextView) findViewById(R.id.tooth);
-                                    tooth.setText(detail.getString("tooth"));
+                                    TextView oral_cavity = (TextView) findViewById(R.id.oral_cavity);
+                                    oral_cavity .setText(detail.getString("oral_cavity"));
                                     TextView heart_lung = (TextView) findViewById(R.id.heart_lung);
                                     heart_lung .setText(detail.getString("heart_lung"));
                                     TextView abdomen = (TextView) findViewById(R.id.abdomen);
                                     abdomen .setText(detail.getString("abdomen"));
                                     TextView all_fours = (TextView) findViewById(R.id.all_fours);
                                     all_fours .setText(detail.getString("all_fours"));
+                                    TextView anus_externalia = (TextView) findViewById(R.id.anus_externalia);
+                                    anus_externalia .setText(detail.getString("anus_externalia"));
+                                    TextView hemoglobin_value =(TextView) findViewById(R.id.hemoglobin_value);
+                                    hemoglobin_value.setText(detail.getString("hemoglobin_value"));
+                                    TextView rickets_sign = (TextView) findViewById(R.id.rickets_sign);
+                                    rickets_sign .setText(detail.getString("rickets_sign"));
                                     TextView transfer_treatment_suggestion_reason = (TextView) findViewById(R.id.transfer_treatment_suggestion_reason);
                                     transfer_treatment_suggestion_reason .setText(detail.getString("transfer_treatment_suggestion_reason"));
                                     TextView transfer_treatment_suggestion_institution = (TextView) findViewById(R.id.transfer_treatment_suggestion_institution);
@@ -176,7 +192,7 @@ public class Aftercare12To30MonthActivity extends AppCompatActivity {
         session.setLogin(false);
         db.deleteUsers();
 
-        Intent intent = new Intent(Aftercare12To30MonthActivity.this, LoginActivity.class);
+        Intent intent = new Intent(Aftercare1To8MonthActivity.this, LoginActivity.class);
         startActivity(intent);
         finish();
     }

@@ -14,7 +14,7 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context="com.seimun.logintwo.NewbornFamilyVisitActivity"
+    tools:context=".activity.NewbornFamilyVisitActivity"
     tools:showIn="@layout/activity_newborn_family_visit">
 
     <LinearLayout
@@ -54,7 +54,7 @@
 
         </LinearLayout>
     <LinearLayout
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:layout_marginTop="25dp">
@@ -134,16 +134,20 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="职业："
-            android:layout_marginLeft="15dp"/>
+            android:layout_marginLeft="20dp"/>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/father_occupation"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp">
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="联系电话："
-            android:layout_marginLeft="15dp"/>
+            android:text="联系电话："/>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -185,16 +189,20 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="职业："
-            android:layout_marginLeft="15dp"/>
+            android:layout_marginLeft="20dp"/>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/mother_occupation"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp">
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="联系电话："
-            android:layout_marginLeft="15dp"/>
+            android:text="联系电话："/>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -230,12 +238,17 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="3dp"
             android:text="周"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp">
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="母亲妊娠期患病情况："
-            android:layout_marginLeft="25dp"/>
+            android:text="母亲妊娠期患病情况："/>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -258,11 +271,15 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/deliver_institution"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp">
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="出生情况："
-            android:layout_marginLeft="15dp"/>
+            android:text="出生情况："/>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -346,7 +363,7 @@
             android:id="@+id/newborn_disease_screening_extra"/>
     </LinearLayout>
     <LinearLayout
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:layout_marginTop="5dp">
@@ -366,7 +383,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="目前体重："
-            android:layout_marginLeft="20dp"/>
+            android:layout_marginLeft="30dp"/>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -461,11 +478,15 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/shit"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp">
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="*大便次数："
-            android:layout_marginLeft="85dp"/>
+            android:text="*大便次数："/>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -523,11 +544,15 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="次/分钟"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp">
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="面色："
-            android:layout_marginLeft="15dp"/>
+            android:text="面色："/>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -607,11 +632,15 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/eye_appearance_abnormal"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp">
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="四肢活动度："
-            android:layout_marginLeft="40dp"/>
+            android:text="四肢活动度："/>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -638,11 +667,15 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/ear_appearance_abnormal"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp">
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="颈部包块："
-            android:layout_marginLeft="40dp"/>
+            android:text="颈部包块："/>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -669,11 +702,15 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/nose_abnormal"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp">
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="皮肤："
-            android:layout_marginLeft="70dp"/>
+            android:text="皮肤："/>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -700,11 +737,15 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/oral_cavity_abnormal"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp">
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="肛门："
-            android:layout_marginLeft="58dp"/>
+            android:text="肛门："/>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -731,11 +772,15 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/heart_lung_auscultation_abnormal"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp">
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="外生殖器："
-            android:layout_marginLeft="32dp"/>
+            android:text="外生殖器："/>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -762,11 +807,15 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/abdomen_palpation_abnormal"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp">
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="脊柱"
-            android:layout_marginLeft="32dp"/>
+            android:text="脊柱"/>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -807,11 +856,15 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/transfer_treatment_suggestion"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp">
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="原因："
-            android:layout_marginLeft="60dp"/>
+            android:text="原因："/>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

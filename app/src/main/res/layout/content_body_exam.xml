@@ -201,11 +201,15 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text=" kg/m2"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp">
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="腰围："
-                android:layout_marginLeft="20dp"/>
+                android:text="腰围："/>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -214,7 +218,6 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text=" cm"/>
-
         </LinearLayout>
 
         <TextView
@@ -490,11 +493,15 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/lung_barrel_chested"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp">
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="呼吸音："
-                android:layout_marginLeft="100dp"/>
+                android:text="呼吸音："/>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -599,11 +606,15 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="5dp"
                 android:id="@+id/stomach_tenderness_extra"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp">
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="包块："
-                android:layout_marginLeft="70dp"/>
+                android:text="包块："/>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -632,11 +643,15 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="5dp"
                 android:id="@+id/stomach_hepatomegaly_extra"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp">
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="脾大："
-                android:layout_marginLeft="70dp"/>
+                android:text="脾大："/>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -694,11 +709,15 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="g/L"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp">
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="白细胞："
-                android:layout_marginLeft="20dp"/>
+                android:text="白细胞："/>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -725,11 +744,15 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="x10^9/L"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp">
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="其他："
-                android:layout_marginLeft="20dp"/>
+                android:text="其他："/>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -762,15 +785,6 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/urine_glucose"/>
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="尿酮体"
-                android:layout_marginLeft="20dp"/>
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/ketone_bodies"/>
         </LinearLayout>
         <LinearLayout
             android:layout_width="wrap_content"
@@ -780,16 +794,29 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="尿潜血："/>
+                android:text="尿酮体："/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/ketone_bodies"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="尿潜血："
+                android:layout_marginLeft="20dp"/>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/occult_blood"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp">
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="其他："
-                android:layout_marginLeft="20dp"/>
+                android:text="其他："/>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -863,11 +890,15 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="U/L"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp">
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="血清谷草转氨酶："
-                android:layout_marginLeft="20dp"/>
+                android:text="血清谷草转氨酶："/>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -917,11 +948,15 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="μmol/L"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp">
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="血尿素氮："
-                android:layout_marginLeft="20dp"/>
+                android:text="血尿素氮："/>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -953,11 +988,15 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="mmol/L"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp">
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="甘油三酯："
-                android:layout_marginLeft="20dp"/>
+                android:text="甘油三酯："/>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
