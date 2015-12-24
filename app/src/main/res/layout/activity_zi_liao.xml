@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
-    tools:context=".activity.Main2Activity">
+    tools:context="com.seimun.logintwo.ZiLiaoActivity">
 
     <android.support.design.widget.AppBarLayout
         android:layout_width="match_parent"
@@ -23,7 +23,7 @@
                 android:layout_height="wrap_content"
                 android:layout_centerInParent="true"
                 android:layout_gravity="center"
-                android:text="基本公共卫生服务"
+                android:text="@string/title_activity_zi_liao"
                 android:textColor="@android:color/white"
                 android:textSize="20sp"
                 android:textStyle="bold" />
@@ -31,7 +31,7 @@
 
     </android.support.design.widget.AppBarLayout>
 
-    <include layout="@layout/content_main2" />
+    <include layout="@layout/content_zi_liao" />
 
 
 

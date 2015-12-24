@@ -120,7 +120,6 @@
             android:name=".activity.Aftercare6Month"
             android:label="@string/title_activity_aftercare1_to8_month"
             android:theme="@style/AppTheme.NoActionBar" />
-        /
         <activity
             android:name=".activity.Aftercare8Month"
             android:label="@string/title_activity_aftercare1_to8_month"
@@ -160,8 +159,16 @@
         <activity
             android:name=".activity.Main2Activity"
             android:label="@string/title_activity_main2"
-            android:theme="@style/AppTheme.NoActionBar"
-            android:launchMode="singleTask"></activity>
+            android:launchMode="singleTask"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".ZiLiaoActivity"
+            android:label="@string/title_activity_zi_liao"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".LifeStyleActivity"
+            android:label="@string/title_activity_life_style"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
 </manifest>

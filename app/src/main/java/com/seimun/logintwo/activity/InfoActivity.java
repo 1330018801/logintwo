@@ -118,6 +118,8 @@ public class InfoActivity extends AppCompatActivity {
                         TextView family_history_sibling_extra = (TextView) findViewById(R.id.family_history_sibling_extra);
                         TextView family_history_children_extra = (TextView) findViewById(R.id.family_history_children_extra);
                         TextView genetic_disease_yes = (TextView) findViewById(R.id.genetic_disease_yes);
+                        TextView work_company = (TextView) findViewById(R.id.work_company);
+                        work_company.setText(jObj.getString("work_company"));
                         TextView disability_extra = (TextView) findViewById(R.id.disability_extra);
                         if(!jObj.getString("surgery_1_name").equals("null")) {
                             TextView surgery_1_name = (TextView) findViewById(R.id.surgery_1_name);
@@ -171,7 +173,7 @@ public class InfoActivity extends AppCompatActivity {
 
                         name.setText(user.get("name"));
                         gender.setText(jObj.getString("gender"));
-                        birthday.setText(jObj.getString("birthday"));
+                        birthday  .setText(jObj.getString("birthday"));
                         mobile.setText(jObj.getString("phone"));
                         identity.setText(jObj.getString("identity"));
                         contact_name.setText(jObj.getString("contact_name"));
