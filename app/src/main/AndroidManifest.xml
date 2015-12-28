@@ -168,6 +168,18 @@
         <activity
             android:name=".LifeStyleActivity"
             android:label="@string/title_activity_life_style"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".PastHistoryActivity"
+            android:label="@string/title_activity_past_history"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".SurgeryActivity"
+            android:label="@string/title_activity_surgery"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".InternalMedicineActivity"
+            android:label="@string/title_activity_internal_medicine"
             android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 

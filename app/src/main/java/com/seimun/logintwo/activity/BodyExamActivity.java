@@ -77,10 +77,8 @@ public class BodyExamActivity extends AppCompatActivity {
 
             if (record_id != 0) {
                 Log.e(TAG, "开始从后台获取详情");
-                final StringRequest detailReq = new StringRequest(
-                        Request.Method.POST,
-                        AppConfig.URL_DETAIL,
-                        new Response.Listener<String>() {
+                final StringRequest detailReq = new StringRequest( Request.Method.POST,
+                        AppConfig.URL_DETAIL, new Response.Listener<String>() {
                             @Override
                             public void onResponse(String response) {
                                 Log.d(TAG, response);
@@ -185,9 +183,9 @@ public class BodyExamActivity extends AppCompatActivity {
                                         skin_extra.setText(detail.getString("skin_extra"));
                                         TextView lymph_node = (TextView) findViewById(R.id.lymph_node);
                                         lymph_node.setText(detail.getString("lymph_node"));
-                                        TextView lung_barrel_chested = (TextView) findViewById(R.id.lung_barrel_chested);
                                         TextView lymph_node_extra = (TextView) findViewById(R.id.lymph_node_extra);
                                         lymph_node_extra.setText(detail.getString("lymph_node_extra"));
+                                        TextView lung_barrel_chested = (TextView) findViewById(R.id.lung_barrel_chested);
                                         lung_barrel_chested.setText(detail.getString("lung_barrel_chested"));
                                         TextView lung_breath_sound = (TextView) findViewById(R.id.lung_breath_sound);
                                         TextView lung_breath_sound_extra = (TextView) findViewById(R.id.lung_breath_sound_extra);
@@ -203,6 +201,8 @@ public class BodyExamActivity extends AppCompatActivity {
                                         heart_rhythm.setText(detail.getString("heart_rhythm"));
                                         TextView heart_noise = (TextView) findViewById(R.id.heart_noise);
                                         heart_noise.setText(detail.getString("heart_noise"));
+                                        TextView heart_noise_extra = (TextView) findViewById(R.id.heart_noise_extra);
+                                        heart_noise_extra.setText(detail.getString("heart_noise_extra"));
                                         TextView stomach_tenderness = (TextView) findViewById(R.id.stomach_tenderness);
                                         stomach_tenderness.setText(detail.getString("stomach_tenderness"));
                                         TextView stomach_tenderness_extra = (TextView) findViewById(R.id.stomach_tenderness_extra);

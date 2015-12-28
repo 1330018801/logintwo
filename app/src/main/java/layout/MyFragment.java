@@ -17,7 +17,11 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.VolleyLog;
 import com.android.volley.toolbox.StringRequest;
+import com.seimun.logintwo.InternalMedicineActivity;
+import com.seimun.logintwo.LifeStyleActivity;
+import com.seimun.logintwo.PastHistoryActivity;
 import com.seimun.logintwo.R;
+import com.seimun.logintwo.SurgeryActivity;
 import com.seimun.logintwo.ZiLiaoActivity;
 import com.seimun.logintwo.activity.DetailActivity;
 import com.seimun.logintwo.activity.InfoActivity;
@@ -40,7 +44,8 @@ public class MyFragment extends Fragment {
     private TextView txtName;
     private TextView txtMobile;
     private Button btnLogout;
-    private TextView zlxx;
+    private TextView zlxx,jwbs,wkqk,nkqk;
+
 
 
 
@@ -67,7 +72,6 @@ public class MyFragment extends Fragment {
             public void onClick(View v) {
                 Intent intent = new Intent(getActivity(), ZiLiaoActivity.class);
                 startActivity(intent);
-                return;
             }
         });
 
@@ -76,10 +80,34 @@ public class MyFragment extends Fragment {
         shxg.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getActivity(),InfoActivity.class);
+                Intent intent = new Intent(getActivity(),LifeStyleActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        jwbs = (TextView) view.findViewById(R.id.jwbs);
+        jwbs.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getActivity(),PastHistoryActivity.class);
                 startActivity(intent);
 
-
+            }
+        });
+        wkqk = (TextView) view.findViewById(R.id.wkqk);
+        wkqk.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getActivity(), SurgeryActivity.class);
+                startActivity(intent);
+            }
+        });
+        nkqk = (TextView) view.findViewById(R.id.nkqk);
+        nkqk.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getActivity(), InternalMedicineActivity.class);
+                startActivity(intent);
             }
         });
 
@@ -92,48 +120,6 @@ public class MyFragment extends Fragment {
         }
         final HashMap<String, String> user = db.getUserDetails();
 
-        StringRequest infoReq = new StringRequest(Request.Method.POST,
-                AppConfig.URL_PERSONAL_INFO, new Response.Listener<String>() {
-            @Override
-            public void onResponse(String response) {
-
-
-                try {
-                    JSONObject jObj = new JSONObject(response);
-                    boolean error = jObj.getBoolean("error");
-                    if (!error) {
-                        TextView gender = (TextView)view.findViewById(R.id.gender);
-                        gender.setText(jObj.getString("gender"));
-
-                    } else {
-                        String errorMsg = jObj.getString("error_msg");
-                        Toast.makeText(getContext(), errorMsg, Toast.LENGTH_LONG).show();
-                    }
-                } catch (JSONException e) {
-                    e.printStackTrace();
-                }
-            }
-        },new Response.ErrorListener() {
-            @Override
-            public void onErrorResponse(VolleyError error) {
-
-                Toast.makeText(getContext(),
-                        error.getMessage(), Toast.LENGTH_LONG).show();
-            }
-        }){
-            @Override
-            protected Map<String, String> getParams() {
-                Map<String, String> params = new HashMap<String, String>();
-
-
-                params.put("resident_id", user.get("resident_id"));
-
-                return params;
-            }
-        };
-        AppController.getInstance().addToRequestQueue(infoReq);
-
-//        HashMap<String, String> user = db.getUserDetails();
 
 
 

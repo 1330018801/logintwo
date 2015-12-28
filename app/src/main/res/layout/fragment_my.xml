@@ -42,37 +42,7 @@
                 android:id="@+id/mobile"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"/>
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="5dp">
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="性别  "/>
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/gender"/>
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="身高  "
-                    android:layout_marginLeft="10dp"/>
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/height"/>
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="体重  "
-                    android:layout_marginLeft="10dp"/>
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/weight" />
-            </LinearLayout>
+
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="40dp"
@@ -89,7 +59,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="   资料信息"
-            android:drawableLeft="@drawable/phone"
+            android:drawableLeft="@drawable/zlxx"
             android:textSize="16sp"
             android:paddingLeft="16dp"
             android:paddingTop="5dp"
@@ -103,7 +73,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="   生活习惯"
-            android:drawableLeft="@drawable/phone"
+            android:drawableLeft="@drawable/shxg"
             android:textSize="16sp"
             android:paddingLeft="16dp"
             android:paddingTop="5dp"
@@ -117,7 +87,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="   既往病史"
-            android:drawableLeft="@drawable/phone"
+            android:drawableLeft="@drawable/jwbs"
             android:textSize="16sp"
             android:paddingLeft="16dp"
             android:paddingTop="5dp"
@@ -132,7 +102,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="    外科情况"
-            android:drawableLeft="@drawable/phone"
+            android:drawableLeft="@drawable/wkqk"
             android:textSize="16sp"
             android:paddingLeft="16dp"
             android:layout_marginTop="20dp"
@@ -146,7 +116,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="   内科情况"
-            android:drawableLeft="@drawable/phone"
+            android:drawableLeft="@drawable/nkqk"
             android:textSize="16sp"
             android:paddingLeft="16dp"
             android:paddingTop="5dp"
@@ -161,7 +131,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="    关于我们"
-            android:drawableLeft="@drawable/phone"
+            android:drawableLeft="@drawable/gywm"
             android:textSize="16sp"
             android:paddingLeft="16dp"
             android:layout_marginTop="20dp"
