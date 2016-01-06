@@ -107,7 +107,6 @@ public class ZiLiaoActivity extends AppCompatActivity {
                         payment_way.setText(jObj.getString("payment_way"));
 
 
-
                     } else {
                         String errorMsg = jObj.getString("error_msg");
                         Toast.makeText(getApplicationContext(), errorMsg, Toast.LENGTH_LONG).show();

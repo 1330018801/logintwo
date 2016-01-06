@@ -31,8 +31,6 @@ public class Aftercare1Month extends Aftercare1To8MonthActivity {
 
     private static final String TAG = DetailActivity.class.getSimpleName();
 
-    private Button btnLogout;
-    private Button btnMain;
 
     private SQLiteHandler db;
     private SessionManager session;
@@ -45,9 +43,16 @@ public class Aftercare1Month extends Aftercare1To8MonthActivity {
         toolbar.setTitle("");
         setSupportActionBar(toolbar);
         toolbar.setNavigationIcon(R.drawable.back);
+        toolbar.setNavigationOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Aftercare1Month.this,Main2Activity.class);
+                startActivity(intent);
+                finish();
+            }
+        });
 
-        btnLogout = (Button)findViewById(R.id.btnLogout);
-        btnMain = (Button)findViewById(R.id.btnMain);
+
 
         db = new SQLiteHandler(getApplicationContext());
         session = new SessionManager(getApplicationContext());
@@ -60,21 +65,6 @@ public class Aftercare1Month extends Aftercare1To8MonthActivity {
 
         Intent intent = getIntent();
         final Integer record_id = intent.getIntExtra("record_id", 0);
-        btnLogout.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                logoutUser();
-            }
-        });
-
-        btnMain.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(Aftercare1Month.this, Main2Activity.class);
-                startActivity(intent);
-                finish();
-            }
-        });
 
         if (record_id != 0) {
             Log.e(TAG, "开始从后台获取详情");

@@ -2,6 +2,7 @@ package layout;
 
 
 import android.content.Intent;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.util.Log;
@@ -44,7 +45,9 @@ public class MyFragment extends Fragment {
     private TextView txtName;
     private TextView txtMobile;
     private Button btnLogout;
-    private TextView zlxx,jwbs,wkqk,nkqk;
+    private TextView data,pasthistory,surgery,medicine,about;
+    private Drawable zlxx,shxg,jwbs,wkqk,neqk,gywm;
+
 
 
 
@@ -66,8 +69,15 @@ public class MyFragment extends Fragment {
         txtMobile = (TextView)view.findViewById(R.id.mobile);
         btnLogout = (Button)view.findViewById(R.id.btnLogout);
 
-        zlxx = (TextView) view.findViewById(R.id.zlxx);
-        zlxx.setOnClickListener(new View.OnClickListener() {
+
+
+
+
+        data = (TextView) view.findViewById(R.id.data);
+        zlxx = getResources().getDrawable(R.drawable.zlxx);
+        zlxx.setBounds(0,0,80,60);
+        data.setCompoundDrawables(zlxx,null,null,null);
+        data.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(getActivity(), ZiLiaoActivity.class);
@@ -76,8 +86,11 @@ public class MyFragment extends Fragment {
         });
 
 
-        TextView shxg = (TextView) view.findViewById(R.id.shxg);
-        shxg.setOnClickListener(new View.OnClickListener() {
+        TextView habits = (TextView) view.findViewById(R.id.habits);
+        shxg = getResources().getDrawable(R.drawable.shxg);
+        shxg.setBounds(0,0,80,60);
+        habits.setCompoundDrawables(shxg,null,null,null);
+        habits.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(getActivity(),LifeStyleActivity.class);
@@ -85,8 +98,11 @@ public class MyFragment extends Fragment {
             }
         });
 
-        jwbs = (TextView) view.findViewById(R.id.jwbs);
-        jwbs.setOnClickListener(new View.OnClickListener() {
+        pasthistory = (TextView) view.findViewById(R.id.pasthistory);
+        jwbs = getResources().getDrawable(R.drawable.jwbs);
+        jwbs.setBounds(0,0,60,80);
+        pasthistory.setCompoundDrawables(jwbs,null,null,null);
+        pasthistory.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(getActivity(),PastHistoryActivity.class);
@@ -94,22 +110,12 @@ public class MyFragment extends Fragment {
 
             }
         });
-        wkqk = (TextView) view.findViewById(R.id.wkqk);
-        wkqk.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(getActivity(), SurgeryActivity.class);
-                startActivity(intent);
-            }
-        });
-        nkqk = (TextView) view.findViewById(R.id.nkqk);
-        nkqk.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(getActivity(), InternalMedicineActivity.class);
-                startActivity(intent);
-            }
-        });
+
+
+        about = (TextView) view.findViewById(R.id.about);
+        gywm = getResources().getDrawable(R.drawable.gywm);
+        gywm.setBounds(0,0,80,80);
+        about.setCompoundDrawables(gywm,null,null,null);
 
 
         db = new SQLiteHandler(getContext());
@@ -119,8 +125,6 @@ public class MyFragment extends Fragment {
             logoutUser();
         }
         final HashMap<String, String> user = db.getUserDetails();
-
-
 
 
 

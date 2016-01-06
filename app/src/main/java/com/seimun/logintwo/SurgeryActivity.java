@@ -58,11 +58,11 @@ public class SurgeryActivity extends AppCompatActivity {
         if (!session.isLoggedIn()) {
             logoutUser();
         }
-        // final HashMap<String, String> user = db.getUserDetails();
+//         final HashMap<String, String> user = db.getUserDetails();
 
 
         Intent intent = getIntent();
-        final Integer record_id = intent.getIntExtra("record_id", 0);
+        final Integer record_id = intent.getIntExtra("record_id",0 );
         if (record_id != 0) {
             Log.e(TAG, "开始从后台获取详情");
             final StringRequest detailReq = new StringRequest(

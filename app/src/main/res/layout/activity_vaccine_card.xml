@@ -35,5 +35,4 @@
     <include layout="@layout/content_vaccine_card" />
 
 
-
 </android.support.design.widget.CoordinatorLayout>

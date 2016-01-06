@@ -20,6 +20,7 @@ import com.android.volley.VolleyError;
 import com.android.volley.VolleyLog;
 import com.android.volley.toolbox.StringRequest;
 import com.seimun.logintwo.R;
+import com.seimun.logintwo.SurgeryActivity;
 import com.seimun.logintwo.activity.Aftercare12Month;
 import com.seimun.logintwo.activity.Aftercare18Month;
 import com.seimun.logintwo.activity.Aftercare1Month;
@@ -133,6 +134,7 @@ public class ServicesFragment extends Fragment {
                     return;
                 } else if (item_alias.equals("body_exam_table") || item_alias.equals("physical_examination")) {
                     Intent intent = new Intent(getActivity(), BodyExamActivity.class);
+
                     intent.putExtra("record_id", summary.getRecordId());
                     startActivity(intent);
                     return;

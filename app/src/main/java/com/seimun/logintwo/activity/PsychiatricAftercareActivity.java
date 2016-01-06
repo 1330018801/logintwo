@@ -30,9 +30,6 @@ import java.util.Map;
 public class PsychiatricAftercareActivity extends AppCompatActivity {
     private static final String TAG = DetailActivity.class.getSimpleName();
 
-    private Button btnLogout;
-    private Button btnMain;
-
     private SQLiteHandler db;
     private SessionManager session;
 
@@ -45,9 +42,15 @@ public class PsychiatricAftercareActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
         toolbar.setNavigationIcon(R.drawable.back);
 
+        toolbar.setNavigationOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(PsychiatricAftercareActivity.this,Main2Activity.class);
+                startActivity(intent);
+                finish();
+            }
+        });
 
-        btnLogout = (Button)findViewById(R.id.btnLogout);
-        btnMain = (Button)findViewById(R.id.btnMain);
 
         db = new SQLiteHandler(getApplicationContext());
         session = new SessionManager(getApplicationContext());
@@ -60,23 +63,7 @@ public class PsychiatricAftercareActivity extends AppCompatActivity {
 
         Intent intent = getIntent();
         final Integer record_id = intent.getIntExtra("record_id", 0);
-        btnLogout.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                logoutUser();
-            }
-        });
 
-        btnMain.setOnClickListener(new View.OnClickListener(){
-
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(PsychiatricAftercareActivity.this, Main2Activity.class);
-                startActivity(intent);
-                finish();
-
-            }
-        });
 
         if (record_id != 0) {
             Log.e(TAG, "开始从后台获取详情");
@@ -202,6 +189,8 @@ public class PsychiatricAftercareActivity extends AppCompatActivity {
                                     transfer_treatment_institution .setText(detail.getString("transfer_treatment_institution"));
                                     TextView doctor_signature = (TextView) findViewById(R.id.doctor_signature);
                                     doctor_signature .setText(detail.getString("doctor_signature"));
+                                    TextView now_symptom = (TextView) findViewById(R.id.now_symptom);
+                                    now_symptom.setText(detail.getString("now_symptom"));
                                     TextView next_visit_date = (TextView) findViewById(R.id.next_visit_date);
                                     next_visit_date .setText(detail.getString("next_visit_date"));
 

@@ -3,7 +3,7 @@
     <color name="bg_login">#428bca</color>
     <color name="bg_register">#428bca</color>
     <color name="bg_main">#428bca</color>
-    <color name="white">#cccccc</color>
+    <color name="white">#f0f0f0</color>
     <color name="input_login">#222222</color>
     <color name="input_login_hint">#999999</color>
     <color name="input_register">#888888</color>
@@ -17,7 +17,7 @@
     <color name="colorPrimaryDark">#666666</color>
     <color name="colorAccent">#428bca</color>
     <color name="btn_register">#228822</color>
-    <color name="activitytheme">#43CD80</color>
+    <color name="activitytheme">#66cdaa</color>
 
     <color name="list_divider">#d9d9d9</color>
     <color name="list_row_start_color">#ffffff</color>

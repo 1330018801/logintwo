@@ -20,7 +20,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:background="@color/list_divider">
+        android:layout_marginTop="1dp"
+        android:background="@color/bg">
 
         <RadioButton
             android:id="@+id/id_tab_baogao"

@@ -43,6 +43,14 @@ public class VaccinationActivity extends AppCompatActivity {
         toolbar.setTitle("");
         setSupportActionBar(toolbar);
         toolbar.setNavigationIcon(R.drawable.back);
+        toolbar.setNavigationOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(VaccinationActivity.this,Main2Activity.class);
+                startActivity(intent);
+                finish();
+            }
+        });
 
 
 

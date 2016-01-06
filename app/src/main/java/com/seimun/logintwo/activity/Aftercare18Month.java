@@ -32,9 +32,6 @@ import java.util.Map;
 public class Aftercare18Month extends Aftercare12To30MonthActivity {
     private static final String TAG = DetailActivity.class.getSimpleName();
 
-    private Button btnLogout;
-    private Button btnMain;
-
     private SQLiteHandler db;
     private SessionManager session;
 
@@ -46,10 +43,16 @@ public class Aftercare18Month extends Aftercare12To30MonthActivity {
         toolbar.setTitle("");
         setSupportActionBar(toolbar);
         toolbar.setNavigationIcon(R.drawable.back);
+        toolbar.setNavigationOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Aftercare18Month.this,Main2Activity.class);
+                startActivity(intent);
+                finish();
+            }
+        });
 
 
-        btnLogout = (Button)findViewById(R.id.btnLogout);
-        btnMain = (Button)findViewById(R.id.btnMain);
 
         db = new SQLiteHandler(getApplicationContext());
         session = new SessionManager(getApplicationContext());
@@ -62,21 +65,7 @@ public class Aftercare18Month extends Aftercare12To30MonthActivity {
 
         Intent intent = getIntent();
         final Integer record_id = intent.getIntExtra("record_id", 0);
-        btnLogout.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                logoutUser();
-            }
-        });
 
-        btnMain.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(Aftercare18Month.this, Main2Activity.class);
-                startActivity(intent);
-                finish();
-            }
-        });
 
         if (record_id != 0) {
             Log.e(TAG, "开始从后台获取详情");
@@ -95,14 +84,20 @@ public class Aftercare18Month extends Aftercare12To30MonthActivity {
 
                                     TextView bregma = (TextView) findViewById(R.id.bregma);
                                     bregma .setText(detail.getString("bregma"));
-                                    TextView bregma_length = (TextView) findViewById(R.id.bregma_length);
-                                    bregma_length .setText(detail.getString("bregma_length"));
-                                    TextView bregma_width = (TextView) findViewById(R.id.bregma_width);
-                                    bregma_width .setText(detail.getString("bregma_width"));
+                                    if(!detail.getString("bregma_length").equals("null")){
+                                        TextView bregma_length = (TextView) findViewById(R.id.bregma_length);
+                                        bregma_length .setText(detail.getString("bregma_length"));
+                                    }
+                                    if(!detail.getString("bregma_width").equals("null")){
+                                        TextView bregma_width = (TextView) findViewById(R.id.bregma_width);
+                                        bregma_width .setText(detail.getString("bregma_width"));
+                                    }
                                     TextView step = (TextView) findViewById(R.id.step);
                                     step.setText(detail.getString("step"));
-                                    TextView rickets_sign = (TextView) findViewById(R.id.rickets_sign);
-                                    rickets_sign .setText(detail.getString("rickets_sign"));
+                                    if(!detail.getString("rickets_sign").equals("null")){
+                                        TextView rickets_sign = (TextView) findViewById(R.id.rickets_sign);
+                                        rickets_sign .setText(detail.getString("rickets_sign"));
+                                    }
                                     TextView take_vitamin_d = (TextView) findViewById(R.id.take_vitamin_d);
                                     take_vitamin_d .setText(detail.getString("take_vitamin_d"));
                                     TextView growth_evaluate = (TextView) findViewById(R.id.growth_evaluate);

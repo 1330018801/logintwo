@@ -32,9 +32,6 @@ import java.util.Map;
 public class Aftercare1To8MonthActivity extends AppCompatActivity {
     private static final String TAG = DetailActivity.class.getSimpleName();
 
-    private Button btnLogout;
-    private Button btnMain;
-
     private SQLiteHandler db;
     private SessionManager session;
 
@@ -47,10 +44,15 @@ public class Aftercare1To8MonthActivity extends AppCompatActivity {
         toolbar.setTitle("");
         setSupportActionBar(toolbar);
         toolbar.setNavigationIcon(R.drawable.back);
+        toolbar.setNavigationOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Aftercare1To8MonthActivity.this,Main2Activity.class);
+                startActivity(intent);
+                finish();
+            }
+        });
 
-
-        btnLogout = (Button)findViewById(R.id.btnLogout);
-        btnMain = (Button)findViewById(R.id.btnMain);
 
         db = new SQLiteHandler(getApplicationContext());
         session = new SessionManager(getApplicationContext());
@@ -63,23 +65,8 @@ public class Aftercare1To8MonthActivity extends AppCompatActivity {
 
         Intent intent = getIntent();
         final Integer record_id = intent.getIntExtra("record_id", 0);
-        btnLogout.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                logoutUser();
-            }
-        });
 
-        btnMain.setOnClickListener(new View.OnClickListener(){
 
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(Aftercare1To8MonthActivity.this, Main2Activity.class);
-                startActivity(intent);
-                finish();
-
-            }
-        });
 
         if (record_id != 0) {
             Log.e(TAG, "开始从后台获取详情");
@@ -129,10 +116,15 @@ public class Aftercare1To8MonthActivity extends AppCompatActivity {
                                     skin.setText(detail.getString("skin"));
                                     TextView bregma = (TextView) findViewById(R.id.bregma);
                                     bregma .setText(detail.getString("bregma"));
-                                    TextView bregma_length = (TextView) findViewById(R.id.bregma_length);
-                                    bregma_length .setText(detail.getString("bregma_length"));
-                                    TextView bregma_width = (TextView) findViewById(R.id.bregma_width);
-                                    bregma_width .setText(detail.getString("bregma_width"));
+                                    if(!detail.getString("bregma_length").equals("null")){
+                                        TextView bregma_length = (TextView) findViewById(R.id.bregma_length);
+                                        bregma_length .setText(detail.getString("bregma_length"));
+                                    }
+                                    if(!detail.getString("bregma_width").equals("null")){
+                                        TextView bregma_width = (TextView) findViewById(R.id.bregma_width);
+                                        bregma_width .setText(detail.getString("bregma_width"));
+                                    }
+
                                     TextView eye_appearance = (TextView) findViewById(R.id.eye_appearance);
                                     eye_appearance .setText(detail.getString("eye_appearance"));
                                     TextView ear_appearance = (TextView) findViewById(R.id.ear_appearance);
