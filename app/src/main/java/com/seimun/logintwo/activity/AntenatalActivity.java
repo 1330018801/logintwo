@@ -245,8 +245,14 @@ public class AntenatalActivity extends AppCompatActivity {
                                         TextView core_antibody = (TextView) findViewById(R.id.core_antibody);
                                         core_antibody.setText(detail.getString("core_antibody"));
                                     }
-                                    TextView total_evaluation = (TextView)findViewById(R.id.total_evaluation);
-                                    total_evaluation.setText(detail.getString("total_evaluation"));
+                                    if(!detail.getString("total_evaluation").equals("null")){
+                                        TextView total_evaluation = (TextView)findViewById(R.id.total_evaluation);
+                                        total_evaluation.setText(detail.getString("total_evaluation"));
+                                    }
+                                    if(!detail.getString("total_evaluation_abnormal").equals("null")){
+                                        TextView total_evaluation_abnormal = (TextView) findViewById(R.id.total_evaluation_abnormal);
+                                        total_evaluation_abnormal.setText(detail.getString("total_evaluation_abnormal"));
+                                    }
                                     TextView guide = (TextView)findViewById(R.id.guide);
                                     guide.setText(detail.getString("guide"));
                                     if(!detail.getString("transfer").equals("null")) {

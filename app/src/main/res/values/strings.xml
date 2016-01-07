@@ -39,4 +39,5 @@
     <string name="title_activity_past_history">既往病史</string>
     <string name="title_activity_surgery">外科情况</string>
     <string name="title_activity_internal_medicine">内科情况</string>
+    <string name="title_activity_about">关于我们</string>
 </resources>

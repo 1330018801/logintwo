@@ -5,38 +5,22 @@ import android.content.Intent;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
-import android.widget.Toast;
 
-import com.android.volley.Request;
-import com.android.volley.Response;
-import com.android.volley.VolleyError;
-import com.android.volley.VolleyLog;
-import com.android.volley.toolbox.StringRequest;
-import com.seimun.logintwo.InternalMedicineActivity;
+import com.seimun.logintwo.AboutActivity;
 import com.seimun.logintwo.LifeStyleActivity;
 import com.seimun.logintwo.PastHistoryActivity;
 import com.seimun.logintwo.R;
-import com.seimun.logintwo.SurgeryActivity;
 import com.seimun.logintwo.ZiLiaoActivity;
-import com.seimun.logintwo.activity.DetailActivity;
-import com.seimun.logintwo.activity.InfoActivity;
 import com.seimun.logintwo.activity.LoginActivity;
-import com.seimun.logintwo.app.AppConfig;
-import com.seimun.logintwo.app.AppController;
 import com.seimun.logintwo.helper.SQLiteHandler;
 import com.seimun.logintwo.helper.SessionManager;
 
-import org.json.JSONException;
-import org.json.JSONObject;
-
 import java.util.HashMap;
-import java.util.Map;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -45,8 +29,8 @@ public class MyFragment extends Fragment {
     private TextView txtName;
     private TextView txtMobile;
     private Button btnLogout;
-    private TextView data,pasthistory,surgery,medicine,about;
-    private Drawable zlxx,shxg,jwbs,wkqk,neqk,gywm;
+    private TextView data,pasthistory,aboutus;
+    private Drawable zlxx,shxg,jwbs,gywm;
 
 
 
@@ -112,10 +96,17 @@ public class MyFragment extends Fragment {
         });
 
 
-        about = (TextView) view.findViewById(R.id.about);
+        aboutus = (TextView) view.findViewById(R.id.aboutus);
         gywm = getResources().getDrawable(R.drawable.gywm);
         gywm.setBounds(0,0,80,80);
-        about.setCompoundDrawables(gywm,null,null,null);
+        aboutus.setCompoundDrawables(gywm,null,null,null);
+        aboutus.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getActivity(), AboutActivity.class);
+                startActivity(intent);
+            }
+        });
 
 
         db = new SQLiteHandler(getContext());
@@ -131,7 +122,7 @@ public class MyFragment extends Fragment {
         String name = user.get("name");
         String mobile = user.get("mobile");
         txtName.setText( name);
-        txtMobile.setText("登陆账号：" + mobile);
+        txtMobile.setText("登录账号：" + mobile);
 
         btnLogout.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -152,8 +143,9 @@ public class MyFragment extends Fragment {
         db.deleteSummaries();
 
         Intent intent = new Intent(getActivity(), LoginActivity.class);
+        getActivity().finish();
         startActivity(intent);
-        return;
+
     }
 
 

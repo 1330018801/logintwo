@@ -3,15 +3,20 @@ package com.seimun.logintwo.activity;
 
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
+import android.provider.Settings;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.view.KeyEvent;
 import android.view.View;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
+import android.widget.Toast;
+
 import com.seimun.logintwo.R;
 import layout.HealthEducationFragment;
+import layout.HospitalFragment;
 import layout.MyFragment;
 import layout.ServicesFragment;
 
@@ -19,6 +24,7 @@ public class Main2Activity extends AppCompatActivity {
     private ServicesFragment mServicesFragment;
     private HealthEducationFragment mHealthEducationFragment;
     private MyFragment mMyFragment;
+    private HospitalFragment mHospitalFragment;
     private RadioGroup mRadioGroup;
 
 
@@ -38,6 +44,10 @@ public class Main2Activity extends AppCompatActivity {
         Drawable jiaoyu1 = getResources().getDrawable(R.drawable.jiaoyu1);
         jiaoyu1.setBounds(0,0,80,80);
         jradioButton.setCompoundDrawables(null,jiaoyu1,null,null);
+        RadioButton yradioButton = (RadioButton) findViewById(R.id.id_tab_yiliao);
+        Drawable yiyuan1 = getResources().getDrawable(R.drawable.yiyuan1);
+        yiyuan1.setBounds(0,0,80,80);
+        yradioButton.setCompoundDrawables(null,yiyuan1,null,null);
         RadioButton mradioButton = (RadioButton) findViewById(R.id.id_tab_ziliao);
         Drawable my2 = getResources().getDrawable(R.drawable.my2);
         my2.setBounds(0,0,80,80);
@@ -60,6 +70,10 @@ public class Main2Activity extends AppCompatActivity {
         jiaoyu1.setBounds(0,0,80,80);
         final Drawable jiaoyu2 = getResources().getDrawable(R.drawable.jiaoyu2);
         jiaoyu2.setBounds(0,0,80,80);
+        final  Drawable yiyuan1 = getResources().getDrawable(R.drawable.yiyuan1);
+        yiyuan1.setBounds(0,0,80,80);
+        final  Drawable yiyuan2 = getResources().getDrawable(R.drawable.yiyuan2);
+        yiyuan2.setBounds(0,0,80,80);
         final Drawable my1 = getResources().getDrawable(R.drawable.my1);
         my1.setBounds(0,0,80,80);
         final Drawable my2 = getResources().getDrawable(R.drawable.my2);
@@ -67,6 +81,7 @@ public class Main2Activity extends AppCompatActivity {
 
         final RadioButton bradioButton = (RadioButton) findViewById(R.id.id_tab_baogao);
         final RadioButton jradioButton = (RadioButton) findViewById(R.id.id_tab_yangsheng);
+        final RadioButton yradioButton = (RadioButton) findViewById(R.id.id_tab_yiliao);
         final RadioButton mradioButton = (RadioButton) findViewById(R.id.id_tab_ziliao);
 
         mMyFragment = new MyFragment();
@@ -81,6 +96,7 @@ public class Main2Activity extends AppCompatActivity {
                         getSupportFragmentManager().beginTransaction().replace(R.id.main_content,mServicesFragment).commit();
                         bradioButton.setCompoundDrawables(null,baogao2,null,null);
                         jradioButton.setCompoundDrawables(null,jiaoyu1,null,null);
+                        yradioButton.setCompoundDrawables(null,yiyuan1,null,null);
                         mradioButton.setCompoundDrawables(null,my1,null,null);
                         break;
                     case R.id.id_tab_yangsheng:
@@ -88,6 +104,15 @@ public class Main2Activity extends AppCompatActivity {
                         getSupportFragmentManager().beginTransaction().replace(R.id.main_content,mHealthEducationFragment).commit();
                         bradioButton.setCompoundDrawables(null,baogao1,null,null);
                         jradioButton.setCompoundDrawables(null,jiaoyu2,null,null);
+                        yradioButton.setCompoundDrawables(null,yiyuan1,null,null);
+                        mradioButton.setCompoundDrawables(null,my1,null,null);
+                        break;
+                    case R.id.id_tab_yiliao:
+                        mHospitalFragment = new HospitalFragment();
+                        getSupportFragmentManager().beginTransaction().replace(R.id.main_content,mHospitalFragment).commit();
+                        bradioButton.setCompoundDrawables(null,baogao1,null,null);
+                        jradioButton.setCompoundDrawables(null,jiaoyu1,null,null);
+                        yradioButton.setCompoundDrawables(null,yiyuan2,null,null);
                         mradioButton.setCompoundDrawables(null,my1,null,null);
                         break;
                     case R.id.id_tab_ziliao:
@@ -95,6 +120,7 @@ public class Main2Activity extends AppCompatActivity {
                         getSupportFragmentManager().beginTransaction().replace(R.id.main_content,mMyFragment).commit();
                         bradioButton.setCompoundDrawables(null,baogao1,null,null);
                         jradioButton.setCompoundDrawables(null,jiaoyu1,null,null);
+                        yradioButton.setCompoundDrawables(null,yiyuan1,null,null);
                         mradioButton.setCompoundDrawables(null,my2,null,null);
                         break;
                     default:
@@ -105,5 +131,23 @@ public class Main2Activity extends AppCompatActivity {
             }
         });
     }
+
+
+    private long exitTime = 0;
+    @Override
+    public  boolean onKeyDown(int keyCode, KeyEvent event){
+        if(keyCode == KeyEvent.KEYCODE_BACK && event.getAction()== KeyEvent.ACTION_DOWN){
+            if((System.currentTimeMillis() - exitTime)> 2000){
+                Toast.makeText(getApplicationContext(),"再按一次返回桌面",Toast.LENGTH_SHORT).show();
+                exitTime = System.currentTimeMillis();
+            }else {
+                finish();
+                System.exit(0);
+            }
+            return true;
+        }
+        return super.onKeyDown(keyCode,event);
+    }
+
 
 }
