@@ -3,11 +3,11 @@ package com.seimun.logintwo.activity;
 
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
-import android.provider.Settings;
+import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
-import android.support.v4.content.ContextCompat;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentStatePagerAdapter;
+import android.support.v4.view.ViewPager;
 import android.view.KeyEvent;
 import android.view.View;
 import android.widget.RadioButton;
@@ -15,53 +15,93 @@ import android.widget.RadioGroup;
 import android.widget.Toast;
 
 import com.seimun.logintwo.R;
+
+import java.util.ArrayList;
+import java.util.List;
+
 import layout.HealthEducationFragment;
 import layout.HospitalFragment;
 import layout.MyFragment;
 import layout.ServicesFragment;
 
-public class Main2Activity extends AppCompatActivity {
+public class Main2Activity extends FragmentActivity implements View.OnClickListener {
+
+    RadioButton bradioButton;
+    RadioButton jradioButton;
+    RadioButton yradioButton;
+    RadioButton mradioButton;
+
+    ViewPager mViewPager;
+
+    List<Fragment> fragmentList;
+
+
     private ServicesFragment mServicesFragment;
     private HealthEducationFragment mHealthEducationFragment;
     private MyFragment mMyFragment;
     private HospitalFragment mHospitalFragment;
     private RadioGroup mRadioGroup;
 
+    Drawable baogao1,baogao2,jiaoyu1,jiaoyu2,yiyuan1,yiyuan2,my1,my2;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main2);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        toolbar.setTitle("");
-        setSupportActionBar(toolbar);
 
-        RadioButton bradioButton = (RadioButton) findViewById(R.id.id_tab_baogao);
-        Drawable baogao1 = getResources().getDrawable(R.drawable.baogao1);
+
+//        initView();
+
+       /* bradioButton = (RadioButton) findViewById(R.id.id_tab_baogao);
+        baogao1 = getResources().getDrawable(R.drawable.baogao1);
         baogao1.setBounds(0,0,60,80);
         bradioButton.setCompoundDrawables(null,baogao1,null,null);
-        RadioButton jradioButton = (RadioButton) findViewById(R.id.id_tab_yangsheng);
-        Drawable jiaoyu1 = getResources().getDrawable(R.drawable.jiaoyu1);
+        jradioButton = (RadioButton) findViewById(R.id.id_tab_yangsheng);
+        jiaoyu1 = getResources().getDrawable(R.drawable.jiaoyu1);
         jiaoyu1.setBounds(0,0,80,80);
         jradioButton.setCompoundDrawables(null,jiaoyu1,null,null);
-        RadioButton yradioButton = (RadioButton) findViewById(R.id.id_tab_yiliao);
-        Drawable yiyuan1 = getResources().getDrawable(R.drawable.yiyuan1);
+        yradioButton = (RadioButton) findViewById(R.id.id_tab_yiliao);
+        yiyuan1 = getResources().getDrawable(R.drawable.yiyuan1);
         yiyuan1.setBounds(0,0,80,80);
         yradioButton.setCompoundDrawables(null,yiyuan1,null,null);
-        RadioButton mradioButton = (RadioButton) findViewById(R.id.id_tab_ziliao);
-        Drawable my2 = getResources().getDrawable(R.drawable.my2);
+        mradioButton = (RadioButton) findViewById(R.id.id_tab_ziliao);
+        my2 = getResources().getDrawable(R.drawable.my2);
         my2.setBounds(0,0,80,80);
-        mradioButton.setCompoundDrawables(null,my2,null,null);
+        mradioButton.setCompoundDrawables(null,my2,null,null);*/
 
-        initView();
+        bradioButton = (RadioButton) findViewById(R.id.id_tab_baogao);
+        jradioButton = (RadioButton) findViewById(R.id.id_tab_yangsheng);
+        yradioButton = (RadioButton) findViewById(R.id.id_tab_yiliao);
+        mradioButton = (RadioButton) findViewById(R.id.id_tab_ziliao);
+
+
+        bradioButton.setOnClickListener(this);
+        jradioButton.setOnClickListener(this);
+        yradioButton.setOnClickListener(this);
+        mradioButton.setOnClickListener(this);
+
+
+        mViewPager = (ViewPager) findViewById(R.id.viewpage);
+
+        fragmentList = new ArrayList<Fragment>();
+
+        mServicesFragment = new ServicesFragment();
+        mHealthEducationFragment= new HealthEducationFragment();
+        mHospitalFragment = new HospitalFragment();
+        mMyFragment = new MyFragment();
+
+        fragmentList.add(mServicesFragment);
+        fragmentList.add(mHealthEducationFragment);
+        fragmentList.add(mHospitalFragment);
+        fragmentList.add(mMyFragment);
+
+        mViewPager.setAdapter(new MyFrageStatePagerAdapter(getSupportFragmentManager()));
+        mViewPager.setCurrentItem(3);
 
     }
 
-
-
-
-
-    private void initView() {
+    /* private void initView() {
         final Drawable baogao1 = getResources().getDrawable(R.drawable.baogao1);
         baogao1.setBounds(0,0,60,80);
         final Drawable baogao2 = getResources().getDrawable(R.drawable.baogao2);
@@ -130,7 +170,9 @@ public class Main2Activity extends AppCompatActivity {
 
             }
         });
-    }
+    }*/
+
+
 
 
     private long exitTime = 0;
@@ -150,4 +192,56 @@ public class Main2Activity extends AppCompatActivity {
     }
 
 
+
+
+
+    @Override
+    public void onClick(View v) {
+
+
+        switch (v.getId()){
+            case R.id.id_tab_baogao:
+                changeView(0);
+
+
+                break;
+            case R.id.id_tab_yangsheng:
+                changeView(1);
+
+                break;
+            case R.id.id_tab_yiliao:
+                changeView(2);
+
+                break;
+            case R.id.id_tab_ziliao:
+                changeView(3);
+
+                break;
+            default:
+                break;
+        }
+
+
+    }
+
+    private void changeView(int i) {
+        mViewPager.setCurrentItem(i,true);
+    }
+
+    private class MyFrageStatePagerAdapter extends FragmentStatePagerAdapter {
+        public MyFrageStatePagerAdapter(FragmentManager fm) {
+            super(fm);
+        }
+
+        @Override
+        public Fragment getItem(int position) {
+            return fragmentList.get(position);
+        }
+
+        @Override
+        public int getCount() {
+            return fragmentList.size();
+        }
+
+    }
 }

@@ -34,6 +34,7 @@ import com.seimun.logintwo.activity.AntenatalActivity;
 import com.seimun.logintwo.activity.BodyExamActivity;
 import com.seimun.logintwo.activity.DiabetesAftercareActivity;
 import com.seimun.logintwo.activity.LoginActivity;
+import com.seimun.logintwo.activity.Main2Activity;
 import com.seimun.logintwo.activity.NewbornFamilyVisitActivity;
 import com.seimun.logintwo.activity.OldIdentifyActivity;
 import com.seimun.logintwo.activity.Postpartum42ExamActivity;
@@ -311,6 +312,8 @@ public class ServicesFragment extends Fragment {
             pDialog = null;
         }
     }
+
+
 
 }
 
