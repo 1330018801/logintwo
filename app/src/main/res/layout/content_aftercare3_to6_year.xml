@@ -239,11 +239,19 @@
             android:layout_height="wrap_content"
             android:id="@+id/weight_grade"
             android:layout_marginLeft="15dp"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/bg"
+            android:paddingLeft="16dp"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:layout_marginTop="1dp">
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="身长（cm）："
-            android:layout_marginLeft="25dp"/>
+            android:text="身长（cm）："/>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
