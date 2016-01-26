@@ -6,7 +6,6 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.View;
-import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -47,12 +46,11 @@ public class TcmAftercareActivity extends AppCompatActivity {
         toolbar.setNavigationOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(TcmAftercareActivity.this,Main2Activity.class);
+                Intent intent = new Intent(TcmAftercareActivity.this, Main2Activity.class);
                 startActivity(intent);
                 finish();
             }
         });
-
 
 
         db = new SQLiteHandler(getApplicationContext());
@@ -66,8 +64,6 @@ public class TcmAftercareActivity extends AppCompatActivity {
 
         Intent intent = getIntent();
         final Integer record_id = intent.getIntExtra("record_id", 0);
-
-
 
 
         if (record_id != 0) {
@@ -87,13 +83,13 @@ public class TcmAftercareActivity extends AppCompatActivity {
                                     TextView visit_date = (TextView) findViewById(R.id.visit_date);
                                     visit_date.setText(detail.getString("visit_date"));
                                     TextView guide = (TextView) findViewById(R.id.guide);
-                                    guide .setText(detail.getString("guide"));
-                                    TextView guide_extra  = (TextView) findViewById(R.id.guide_extra);
-                                    guide_extra .setText(detail.getString("guide_extra"));
+                                    guide.setText(detail.getString("guide"));
+                                    TextView guide_extra = (TextView) findViewById(R.id.guide_extra);
+                                    guide_extra.setText(detail.getString("guide_extra"));
                                     TextView next_visit_date = (TextView) findViewById(R.id.next_visit_date);
-                                    next_visit_date .setText(detail.getString("next_visit_date"));
+                                    next_visit_date.setText(detail.getString("next_visit_date"));
                                     TextView doctor_signature = (TextView) findViewById(R.id.doctor_signature);
-                                    doctor_signature .setText(detail.getString("doctor_signature"));
+                                    doctor_signature.setText(detail.getString("doctor_signature"));
 
 
                                 } else {

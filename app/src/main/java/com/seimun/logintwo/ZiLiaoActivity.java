@@ -2,8 +2,6 @@ package com.seimun.logintwo;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
@@ -35,7 +33,6 @@ public class ZiLiaoActivity extends AppCompatActivity {
     private SessionManager session;
 
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -48,13 +45,11 @@ public class ZiLiaoActivity extends AppCompatActivity {
         toolbar.setNavigationOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(ZiLiaoActivity.this,Main2Activity.class);
+                Intent intent = new Intent(ZiLiaoActivity.this, Main2Activity.class);
                 startActivity(intent);
                 finish();
             }
         });
-
-
 
 
         db = new SQLiteHandler(getApplicationContext());
@@ -77,33 +72,33 @@ public class ZiLiaoActivity extends AppCompatActivity {
                     JSONObject jObj = new JSONObject(response);
                     boolean error = jObj.getBoolean("error");
                     if (!error) {
-                        TextView name = (TextView)findViewById(R.id.name);
+                        TextView name = (TextView) findViewById(R.id.name);
                         name.setText(user.get("name"));
-                        TextView gender = (TextView)findViewById(R.id.gender);
+                        TextView gender = (TextView) findViewById(R.id.gender);
                         gender.setText(jObj.getString("gender"));
-                        TextView birthday = (TextView)findViewById(R.id.birthday);
-                        birthday  .setText(jObj.getString("birthday"));
-                        TextView identity = (TextView)findViewById(R.id.identity);
-                        TextView contact_name=(TextView)findViewById(R.id.contact_name);
+                        TextView birthday = (TextView) findViewById(R.id.birthday);
+                        birthday.setText(jObj.getString("birthday"));
+                        TextView identity = (TextView) findViewById(R.id.identity);
+                        TextView contact_name = (TextView) findViewById(R.id.contact_name);
                         TextView phone = (TextView) findViewById(R.id.phone);
                         phone.setText(jObj.getString("phone"));
-                        TextView contact_phone=(TextView)findViewById(R.id.contact_phone);
+                        TextView contact_phone = (TextView) findViewById(R.id.contact_phone);
                         identity.setText(jObj.getString("identity"));
                         contact_name.setText(jObj.getString("contact_name"));
                         contact_phone.setText(jObj.getString("contact_phone"));
-                        TextView nation=(TextView)findViewById(R.id.nation);
+                        TextView nation = (TextView) findViewById(R.id.nation);
                         nation.setText(jObj.getString("nation"));
-                        TextView education=(TextView)findViewById(R.id.education);
+                        TextView education = (TextView) findViewById(R.id.education);
                         education.setText(jObj.getString("education"));
-                        TextView occupation=(TextView)findViewById(R.id.occupation);
+                        TextView occupation = (TextView) findViewById(R.id.occupation);
                         occupation.setText(jObj.getString("occupation"));
                         TextView work_company = (TextView) findViewById(R.id.work_company);
                         work_company.setText(jObj.getString("work_company"));
-                        TextView marriage=(TextView)findViewById(R.id.marriage);
+                        TextView marriage = (TextView) findViewById(R.id.marriage);
                         marriage.setText(jObj.getString("marriage"));
-                        TextView blood_type=(TextView)findViewById(R.id.blood_type);
+                        TextView blood_type = (TextView) findViewById(R.id.blood_type);
                         blood_type.setText(jObj.getString("blood_type"));
-                        TextView payment_way=(TextView)findViewById(R.id.payment_way);
+                        TextView payment_way = (TextView) findViewById(R.id.payment_way);
                         payment_way.setText(jObj.getString("payment_way"));
 
 
@@ -134,7 +129,6 @@ public class ZiLiaoActivity extends AppCompatActivity {
 
         AppController.getInstance().addToRequestQueue(infoReq);
     }
-
 
 
     private void logoutUser() {

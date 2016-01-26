@@ -5,7 +5,6 @@ import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.View;
-import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -29,7 +28,7 @@ import java.util.Map;
 /**
  * Created by Administrator on 2015/12/9.
  */
-public class Aftercare6Month extends Aftercare1To8MonthActivity{
+public class Aftercare6Month extends Aftercare1To8MonthActivity {
     private static final String TAG = DetailActivity.class.getSimpleName();
 
 
@@ -47,7 +46,7 @@ public class Aftercare6Month extends Aftercare1To8MonthActivity{
         toolbar.setNavigationOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(Aftercare6Month.this,Main2Activity.class);
+                Intent intent = new Intent(Aftercare6Month.this, Main2Activity.class);
                 startActivity(intent);
                 finish();
             }
@@ -84,9 +83,9 @@ public class Aftercare6Month extends Aftercare1To8MonthActivity{
 
                                     TextView neck_enclosed_mass = (TextView) findViewById(R.id.neck_enclosed_mass);
                                     neck_enclosed_mass.setText(detail.getString("neck_enclosed_mass"));
-                                    TextView hearing =(TextView) findViewById(R.id.hearing);
+                                    TextView hearing = (TextView) findViewById(R.id.hearing);
                                     hearing.setText(detail.getString("hearing"));
-                                    TextView rickets_symptom =(TextView) findViewById(R.id.rickets_symptom);
+                                    TextView rickets_symptom = (TextView) findViewById(R.id.rickets_symptom);
                                     rickets_symptom.setText(detail.getString("rickets_symptom"));
 
                                 } else {

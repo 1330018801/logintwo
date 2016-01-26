@@ -5,7 +5,6 @@ import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.View;
-import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -46,12 +45,11 @@ public class Aftercare1Month extends Aftercare1To8MonthActivity {
         toolbar.setNavigationOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(Aftercare1Month.this,Main2Activity.class);
+                Intent intent = new Intent(Aftercare1Month.this, Main2Activity.class);
                 startActivity(intent);
                 finish();
             }
         });
-
 
 
         db = new SQLiteHandler(getApplicationContext());
@@ -82,7 +80,7 @@ public class Aftercare1Month extends Aftercare1To8MonthActivity {
                                     // Toast.makeText(getApplicationContext(), detail.getString("visit_date"), Toast.LENGTH_SHORT).show();
                                     TextView neck_enclosed_mass = (TextView) findViewById(R.id.neck_enclosed_mass);
                                     neck_enclosed_mass.setText(detail.getString("neck_enclosed_mass"));
-                                    TextView navel =(TextView) findViewById(R.id.navel);
+                                    TextView navel = (TextView) findViewById(R.id.navel);
                                     navel.setText(detail.getString("navel"));
 
                                 } else {

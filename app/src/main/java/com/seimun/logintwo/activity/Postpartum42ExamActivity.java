@@ -6,7 +6,6 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.View;
-import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -44,7 +43,7 @@ public class Postpartum42ExamActivity extends AppCompatActivity {
         toolbar.setNavigationOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(Postpartum42ExamActivity.this,Main2Activity.class);
+                Intent intent = new Intent(Postpartum42ExamActivity.this, Main2Activity.class);
                 startActivity(intent);
                 finish();
             }
@@ -77,7 +76,7 @@ public class Postpartum42ExamActivity extends AppCompatActivity {
                                 if (!obj.getBoolean("error")) {
                                     JSONObject detail = obj.getJSONObject("detail");
                                     // Toast.makeText(getApplicationContext(), detail.getString("visit_date"), Toast.LENGTH_SHORT).show();
-                                    TextView visit_date = (TextView)findViewById(R.id.visit_date);
+                                    TextView visit_date = (TextView) findViewById(R.id.visit_date);
                                     visit_date.setText(detail.getString("visit_date"));
                                     TextView doctor_signature = (TextView) findViewById(R.id.doctor_signature);
                                     doctor_signature.setText(detail.getString("doctor_signature"));
@@ -109,7 +108,7 @@ public class Postpartum42ExamActivity extends AppCompatActivity {
                                     extra.setText(detail.getString("extra"));
                                     TextView classification = (TextView) findViewById(R.id.classification);
                                     classification.setText(detail.getString("classification"));
-                                    TextView classification_not_recovery = (TextView)findViewById(R.id.classification_not_recovery);
+                                    TextView classification_not_recovery = (TextView) findViewById(R.id.classification_not_recovery);
                                     classification_not_recovery.setText(detail.getString("classification_not_recovery"));
                                     TextView guide = (TextView) findViewById(R.id.guide);
                                     guide.setText(detail.getString("guide"));

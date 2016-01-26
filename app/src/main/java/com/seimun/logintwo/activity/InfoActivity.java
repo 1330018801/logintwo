@@ -41,8 +41,8 @@ public class InfoActivity extends AppCompatActivity {
         setContentView(R.layout.activity_info);
 
 
-        btnLogout = (Button)findViewById(R.id.btnLogout);
-        btnMain = (Button)findViewById(R.id.btnMain);
+        btnLogout = (Button) findViewById(R.id.btnLogout);
+        btnMain = (Button) findViewById(R.id.btnMain);
 
         db = new SQLiteHandler(getApplicationContext());
         session = new SessionManager(getApplicationContext());
@@ -79,40 +79,40 @@ public class InfoActivity extends AppCompatActivity {
                     JSONObject jObj = new JSONObject(response);
                     boolean error = jObj.getBoolean("error");
                     if (!error) {
-                        TextView name = (TextView)findViewById(R.id.name);
-                        TextView gender = (TextView)findViewById(R.id.gender);
-                        TextView birthday = (TextView)findViewById(R.id.birthday);
-                        TextView mobile = (TextView)findViewById(R.id.phone);
-                        TextView identity = (TextView)findViewById(R.id.identity);
-                        TextView contact_name=(TextView)findViewById(R.id.contact_name);
-                        TextView contact_phone=(TextView)findViewById(R.id.contact_phone);
-                        TextView residence_type=(TextView)findViewById(R.id.residence_type);
-                        TextView nation=(TextView)findViewById(R.id.nation);
-                        TextView education=(TextView)findViewById(R.id.education);
-                        TextView marriage=(TextView)findViewById(R.id.marriage);
-                        TextView occupation=(TextView)findViewById(R.id.occupation);
-                        TextView payment_way=(TextView)findViewById(R.id.payment_way);
-                        TextView blood_type=(TextView)findViewById(R.id.blood_type);
-                        TextView blood_rh=(TextView)findViewById(R.id.blood_rh);
-                        TextView allergy_history=(TextView)findViewById(R.id.allergy_history);
-                        TextView expose_history=(TextView)findViewById(R.id.expose_history);
-                        TextView disease_history=(TextView)findViewById(R.id.disease_history);
-                        TextView surgery_history=(TextView)findViewById(R.id.surgery_history);
-                        TextView injury_history=(TextView)findViewById(R.id.injury_history);
-                        TextView transfusion_history=(TextView)findViewById(R.id.transfusion_history);
-                        TextView family_history_father=(TextView)findViewById(R.id.family_history_father);
-                        TextView family_history_mother=(TextView)findViewById(R.id.family_history_mother);
-                        TextView family_history_sibling=(TextView)findViewById(R.id.family_history_sibling);
-                        TextView family_history_children=(TextView)findViewById(R.id.family_history_children);
-                        TextView genetic_disease=(TextView)findViewById(R.id.genetic_disease);
-                        TextView disability=(TextView)findViewById(R.id.disability);
-                        TextView surroundings_kitchen_exhaust=(TextView)findViewById(R.id.surroundings_kitchen_exhaust);
-                        TextView surroundings_fuel_type=(TextView)findViewById(R.id.surroundings_fuel_type);
-                        TextView surroundings_water=(TextView)findViewById(R.id.surroundings_water);
-                        TextView surroundings_toilet=(TextView)findViewById(R.id.surroundings_toilet);
-                        TextView surrounding_livestock_fence=(TextView)findViewById(R.id.surrounding_livestock_fence);
+                        TextView name = (TextView) findViewById(R.id.name);
+                        TextView gender = (TextView) findViewById(R.id.gender);
+                        TextView birthday = (TextView) findViewById(R.id.birthday);
+                        TextView mobile = (TextView) findViewById(R.id.phone);
+                        TextView identity = (TextView) findViewById(R.id.identity);
+                        TextView contact_name = (TextView) findViewById(R.id.contact_name);
+                        TextView contact_phone = (TextView) findViewById(R.id.contact_phone);
+                        TextView residence_type = (TextView) findViewById(R.id.residence_type);
+                        TextView nation = (TextView) findViewById(R.id.nation);
+                        TextView education = (TextView) findViewById(R.id.education);
+                        TextView marriage = (TextView) findViewById(R.id.marriage);
+                        TextView occupation = (TextView) findViewById(R.id.occupation);
+                        TextView payment_way = (TextView) findViewById(R.id.payment_way);
+                        TextView blood_type = (TextView) findViewById(R.id.blood_type);
+                        TextView blood_rh = (TextView) findViewById(R.id.blood_rh);
+                        TextView allergy_history = (TextView) findViewById(R.id.allergy_history);
+                        TextView expose_history = (TextView) findViewById(R.id.expose_history);
+                        TextView disease_history = (TextView) findViewById(R.id.disease_history);
+                        TextView surgery_history = (TextView) findViewById(R.id.surgery_history);
+                        TextView injury_history = (TextView) findViewById(R.id.injury_history);
+                        TextView transfusion_history = (TextView) findViewById(R.id.transfusion_history);
+                        TextView family_history_father = (TextView) findViewById(R.id.family_history_father);
+                        TextView family_history_mother = (TextView) findViewById(R.id.family_history_mother);
+                        TextView family_history_sibling = (TextView) findViewById(R.id.family_history_sibling);
+                        TextView family_history_children = (TextView) findViewById(R.id.family_history_children);
+                        TextView genetic_disease = (TextView) findViewById(R.id.genetic_disease);
+                        TextView disability = (TextView) findViewById(R.id.disability);
+                        TextView surroundings_kitchen_exhaust = (TextView) findViewById(R.id.surroundings_kitchen_exhaust);
+                        TextView surroundings_fuel_type = (TextView) findViewById(R.id.surroundings_fuel_type);
+                        TextView surroundings_water = (TextView) findViewById(R.id.surroundings_water);
+                        TextView surroundings_toilet = (TextView) findViewById(R.id.surroundings_toilet);
+                        TextView surrounding_livestock_fence = (TextView) findViewById(R.id.surrounding_livestock_fence);
                         TextView payment_way_extra = (TextView) findViewById(R.id.payment_way_extra);
-                        TextView allergy_history_yes_extra= (TextView) findViewById(R.id.allergy_history_yes_extra);
+                        TextView allergy_history_yes_extra = (TextView) findViewById(R.id.allergy_history_yes_extra);
                         TextView family_history_father_extra = (TextView) findViewById(R.id.family_history_father_extra);
                         TextView family_history_mother_extra = (TextView) findViewById(R.id.family_history_mother_extra);
                         TextView family_history_sibling_extra = (TextView) findViewById(R.id.family_history_sibling_extra);
@@ -121,51 +121,51 @@ public class InfoActivity extends AppCompatActivity {
                         TextView work_company = (TextView) findViewById(R.id.work_company);
                         work_company.setText(jObj.getString("work_company"));
                         TextView disability_extra = (TextView) findViewById(R.id.disability_extra);
-                        if(!jObj.getString("surgery_1_name").equals("null")) {
+                        if (!jObj.getString("surgery_1_name").equals("null")) {
                             TextView surgery_1_name = (TextView) findViewById(R.id.surgery_1_name);
                             surgery_1_name.setText(jObj.getString("surgery_1_name"));
                         }
-                        if(!jObj.getString("surgery_1_date").equals("null")) {
+                        if (!jObj.getString("surgery_1_date").equals("null")) {
                             TextView surgery_1_date = (TextView) findViewById(R.id.surgery_1_date);
                             surgery_1_date.setText(jObj.getString("surgery_1_date"));
                         }
-                        if(!jObj.getString("surgery_2_name").equals("null")) {
+                        if (!jObj.getString("surgery_2_name").equals("null")) {
                             TextView surgery_2_name = (TextView) findViewById(R.id.surgery_2_name);
                             surgery_2_name.setText(jObj.getString("surgery_2_name"));
                         }
-                        if(!jObj.getString("surgery_2_date").equals("null")) {
+                        if (!jObj.getString("surgery_2_date").equals("null")) {
                             TextView surgery_2_date = (TextView) findViewById(R.id.surgery_2_date);
                             surgery_2_date.setText(jObj.getString("surgery_2_date"));
                         }
-                        if(!jObj.getString("injury_1_name").equals("null")) {
+                        if (!jObj.getString("injury_1_name").equals("null")) {
                             TextView injury_1_name = (TextView) findViewById(R.id.injury_1_name);
                             injury_1_name.setText(jObj.getString("injury_1_name"));
                         }
-                        if(!jObj.getString("injury_1_date").equals("null")) {
+                        if (!jObj.getString("injury_1_date").equals("null")) {
                             TextView injury_1_date = (TextView) findViewById(R.id.injury_1_date);
                             injury_1_date.setText(jObj.getString("injury_1_date"));
                         }
-                        if(!jObj.getString("injury_2_name").equals("null")) {
+                        if (!jObj.getString("injury_2_name").equals("null")) {
                             TextView injury_2_name = (TextView) findViewById(R.id.injury_2_name);
                             injury_2_name.setText(jObj.getString("injury_2_name"));
                         }
-                        if(!jObj.getString("injury_2_date").equals("null")) {
+                        if (!jObj.getString("injury_2_date").equals("null")) {
                             TextView injury_2_date = (TextView) findViewById(R.id.injury_2_date);
                             injury_2_date.setText(jObj.getString("injury_2_date"));
                         }
-                        if(!jObj.getString("transfusion_1_reason").equals("null")) {
+                        if (!jObj.getString("transfusion_1_reason").equals("null")) {
                             TextView transfusion_1_reason = (TextView) findViewById(R.id.transfusion_1_reason);
                             transfusion_1_reason.setText(jObj.getString("transfusion_1_reason"));
                         }
-                        if(!jObj.getString("transfusion_1_date").equals("null")) {
+                        if (!jObj.getString("transfusion_1_date").equals("null")) {
                             TextView transfusion_1_date = (TextView) findViewById(R.id.transfusion_1_date);
                             transfusion_1_date.setText(jObj.getString("transfusion_1_date"));
                         }
-                        if(!jObj.getString("transfusion_2_reason").equals("null")) {
+                        if (!jObj.getString("transfusion_2_reason").equals("null")) {
                             TextView transfusion_2_reason = (TextView) findViewById(R.id.transfusion_2_reason);
                             transfusion_2_reason.setText(jObj.getString("transfusion_2_reason"));
                         }
-                        if(!jObj.getString("transfusion_2_date").equals("null")) {
+                        if (!jObj.getString("transfusion_2_date").equals("null")) {
                             TextView transfusion_2_date = (TextView) findViewById(R.id.transfusion_2_date);
                             transfusion_2_date.setText(jObj.getString("transfusion_2_date"));
                         }
@@ -173,7 +173,7 @@ public class InfoActivity extends AppCompatActivity {
 
                         name.setText(user.get("name"));
                         gender.setText(jObj.getString("gender"));
-                        birthday  .setText(jObj.getString("birthday"));
+                        birthday.setText(jObj.getString("birthday"));
                         mobile.setText(jObj.getString("phone"));
                         identity.setText(jObj.getString("identity"));
                         contact_name.setText(jObj.getString("contact_name"));
