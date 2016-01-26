@@ -41,10 +41,10 @@ public class LoginActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
-        inputMobile = (EditText)findViewById(R.id.mobile);
-        inputPassword = (EditText)findViewById(R.id.password);
-        btnLogin = (Button)findViewById(R.id.btnLogin);
-        btnLinkToRegister = (Button)findViewById(R.id.btnLinkToRegisterScreen);
+        inputMobile = (EditText) findViewById(R.id.mobile);
+        inputPassword = (EditText) findViewById(R.id.password);
+        btnLogin = (Button) findViewById(R.id.btnLogin);
+        btnLinkToRegister = (Button) findViewById(R.id.btnLinkToRegisterScreen);
 
         // Progress dialog
         pDialog = new ProgressDialog(this);
@@ -141,7 +141,8 @@ public class LoginActivity extends AppCompatActivity {
                                 errorMsg, Toast.LENGTH_LONG).show();
                     }
                 } catch (JSONException e) {
-                    e.printStackTrace();;
+                    e.printStackTrace();
+                    ;
                     Toast.makeText(getApplicationContext(), "Json error: " + e.getMessage(),
                             Toast.LENGTH_LONG).show();
                 }

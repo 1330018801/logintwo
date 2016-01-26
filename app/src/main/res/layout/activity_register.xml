@@ -9,16 +9,17 @@
     <ImageView
         android:layout_width="100dp"
         android:layout_height="100dp"
-        android:src="@drawable/icon"
+        android:layout_gravity="center"
         android:layout_marginTop="20dp"
-        android:layout_gravity="center"/>
+        android:src="@drawable/icon" />
+
     <ImageView
         android:layout_width="160dp"
         android:layout_height="wrap_content"
-        android:src="@drawable/shgw"
+        android:layout_gravity="center"
         android:layout_marginTop="10dp"
-        android:layout_gravity="center"/>
-    
+        android:src="@drawable/shgw" />
+
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -27,34 +28,40 @@
         android:orientation="vertical"
         android:paddingLeft="20dp"
         android:paddingRight="20dp">
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp">
+
             <ImageView
                 android:layout_width="20dp"
                 android:layout_height="40dp"
-                android:src="@drawable/iconfont_lianxiren"/>
+                android:src="@drawable/iconfont_lianxiren" />
+
             <EditText
                 android:id="@+id/name"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="@string/hint_name"
+                android:inputType="textCapWords"
                 android:padding="10dp"
                 android:singleLine="true"
-                android:inputType="textCapWords"
                 android:textColor="@color/input_register"
-                android:textColorHint="@color/input_login_hint"/>
-            </LinearLayout>
+                android:textColorHint="@color/input_login_hint" />
+        </LinearLayout>
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="5dp">
+
             <ImageView
                 android:layout_width="20dp"
                 android:layout_height="30dp"
                 android:layout_gravity="center"
-                android:src="@drawable/ico_phone"/>
+                android:src="@drawable/ico_phone" />
+
             <EditText
                 android:id="@+id/mobile"
                 android:layout_width="match_parent"
@@ -64,16 +71,19 @@
                 android:padding="10dp"
                 android:singleLine="true"
                 android:textColor="@color/input_register"
-                android:textColorHint="@color/input_register_hint"/>
+                android:textColorHint="@color/input_register_hint" />
         </LinearLayout>
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="5dp">
+
             <ImageView
                 android:layout_width="20dp"
                 android:layout_height="40dp"
-                android:src="@drawable/iconfont_cardid"/>
+                android:src="@drawable/iconfont_cardid" />
+
             <EditText
                 android:id="@+id/identity"
                 android:layout_width="match_parent"
@@ -82,16 +92,19 @@
                 android:padding="10dp"
                 android:singleLine="true"
                 android:textColor="@color/input_register"
-                android:textColorHint="@color/input_register_hint"/>
-            </LinearLayout>
+                android:textColorHint="@color/input_register_hint" />
+        </LinearLayout>
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="5dp">
+
             <ImageView
                 android:layout_width="20dp"
                 android:layout_height="40dp"
-                android:src="@drawable/ico_lock"/>
+                android:src="@drawable/ico_lock" />
+
             <EditText
                 android:id="@+id/password"
                 android:layout_width="match_parent"
@@ -101,8 +114,9 @@
                 android:padding="10dp"
                 android:singleLine="true"
                 android:textColor="@color/input_register"
-                android:textColorHint="@color/input_register_hint"/>
-            </LinearLayout>
+                android:textColorHint="@color/input_register_hint" />
+        </LinearLayout>
+
         <Button
             android:id="@+id/btnResister"
             android:layout_width="match_parent"
@@ -111,7 +125,8 @@
             android:background="@drawable/yuanjiao"
             android:text="@string/btn_register"
             android:textColor="#43CD80"
-            android:textSize="22dp"/>
+            android:textSize="22dp" />
+
         <Button
             android:id="@+id/btnLinkToRegisterScreen"
             android:layout_width="fill_parent"
@@ -119,9 +134,9 @@
             android:layout_marginTop="10dp"
             android:background="@null"
             android:text="@string/btn_link_to_login"
+            android:textAlignment="center"
             android:textAllCaps="false"
             android:textColor="#A8A8A8"
-            android:textAlignment="center"
-            android:textSize="16dp"/>
+            android:textSize="16dp" />
     </LinearLayout>
 </LinearLayout>

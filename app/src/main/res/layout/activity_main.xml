@@ -14,6 +14,7 @@
         android:layout_marginRight="20dp"
         android:gravity="center"
         android:orientation="vertical">
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -25,14 +26,14 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:padding="10dp"
-            android:textSize="16dp"/>
+            android:textSize="16dp" />
 
         <TextView
             android:id="@+id/mobile"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:padding="10dp"
-            android:textSize="16dp"/>
+            android:textSize="16dp" />
 
         <Button
             android:id="@+id/btnInfo"
@@ -43,7 +44,7 @@
             android:text="@string/btn_info"
             android:textAllCaps="false"
             android:textColor="@color/white"
-            android:textSize="22dp"/>
+            android:textSize="22dp" />
 
         <Button
             android:id="@+id/btnServices"
@@ -54,7 +55,7 @@
             android:text="@string/btn_services"
             android:textAllCaps="false"
             android:textColor="@color/white"
-            android:textSize="22dp"/>
+            android:textSize="22dp" />
 
         <Button
             android:id="@+id/btnLogout"
@@ -65,7 +66,7 @@
             android:text="@string/btn_logout"
             android:textAllCaps="false"
             android:textColor="@color/white"
-            android:textSize="22dp"/>
+            android:textSize="22dp" />
 
     </LinearLayout>
 

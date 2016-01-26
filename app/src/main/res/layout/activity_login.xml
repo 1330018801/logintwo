@@ -6,75 +6,85 @@
     android:orientation="vertical"
     android:padding="10dp">
 
-        <ImageView
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:src="@drawable/icon"
-            android:layout_marginTop="40dp"
-            android:layout_gravity="center"/>
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="三河市公共卫生系统"
-            android:textSize="20sp"
-            android:layout_gravity="center"
-            style="@style/Base.TextAppearance.AppCompat.Body1"/>
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="40dp"
+        android:src="@drawable/icon" />
+
+    <TextView
+        style="@style/Base.TextAppearance.AppCompat.Body1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="三河市公共卫生系统"
+        android:textSize="20sp" />
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
         android:paddingLeft="20dp"
         android:paddingRight="20dp">
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="40dp">
+
             <ImageView
                 android:layout_width="20dp"
                 android:layout_height="30dp"
                 android:layout_gravity="center"
-                android:src="@drawable/phone"/>
-        <EditText
-            android:id="@+id/mobile"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="@string/hint_mobile"
-            android:inputType="phone"
-            android:padding="10dp"
-            android:singleLine="true"
-            android:textColor="@color/input_login"
-            android:textColorHint="@color/input_login_hint"/>
+                android:src="@drawable/phone" />
+
+            <EditText
+                android:id="@+id/mobile"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/hint_mobile"
+                android:inputType="phone"
+                android:padding="10dp"
+                android:singleLine="true"
+                android:textColor="@color/input_login"
+                android:textColorHint="@color/input_login_hint" />
         </LinearLayout>
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp">
+
             <ImageView
                 android:layout_width="20dp"
                 android:layout_height="40dp"
-                android:src="@drawable/lock"/>
-        <EditText
-            android:id="@+id/password"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="@string/hint_password"
-            android:inputType="textPassword"
-            android:padding="10dp"
-            android:singleLine="true"
-            android:textColor="@color/input_login"
-            android:textColorHint="@color/input_login_hint"/>
+                android:src="@drawable/lock" />
+
+            <EditText
+                android:id="@+id/password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/hint_password"
+                android:inputType="textPassword"
+                android:padding="10dp"
+                android:singleLine="true"
+                android:textColor="@color/input_login"
+                android:textColorHint="@color/input_login_hint" />
         </LinearLayout>
+
         <Button
             android:id="@+id/btnLogin"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
-            android:padding="10dp"
             android:background="@drawable/shape"
+            android:padding="10dp"
             android:text="@string/btn_login"
             android:textAlignment="center"
-            android:textSize="22dp"
-            android:textColor="#FFF" />
+            android:textColor="#FFF"
+            android:textSize="22dp" />
+
         <Button
             android:id="@+id/btnLinkToRegisterScreen"
             android:layout_width="match_parent"
@@ -82,10 +92,10 @@
             android:layout_marginTop="10dp"
             android:background="@null"
             android:text="@string/btn_link_to_register"
+            android:textAlignment="center"
             android:textAllCaps="false"
             android:textColor="#A8A8A8"
-            android:textAlignment="center"
-            android:textSize="16dp"/>
+            android:textSize="16dp" />
     </LinearLayout>
 
 

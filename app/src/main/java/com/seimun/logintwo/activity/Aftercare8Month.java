@@ -5,7 +5,6 @@ import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.View;
-import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -46,7 +45,7 @@ public class Aftercare8Month extends Aftercare1To8MonthActivity {
         toolbar.setNavigationOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(Aftercare8Month.this,Main2Activity.class);
+                Intent intent = new Intent(Aftercare8Month.this, Main2Activity.class);
                 startActivity(intent);
                 finish();
             }
@@ -64,7 +63,6 @@ public class Aftercare8Month extends Aftercare1To8MonthActivity {
 
         Intent intent = getIntent();
         final Integer record_id = intent.getIntExtra("record_id", 0);
-
 
 
         if (record_id != 0) {

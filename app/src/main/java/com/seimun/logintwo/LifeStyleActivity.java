@@ -2,8 +2,6 @@ package com.seimun.logintwo;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
@@ -54,7 +52,6 @@ public class LifeStyleActivity extends AppCompatActivity {
         });
 
 
-
         db = new SQLiteHandler(getApplicationContext());
         session = new SessionManager(getApplicationContext());
 
@@ -75,13 +72,13 @@ public class LifeStyleActivity extends AppCompatActivity {
                     JSONObject jObj = new JSONObject(response);
                     boolean error = jObj.getBoolean("error");
                     if (!error) {
-                        TextView expose_history=(TextView)findViewById(R.id.expose_history);
+                        TextView expose_history = (TextView) findViewById(R.id.expose_history);
                         expose_history.setText(jObj.getString("expose_history"));
-                        TextView surroundings_kitchen_exhaust=(TextView)findViewById(R.id.surroundings_kitchen_exhaust);
-                        TextView surroundings_fuel_type=(TextView)findViewById(R.id.surroundings_fuel_type);
-                        TextView surroundings_water=(TextView)findViewById(R.id.surroundings_water);
-                        TextView surroundings_toilet=(TextView)findViewById(R.id.surroundings_toilet);
-                        TextView surrounding_livestock_fence=(TextView)findViewById(R.id.surrounding_livestock_fence);
+                        TextView surroundings_kitchen_exhaust = (TextView) findViewById(R.id.surroundings_kitchen_exhaust);
+                        TextView surroundings_fuel_type = (TextView) findViewById(R.id.surroundings_fuel_type);
+                        TextView surroundings_water = (TextView) findViewById(R.id.surroundings_water);
+                        TextView surroundings_toilet = (TextView) findViewById(R.id.surroundings_toilet);
+                        TextView surrounding_livestock_fence = (TextView) findViewById(R.id.surrounding_livestock_fence);
                         surroundings_kitchen_exhaust.setText(jObj.getString("surroundings_kitchen_exhaust"));
                         surroundings_fuel_type.setText(jObj.getString("surroundings_fuel_type"));
                         surroundings_water.setText(jObj.getString("surroundings_water"));
@@ -115,7 +112,6 @@ public class LifeStyleActivity extends AppCompatActivity {
 
         AppController.getInstance().addToRequestQueue(infoReq);
     }
-
 
 
     private void logoutUser() {

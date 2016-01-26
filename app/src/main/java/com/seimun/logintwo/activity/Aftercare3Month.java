@@ -5,7 +5,6 @@ import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.View;
-import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -33,7 +32,6 @@ public class Aftercare3Month extends Aftercare1To8MonthActivity {
     private static final String TAG = DetailActivity.class.getSimpleName();
 
 
-
     private SQLiteHandler db;
     private SessionManager session;
 
@@ -48,7 +46,7 @@ public class Aftercare3Month extends Aftercare1To8MonthActivity {
         toolbar.setNavigationOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(Aftercare3Month.this,Main2Activity.class);
+                Intent intent = new Intent(Aftercare3Month.this, Main2Activity.class);
                 startActivity(intent);
                 finish();
             }
@@ -68,7 +66,6 @@ public class Aftercare3Month extends Aftercare1To8MonthActivity {
         final Integer record_id = intent.getIntExtra("record_id", 0);
 
 
-
         if (record_id != 0) {
             Log.e(TAG, "开始从后台获取详情");
             final StringRequest detailReq = new StringRequest(
@@ -85,7 +82,7 @@ public class Aftercare3Month extends Aftercare1To8MonthActivity {
                                     // Toast.makeText(getApplicationContext(), detail.getString("visit_date"), Toast.LENGTH_SHORT).show();
                                     TextView rickets_symptom = (TextView) findViewById(R.id.rickets_symptom);
                                     rickets_symptom.setText(detail.getString("rickets_symptom"));
-                                    TextView navel =(TextView) findViewById(R.id.navel);
+                                    TextView navel = (TextView) findViewById(R.id.navel);
                                     navel.setText(detail.getString("navel"));
                                     TextView neck_enclosed_mass = (TextView) findViewById(R.id.neck_enclosed_mass);
                                     neck_enclosed_mass.setText(detail.getString("neck_enclosed_mass"));

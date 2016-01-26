@@ -7,7 +7,6 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.View;
-import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -32,8 +31,6 @@ public class hypertension_aftercare extends AppCompatActivity {
     private static final String TAG = DetailActivity.class.getSimpleName();
 
 
-
-
     private SQLiteHandler db;
     private SessionManager session;
 
@@ -48,7 +45,7 @@ public class hypertension_aftercare extends AppCompatActivity {
         toolbar.setNavigationOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(hypertension_aftercare.this,Main2Activity.class);
+                Intent intent = new Intent(hypertension_aftercare.this, Main2Activity.class);
                 startActivity(intent);
                 finish();
             }
@@ -80,9 +77,9 @@ public class hypertension_aftercare extends AppCompatActivity {
                                 if (!obj.getBoolean("error")) {
                                     JSONObject detail = obj.getJSONObject("detail");
                                     // Toast.makeText(getApplicationContext(), detail.getString("visit_date"), Toast.LENGTH_SHORT).show();
-                                    TextView visit_date = (TextView)findViewById(R.id.visit_date);
+                                    TextView visit_date = (TextView) findViewById(R.id.visit_date);
                                     visit_date.setText(detail.getString("visit_date"));
-                                    TextView visit_way = (TextView)findViewById(R.id.visit_way);
+                                    TextView visit_way = (TextView) findViewById(R.id.visit_way);
                                     visit_way.setText(detail.getString("visit_way"));
                                     TextView doctor_signature = (TextView) findViewById(R.id.doctor_signature);
                                     doctor_signature.setText(detail.getString("doctor_signature"));
@@ -104,7 +101,7 @@ public class hypertension_aftercare extends AppCompatActivity {
                                     sign_weight.setText(detail.getString("sign_weight"));
                                     TextView sign_weight_next = (TextView) findViewById(R.id.sign_weight_next);
                                     sign_weight_next.setText(detail.getString("sign_weight_next"));
-                                    TextView sign_bmi= (TextView) findViewById(R.id.sign_bmi);
+                                    TextView sign_bmi = (TextView) findViewById(R.id.sign_bmi);
                                     sign_bmi.setText(detail.getString("sign_bmi"));
                                     TextView sign_bmi_next = (TextView) findViewById(R.id.sign_bmi_next);
                                     sign_bmi_next.setText(detail.getString("sign_bmi_next"));
@@ -140,51 +137,51 @@ public class hypertension_aftercare extends AppCompatActivity {
                                     take_medicine_compliance.setText(detail.getString("take_medicine_compliance"));
                                     TextView medicine_untoward_effect = (TextView) findViewById(R.id.medicine_untoward_effect);
                                     medicine_untoward_effect.setText(detail.getString("medicine_untoward_effect"));
-                                    if(!detail.getString("take_medicine_1").equals("null")) {
+                                    if (!detail.getString("take_medicine_1").equals("null")) {
                                         TextView take_medicine_1 = (TextView) findViewById(R.id.take_medicine_1);
                                         take_medicine_1.setText(detail.getString("take_medicine_1"));
                                     }
-                                    if(!detail.getString("take_medicine_1_day").equals("null")) {
+                                    if (!detail.getString("take_medicine_1_day").equals("null")) {
                                         TextView take_medicine_1_day = (TextView) findViewById(R.id.take_medicine_1_day);
                                         take_medicine_1_day.setText(detail.getString("take_medicine_1_day"));
                                     }
-                                    if(!detail.getString("take_medicine_1_time").equals("null")) {
+                                    if (!detail.getString("take_medicine_1_time").equals("null")) {
                                         TextView take_medicine_1_time = (TextView) findViewById(R.id.take_medicine_1_time);
                                         take_medicine_1_time.setText(detail.getString("take_medicine_1_time"));
                                     }
-                                    if(!detail.getString("take_medicine_2").equals("null")) {
+                                    if (!detail.getString("take_medicine_2").equals("null")) {
                                         TextView take_medicine_2 = (TextView) findViewById(R.id.take_medicine_2);
                                         take_medicine_2.setText(detail.getString("take_medicine_2"));
                                     }
-                                    if(!detail.getString("take_medicine_2_day").equals("null")) {
+                                    if (!detail.getString("take_medicine_2_day").equals("null")) {
                                         TextView take_medicine_2_day = (TextView) findViewById(R.id.take_medicine_2_day);
                                         take_medicine_2_day.setText(detail.getString("take_medicine_2_day"));
                                     }
-                                    if(!detail.getString("take_medicine_2_time").equals("null")) {
+                                    if (!detail.getString("take_medicine_2_time").equals("null")) {
                                         TextView take_medicine_2_time = (TextView) findViewById(R.id.take_medicine_2_time);
                                         take_medicine_2_time.setText(detail.getString("take_medicine_2_time"));
                                     }
-                                    if(!detail.getString("take_medicine_3").equals("null")) {
+                                    if (!detail.getString("take_medicine_3").equals("null")) {
                                         TextView take_medicine_3 = (TextView) findViewById(R.id.take_medicine_3);
                                         take_medicine_3.setText(detail.getString("take_medicine_3"));
                                     }
-                                    if(!detail.getString("take_medicine_3_day").equals("null")) {
+                                    if (!detail.getString("take_medicine_3_day").equals("null")) {
                                         TextView take_medicine_3_day = (TextView) findViewById(R.id.take_medicine_3_day);
                                         take_medicine_3_day.setText(detail.getString("take_medicine_3_day"));
                                     }
-                                    if(!detail.getString("take_medicine_3_time").equals("null")) {
+                                    if (!detail.getString("take_medicine_3_time").equals("null")) {
                                         TextView take_medicine_3_time = (TextView) findViewById(R.id.take_medicine_3_time);
                                         take_medicine_3_time.setText(detail.getString("take_medicine_3_time"));
                                     }
-                                    if(!detail.getString("take_medicine_qt").equals("null")) {
+                                    if (!detail.getString("take_medicine_qt").equals("null")) {
                                         TextView take_medicine_qt = (TextView) findViewById(R.id.take_medicine_qt);
                                         take_medicine_qt.setText(detail.getString("take_medicine_qt"));
                                     }
-                                    if(!detail.getString("take_medicine_qt_day").equals("null")) {
+                                    if (!detail.getString("take_medicine_qt_day").equals("null")) {
                                         TextView take_medicine_qt_day = (TextView) findViewById(R.id.take_medicine_qt_day);
                                         take_medicine_qt_day.setText(detail.getString("take_medicine_qt_day"));
                                     }
-                                    if(!detail.getString("take_medicine_qt_time").equals("null")) {
+                                    if (!detail.getString("take_medicine_qt_time").equals("null")) {
                                         TextView take_medicine_qt_time = (TextView) findViewById(R.id.take_medicine_qt_time);
                                         take_medicine_qt_time.setText(detail.getString("take_medicine_qt_time"));
                                     }
@@ -198,7 +195,7 @@ public class hypertension_aftercare extends AppCompatActivity {
                                 e.printStackTrace();
                             }
                         }
-                    },new Response.ErrorListener() {
+                    }, new Response.ErrorListener() {
                 @Override
                 public void onErrorResponse(VolleyError error) {
                     VolleyLog.d(TAG, "Error: " + error.getMessage());
@@ -218,6 +215,7 @@ public class hypertension_aftercare extends AppCompatActivity {
             Toast.makeText(getApplicationContext(), "没有获得记录ID", Toast.LENGTH_LONG).show();
         }
     }
+
     private void logoutUser() {
         session.setLogin(false);
         db.deleteUsers();

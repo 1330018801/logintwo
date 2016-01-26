@@ -2,8 +2,6 @@ package com.seimun.logintwo;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v4.view.PagerAdapter;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
@@ -73,72 +71,72 @@ public class PastHistoryActivity extends AppCompatActivity {
                     JSONObject jObj = new JSONObject(response);
                     boolean error = jObj.getBoolean("error");
                     if (!error) {
-                        TextView disease_history=(TextView)findViewById(R.id.disease_history);
+                        TextView disease_history = (TextView) findViewById(R.id.disease_history);
                         disease_history.setText(jObj.getString("disease_history"));
 
-                        if(jObj.getString("surgery_history").equals("无")){
-                        TextView surgery_history=(TextView)findViewById(R.id.surgery_history);
-                        surgery_history.setText(jObj.getString("surgery_history"));
+                        if (jObj.getString("surgery_history").equals("无")) {
+                            TextView surgery_history = (TextView) findViewById(R.id.surgery_history);
+                            surgery_history.setText(jObj.getString("surgery_history"));
                         }
 
-                        if(!jObj.getString("surgery_1_name").equals("null")) {
+                        if (!jObj.getString("surgery_1_name").equals("null")) {
                             TextView surgery_1_name = (TextView) findViewById(R.id.surgery_1_name);
                             surgery_1_name.setText(jObj.getString("surgery_1_name"));
                         }
-                        if(jObj.getString("injury_history").equals("无")){
-                            TextView injury_history=(TextView)findViewById(R.id.injury_history);
+                        if (jObj.getString("injury_history").equals("无")) {
+                            TextView injury_history = (TextView) findViewById(R.id.injury_history);
                             injury_history.setText(jObj.getString("injury_history"));
                         }
-                        if(!jObj.getString("surgery_1_date").equals("null")) {
+                        if (!jObj.getString("surgery_1_date").equals("null")) {
                             TextView surgery_1_date = (TextView) findViewById(R.id.surgery_1_date);
                             surgery_1_date.setText(jObj.getString("surgery_1_date"));
                         }
-                        if(!jObj.getString("injury_1_name").equals("null")) {
+                        if (!jObj.getString("injury_1_name").equals("null")) {
                             TextView injury_1_name = (TextView) findViewById(R.id.injury_1_name);
                             injury_1_name.setText(jObj.getString("injury_1_name"));
                         }
-                        if(!jObj.getString("injury_1_date").equals("null")) {
+                        if (!jObj.getString("injury_1_date").equals("null")) {
                             TextView injury_1_date = (TextView) findViewById(R.id.injury_1_date);
                             injury_1_date.setText(jObj.getString("injury_1_date"));
                         }
-                        if(jObj.getString("transfusion_history").equals("无")){
-                            TextView transfusion_history=(TextView)findViewById(R.id.transfusion_history);
+                        if (jObj.getString("transfusion_history").equals("无")) {
+                            TextView transfusion_history = (TextView) findViewById(R.id.transfusion_history);
                             transfusion_history.setText(jObj.getString("transfusion_history"));
                         }
 
-                        if(!jObj.getString("transfusion_1_reason").equals("null")) {
+                        if (!jObj.getString("transfusion_1_reason").equals("null")) {
                             TextView transfusion_1_reason = (TextView) findViewById(R.id.transfusion_1_reason);
                             transfusion_1_reason.setText(jObj.getString("transfusion_1_reason"));
                         }
-                        if(!jObj.getString("transfusion_1_date").equals("null")) {
+                        if (!jObj.getString("transfusion_1_date").equals("null")) {
                             TextView transfusion_1_date = (TextView) findViewById(R.id.transfusion_1_date);
                             transfusion_1_date.setText(jObj.getString("transfusion_1_date"));
                         }
-                        TextView disability=(TextView)findViewById(R.id.disability);
+                        TextView disability = (TextView) findViewById(R.id.disability);
                         disability.setText(jObj.getString("disability"));
                         TextView disability_extra = (TextView) findViewById(R.id.disability_extra);
                         disability_extra.setText(jObj.getString("disability_extra"));
                         TextView family_history_father_extra = (TextView) findViewById(R.id.family_history_father_extra);
                         family_history_father_extra.setText(jObj.getString("family_history_father_extra"));
-                        TextView family_history_father=(TextView)findViewById(R.id.family_history_father);
+                        TextView family_history_father = (TextView) findViewById(R.id.family_history_father);
                         family_history_father.setText(jObj.getString("family_history_father"));
-                        TextView family_history_mother=(TextView)findViewById(R.id.family_history_mother);
+                        TextView family_history_mother = (TextView) findViewById(R.id.family_history_mother);
                         family_history_mother.setText(jObj.getString("family_history_mother"));
                         TextView family_history_mother_extra = (TextView) findViewById(R.id.family_history_mother_extra);
                         family_history_mother_extra.setText(jObj.getString("family_history_mother_extra"));
-                        TextView family_history_sibling=(TextView)findViewById(R.id.family_history_sibling);
+                        TextView family_history_sibling = (TextView) findViewById(R.id.family_history_sibling);
                         family_history_sibling.setText(jObj.getString("family_history_sibling"));
                         TextView family_history_sibling_extra = (TextView) findViewById(R.id.family_history_sibling_extra);
                         family_history_sibling_extra.setText(jObj.getString("family_history_sibling_extra"));
-                        TextView family_history_children=(TextView)findViewById(R.id.family_history_children);
+                        TextView family_history_children = (TextView) findViewById(R.id.family_history_children);
                         family_history_children.setText(jObj.getString("family_history_children"));
                         TextView family_history_children_extra = (TextView) findViewById(R.id.family_history_children_extra);
                         family_history_children_extra.setText(jObj.getString("family_history_children_extra"));
-                        TextView allergy_history=(TextView)findViewById(R.id.allergy_history);
+                        TextView allergy_history = (TextView) findViewById(R.id.allergy_history);
                         allergy_history.setText(jObj.getString("allergy_history"));
-                        TextView allergy_history_yes_extra= (TextView) findViewById(R.id.allergy_history_yes_extra);
+                        TextView allergy_history_yes_extra = (TextView) findViewById(R.id.allergy_history_yes_extra);
                         allergy_history_yes_extra.setText(jObj.getString("allergy_history_yes_extra"));
-                        TextView genetic_disease=(TextView)findViewById(R.id.genetic_disease);
+                        TextView genetic_disease = (TextView) findViewById(R.id.genetic_disease);
                         genetic_disease.setText(jObj.getString("genetic_disease"));
                         TextView genetic_disease_yes = (TextView) findViewById(R.id.genetic_disease_yes);
                         genetic_disease_yes.setText(jObj.getString("genetic_disease_yes"));
@@ -170,7 +168,6 @@ public class PastHistoryActivity extends AppCompatActivity {
 
         AppController.getInstance().addToRequestQueue(infoReq);
     }
-
 
 
     private void logoutUser() {
