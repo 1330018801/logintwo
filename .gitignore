@@ -38,3 +38,5 @@ proguard/
 captures/
 *.png
 app/src/main/res/drawable-xhdpi/jiaoyu2.png
+
+.idea/*
