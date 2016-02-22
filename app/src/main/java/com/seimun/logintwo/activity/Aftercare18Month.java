@@ -5,7 +5,6 @@ import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.View;
-import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -46,12 +45,11 @@ public class Aftercare18Month extends Aftercare12To30MonthActivity {
         toolbar.setNavigationOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(Aftercare18Month.this,Main2Activity.class);
+                Intent intent = new Intent(Aftercare18Month.this, Main2Activity.class);
                 startActivity(intent);
                 finish();
             }
         });
-
 
 
         db = new SQLiteHandler(getApplicationContext());
@@ -83,26 +81,26 @@ public class Aftercare18Month extends Aftercare12To30MonthActivity {
                                     // Toast.makeText(getApplicationContext(), detail.getString("visit_date"), Toast.LENGTH_SHORT).show();
 
                                     TextView bregma = (TextView) findViewById(R.id.bregma);
-                                    bregma .setText(detail.getString("bregma"));
-                                    if(!detail.getString("bregma_length").equals("null")){
+                                    bregma.setText(detail.getString("bregma"));
+                                    if (!detail.getString("bregma_length").equals("null")) {
                                         TextView bregma_length = (TextView) findViewById(R.id.bregma_length);
-                                        bregma_length .setText(detail.getString("bregma_length"));
+                                        bregma_length.setText(detail.getString("bregma_length"));
                                     }
-                                    if(!detail.getString("bregma_width").equals("null")){
+                                    if (!detail.getString("bregma_width").equals("null")) {
                                         TextView bregma_width = (TextView) findViewById(R.id.bregma_width);
-                                        bregma_width .setText(detail.getString("bregma_width"));
+                                        bregma_width.setText(detail.getString("bregma_width"));
                                     }
                                     TextView step = (TextView) findViewById(R.id.step);
                                     step.setText(detail.getString("step"));
-                                    if(!detail.getString("rickets_sign").equals("null")){
+                                    if (!detail.getString("rickets_sign").equals("null")) {
                                         TextView rickets_sign = (TextView) findViewById(R.id.rickets_sign);
-                                        rickets_sign .setText(detail.getString("rickets_sign"));
+                                        rickets_sign.setText(detail.getString("rickets_sign"));
                                     }
                                     TextView take_vitamin_d = (TextView) findViewById(R.id.take_vitamin_d);
-                                    take_vitamin_d .setText(detail.getString("take_vitamin_d"));
+                                    take_vitamin_d.setText(detail.getString("take_vitamin_d"));
                                     TextView growth_evaluate = (TextView) findViewById(R.id.growth_evaluate);
-                                    growth_evaluate .setText(detail.getString("growth_evaluate"));
-                                    TextView hemoglobin_value =(TextView) findViewById(R.id.hemoglobin_value);
+                                    growth_evaluate.setText(detail.getString("growth_evaluate"));
+                                    TextView hemoglobin_value = (TextView) findViewById(R.id.hemoglobin_value);
                                     hemoglobin_value.setText(detail.getString("hemoglobin_value"));
 
                                 } else {

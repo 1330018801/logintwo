@@ -6,7 +6,6 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.View;
-import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -44,12 +43,11 @@ public class PostpartumVisitActivity extends AppCompatActivity {
         toolbar.setNavigationOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(PostpartumVisitActivity.this,Main2Activity.class);
+                Intent intent = new Intent(PostpartumVisitActivity.this, Main2Activity.class);
                 startActivity(intent);
                 finish();
             }
         });
-
 
 
         db = new SQLiteHandler(getApplicationContext());
@@ -62,7 +60,6 @@ public class PostpartumVisitActivity extends AppCompatActivity {
 
         Intent intent = getIntent();
         final Integer record_id = intent.getIntExtra("record_id", 0);
-
 
 
         if (record_id != 0) {
@@ -79,7 +76,7 @@ public class PostpartumVisitActivity extends AppCompatActivity {
                                 if (!obj.getBoolean("error")) {
                                     JSONObject detail = obj.getJSONObject("detail");
                                     // Toast.makeText(getApplicationContext(), detail.getString("visit_date"), Toast.LENGTH_SHORT).show();
-                                    TextView visit_date = (TextView)findViewById(R.id.visit_date);
+                                    TextView visit_date = (TextView) findViewById(R.id.visit_date);
                                     visit_date.setText(detail.getString("visit_date"));
                                     TextView doctor_signature = (TextView) findViewById(R.id.doctor_signature);
                                     doctor_signature.setText(detail.getString("doctor_signature"));
@@ -127,7 +124,6 @@ public class PostpartumVisitActivity extends AppCompatActivity {
                                     transfer_treatment_institution.setText(detail.getString("transfer_treatment_institution"));
                                     TextView next_visit_date = (TextView) findViewById(R.id.next_visit_date);
                                     next_visit_date.setText(detail.getString("next_visit_date"));
-
 
 
                                 } else {

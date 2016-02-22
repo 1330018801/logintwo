@@ -5,7 +5,6 @@ import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.View;
-import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -46,7 +45,7 @@ public class Aftercare30Month extends Aftercare12To30MonthActivity {
         toolbar.setNavigationOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(Aftercare30Month.this,Main2Activity.class);
+                Intent intent = new Intent(Aftercare30Month.this, Main2Activity.class);
                 startActivity(intent);
                 finish();
             }
@@ -82,7 +81,7 @@ public class Aftercare30Month extends Aftercare12To30MonthActivity {
 
                                     TextView step = (TextView) findViewById(R.id.step);
                                     step.setText(detail.getString("step"));
-                                    TextView hemoglobin_value =(TextView) findViewById(R.id.hemoglobin_value);
+                                    TextView hemoglobin_value = (TextView) findViewById(R.id.hemoglobin_value);
                                     hemoglobin_value.setText(detail.getString("hemoglobin_value"));
 
                                 } else {

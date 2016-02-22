@@ -17,46 +17,50 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
+        android:layout_marginTop="20dp"
         android:gravity="center"
-        android:layout_marginTop="20dp">
+        android:orientation="vertical">
+
         <ImageView
             android:layout_width="100dp"
             android:layout_height="100dp"
-            android:src="@drawable/icon"/>
+            android:src="@drawable/icon" />
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
-            android:textSize="24sp"
-            android:text="宜健宝"/>
+            android:text="宜健宝"
+            android:textSize="24sp" />
     </LinearLayout>
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="30dp"
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
 
-            android:textSize="16sp"
-            android:text="        宜健宝APP致力打造一款守护您健康的APP。收集各方健康数据，发布健康教育知识，实时展现在您面前。"/>
+        android:text="        宜健宝APP致力打造一款守护您健康的APP。收集各方健康数据，发布健康教育知识，实时展现在您面前。"
+        android:textSize="16sp" />
 
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="60dp">
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="22sp"
-            android:text="当前版本"/>
+            android:text="当前版本"
+            android:textSize="22sp" />
+
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textSize="22sp"
             android:layout_marginRight="20dp"
             android:gravity="right"
-            android:text="V 2.0"/>
+            android:text="V 2.0"
+            android:textSize="22sp" />
     </LinearLayout>
 
     <ImageView

@@ -13,15 +13,15 @@
         android:id="@+id/main_content"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="1"/>
+        android:layout_weight="1" />
 
     <RadioGroup
         android:id="@+id/tab_menu"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
         android:layout_marginTop="1dp"
-        android:background="@color/bg">
+        android:background="@color/bg"
+        android:orientation="horizontal">
 
         <RadioButton
             android:id="@+id/id_tab_baogao"
@@ -63,6 +63,20 @@
             android:textColor="@color/tab_selector_color" />
 
         <RadioButton
+            android:id="@+id/id_tab_yiliao"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_weight="1"
+            android:button="@null"
+            android:checked="true"
+            android:drawableTop="@drawable/tab_select_yiliao"
+            android:gravity="center_horizontal|bottom"
+            android:paddingTop="10dp"
+            android:text="医院诊疗"
+            android:textColor="@color/tab_selector_color" />
+
+        <RadioButton
             android:id="@+id/id_tab_ziliao"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -76,6 +90,6 @@
             android:text="个人资料"
             android:textColor="@color/tab_selector_color" />
 
-        </RadioGroup>
+    </RadioGroup>
 
 </LinearLayout>

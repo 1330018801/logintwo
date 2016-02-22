@@ -7,7 +7,6 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.View;
-import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -46,12 +45,11 @@ public class Aftercare3To6YearActivity extends AppCompatActivity {
         toolbar.setNavigationOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(Aftercare3To6YearActivity.this,Main2Activity.class);
+                Intent intent = new Intent(Aftercare3To6YearActivity.this, Main2Activity.class);
                 startActivity(intent);
                 finish();
             }
         });
-
 
 
         db = new SQLiteHandler(getApplicationContext());
@@ -84,50 +82,49 @@ public class Aftercare3To6YearActivity extends AppCompatActivity {
                                     TextView visit_date = (TextView) findViewById(R.id.visit_date);
                                     visit_date.setText(detail.getString("visit_date"));
                                     TextView doctor_signature = (TextView) findViewById(R.id.doctor_signature);
-                                    doctor_signature .setText(detail.getString("doctor_signature"));
+                                    doctor_signature.setText(detail.getString("doctor_signature"));
                                     TextView pneumonia = (TextView) findViewById(R.id.pneumonia);
-                                    pneumonia .setText(detail.getString("pneumonia"));
+                                    pneumonia.setText(detail.getString("pneumonia"));
                                     TextView diarrhea = (TextView) findViewById(R.id.diarrhea);
                                     diarrhea.setText(detail.getString("diarrhea"));
                                     TextView traumatism = (TextView) findViewById(R.id.traumatism);
-                                    traumatism .setText(detail.getString("traumatism"));
+                                    traumatism.setText(detail.getString("traumatism"));
                                     TextView two_visit_extra = (TextView) findViewById(R.id.two_visit_extra);
-                                    two_visit_extra .setText(detail.getString("two_visit_extra"));
+                                    two_visit_extra.setText(detail.getString("two_visit_extra"));
                                     TextView guide = (TextView) findViewById(R.id.guide);
-                                    guide .setText(detail.getString("guide"));
+                                    guide.setText(detail.getString("guide"));
                                     TextView guide_extra = (TextView) findViewById(R.id.guide_extra);
-                                    guide_extra .setText(detail.getString("guide_extra"));
+                                    guide_extra.setText(detail.getString("guide_extra"));
                                     TextView transfer_treatment_suggestion = (TextView) findViewById(R.id.transfer_treatment_suggestion);
-                                    transfer_treatment_suggestion .setText(detail.getString("transfer_treatment_suggestion"));
+                                    transfer_treatment_suggestion.setText(detail.getString("transfer_treatment_suggestion"));
                                     TextView transfer_treatment_suggestion_reason = (TextView) findViewById(R.id.transfer_treatment_suggestion_reason);
-                                    transfer_treatment_suggestion_reason .setText(detail.getString("transfer_treatment_suggestion_reason"));
+                                    transfer_treatment_suggestion_reason.setText(detail.getString("transfer_treatment_suggestion_reason"));
                                     TextView next_visit_date = (TextView) findViewById(R.id.next_visit_date);
-                                    next_visit_date .setText(detail.getString("next_visit_date"));
+                                    next_visit_date.setText(detail.getString("next_visit_date"));
                                     TextView transfer_treatment_suggestion_institution = (TextView) findViewById(R.id.transfer_treatment_suggestion_institution);
                                     transfer_treatment_suggestion_institution.setText(detail.getString("transfer_treatment_suggestion_institution"));
                                     TextView weight = (TextView) findViewById(R.id.weight);
-                                    weight .setText(detail.getString("weight"));
+                                    weight.setText(detail.getString("weight"));
                                     TextView weight_grade = (TextView) findViewById(R.id.weight_grade);
-                                    weight_grade .setText(detail.getString("weight_grade"));
+                                    weight_grade.setText(detail.getString("weight_grade"));
                                     TextView height = (TextView) findViewById(R.id.height);
-                                    height .setText(detail.getString("height"));
+                                    height.setText(detail.getString("height"));
                                     TextView height_grade = (TextView) findViewById(R.id.height_grade);
                                     height_grade.setText(detail.getString("height_grade"));
                                     TextView body_growth_evaluate = (TextView) findViewById(R.id.body_growth_evaluate);
-                                    body_growth_evaluate .setText(detail.getString("body_growth_evaluate"));
+                                    body_growth_evaluate.setText(detail.getString("body_growth_evaluate"));
                                     TextView tooth = (TextView) findViewById(R.id.tooth);
-                                    tooth .setText(detail.getString("tooth"));
+                                    tooth.setText(detail.getString("tooth"));
                                     TextView decayed_tooth = (TextView) findViewById(R.id.decayed_tooth);
-                                    decayed_tooth .setText(detail.getString("decayed_tooth"));
+                                    decayed_tooth.setText(detail.getString("decayed_tooth"));
                                     TextView heart_lung = (TextView) findViewById(R.id.heart_lung);
-                                    heart_lung .setText(detail.getString("heart_lung"));
+                                    heart_lung.setText(detail.getString("heart_lung"));
                                     TextView abdomen = (TextView) findViewById(R.id.abdomen);
-                                    abdomen .setText(detail.getString("abdomen"));
+                                    abdomen.setText(detail.getString("abdomen"));
                                     TextView hemoglobin_value = (TextView) findViewById(R.id.hemoglobin_value);
-                                    hemoglobin_value .setText(detail.getString("hemoglobin_value"));
+                                    hemoglobin_value.setText(detail.getString("hemoglobin_value"));
                                     TextView extra = (TextView) findViewById(R.id.extra);
-                                    extra .setText(detail.getString("extra"));
-
+                                    extra.setText(detail.getString("extra"));
 
 
                                 } else {

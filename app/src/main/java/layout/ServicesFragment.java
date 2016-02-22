@@ -34,6 +34,7 @@ import com.seimun.logintwo.activity.AntenatalActivity;
 import com.seimun.logintwo.activity.BodyExamActivity;
 import com.seimun.logintwo.activity.DiabetesAftercareActivity;
 import com.seimun.logintwo.activity.LoginActivity;
+import com.seimun.logintwo.activity.Main2Activity;
 import com.seimun.logintwo.activity.NewbornFamilyVisitActivity;
 import com.seimun.logintwo.activity.OldIdentifyActivity;
 import com.seimun.logintwo.activity.Postpartum42ExamActivity;
@@ -77,13 +78,12 @@ public class ServicesFragment extends Fragment {
     }
 
 
-
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
 
-        View view = inflater.inflate(R.layout.fragment_services,null);
+        View view = inflater.inflate(R.layout.fragment_services, null);
         // Inflate the layout for this fragment
         ListView listView = (ListView) view.findViewById(R.id.services1);
         adapter = new SummaryListAdapter(getActivity(), summaryList);
@@ -270,13 +270,13 @@ public class ServicesFragment extends Fragment {
 
                 adapter.notifyDataSetChanged();
             }
-        },new Response.ErrorListener() {
+        }, new Response.ErrorListener() {
             @Override
             public void onErrorResponse(VolleyError error) {
                 VolleyLog.d(TAG, "Error: " + error.getMessage());
                 hidePDialog();
             }
-        }){
+        }) {
             @Override
             protected Map<String, String> getParams() {
                 Map<String, String> params = new HashMap<String, String>();
@@ -296,7 +296,7 @@ public class ServicesFragment extends Fragment {
 
         Intent intent = new Intent(getActivity(), LoginActivity.class);
         startActivity(intent);
-        return ;
+        return;
     }
 
     @Override
@@ -311,6 +311,7 @@ public class ServicesFragment extends Fragment {
             pDialog = null;
         }
     }
+
 
 }
 

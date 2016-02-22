@@ -6,7 +6,6 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.View;
-import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -46,7 +45,7 @@ public class OldIdentifyActivity extends AppCompatActivity {
         toolbar.setNavigationOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(OldIdentifyActivity.this,Main2Activity.class);
+                Intent intent = new Intent(OldIdentifyActivity.this, Main2Activity.class);
                 startActivity(intent);
                 finish();
             }
@@ -63,8 +62,6 @@ public class OldIdentifyActivity extends AppCompatActivity {
 
         Intent intent = getIntent();
         final Integer record_id = intent.getIntExtra("record_id", 0);
-
-
 
 
         if (record_id != 0) {
@@ -84,96 +81,96 @@ public class OldIdentifyActivity extends AppCompatActivity {
                                     TextView fill_table_date = (TextView) findViewById(R.id.fill_table_date);
                                     fill_table_date.setText(detail.getString("fill_table_date"));
                                     TextView points_pinghe = (TextView) findViewById(R.id.points_pinghe);
-                                    points_pinghe .setText(detail.getString("points_pinghe"));
-                                    if(!detail.getString("yes_trend_pinghe").equals("null")) {
+                                    points_pinghe.setText(detail.getString("points_pinghe"));
+                                    if (!detail.getString("yes_trend_pinghe").equals("null")) {
                                         TextView yes_trend_pinghe = (TextView) findViewById(R.id.yes_trend_pinghe);
                                         yes_trend_pinghe.setText(detail.getString("yes_trend_pinghe"));
                                     }
                                     TextView health_care_guide_pinghe = (TextView) findViewById(R.id.health_care_guide_pinghe);
                                     health_care_guide_pinghe.setText(detail.getString("health_care_guide_pinghe"));
                                     TextView health_care_guide_extra_pinghe = (TextView) findViewById(R.id.health_care_guide_extra_pinghe);
-                                    health_care_guide_extra_pinghe .setText(detail.getString("health_care_guide_extra_pinghe"));
+                                    health_care_guide_extra_pinghe.setText(detail.getString("health_care_guide_extra_pinghe"));
                                     TextView points_qixu = (TextView) findViewById(R.id.points_qixu);
-                                    points_qixu .setText(detail.getString("points_qixu"));
-                                    if(!detail.getString("yes_trend_qixu").equals("null")) {
+                                    points_qixu.setText(detail.getString("points_qixu"));
+                                    if (!detail.getString("yes_trend_qixu").equals("null")) {
                                         TextView yes_trend_qixu = (TextView) findViewById(R.id.yes_trend_qixu);
                                         yes_trend_qixu.setText(detail.getString("yes_trend_qixu"));
                                     }
                                     TextView health_care_guide_qixu = (TextView) findViewById(R.id.health_care_guide_qixu);
-                                    health_care_guide_qixu .setText(detail.getString("health_care_guide_qixu"));
+                                    health_care_guide_qixu.setText(detail.getString("health_care_guide_qixu"));
                                     TextView health_care_guide_extra_qixu = (TextView) findViewById(R.id.health_care_guide_extra_qixu);
-                                    health_care_guide_extra_qixu .setText(detail.getString("health_care_guide_extra_qixu"));
+                                    health_care_guide_extra_qixu.setText(detail.getString("health_care_guide_extra_qixu"));
                                     TextView points_yangxu = (TextView) findViewById(R.id.points_yangxu);
-                                    points_yangxu .setText(detail.getString("points_yangxu"));
+                                    points_yangxu.setText(detail.getString("points_yangxu"));
 
-                                    if(!detail.getString("yes_trend_yangxu").equals("null")) {
+                                    if (!detail.getString("yes_trend_yangxu").equals("null")) {
                                         TextView yes_trend_yangxu = (TextView) findViewById(R.id.yes_trend_yangxu);
                                         yes_trend_yangxu.setText(detail.getString("yes_trend_yangxu"));
                                     }
                                     TextView health_care_guide_yangxu = (TextView) findViewById(R.id.health_care_guide_yangxu);
-                                    health_care_guide_yangxu .setText(detail.getString("health_care_guide_yangxu"));
+                                    health_care_guide_yangxu.setText(detail.getString("health_care_guide_yangxu"));
                                     TextView health_care_guide_extra_yangxu = (TextView) findViewById(R.id.health_care_guide_extra_yangxu);
-                                    health_care_guide_extra_yangxu .setText(detail.getString("health_care_guide_extra_yangxu"));
+                                    health_care_guide_extra_yangxu.setText(detail.getString("health_care_guide_extra_yangxu"));
                                     TextView points_yinxu = (TextView) findViewById(R.id.points_yinxu);
                                     points_yinxu.setText(detail.getString("points_yinxu"));
-                                    if(!detail.getString("yes_trend_yinxu").equals("null")) {
+                                    if (!detail.getString("yes_trend_yinxu").equals("null")) {
                                         TextView yes_trend_yinxu = (TextView) findViewById(R.id.yes_trend_yinxu);
                                         yes_trend_yinxu.setText(detail.getString("yes_trend_yinxu"));
                                     }
                                     TextView health_care_guide_yinxu = (TextView) findViewById(R.id.health_care_guide_yinxu);
-                                    health_care_guide_yinxu .setText(detail.getString("health_care_guide_yinxu"));
+                                    health_care_guide_yinxu.setText(detail.getString("health_care_guide_yinxu"));
                                     TextView health_care_guide_extra_yinxu = (TextView) findViewById(R.id.health_care_guide_extra_yinxu);
-                                    health_care_guide_extra_yinxu .setText(detail.getString("health_care_guide_extra_yinxu"));
+                                    health_care_guide_extra_yinxu.setText(detail.getString("health_care_guide_extra_yinxu"));
                                     TextView points_tanshi = (TextView) findViewById(R.id.points_tanshi);
-                                    points_tanshi .setText(detail.getString("points_tanshi"));
-                                    if(!detail.getString("yes_trend_tanshi").equals("null")) {
+                                    points_tanshi.setText(detail.getString("points_tanshi"));
+                                    if (!detail.getString("yes_trend_tanshi").equals("null")) {
                                         TextView yes_trend_tanshi = (TextView) findViewById(R.id.yes_trend_tanshi);
                                         yes_trend_tanshi.setText(detail.getString("yes_trend_tanshi"));
                                     }
                                     TextView health_care_guide_tanshi = (TextView) findViewById(R.id.health_care_guide_tanshi);
-                                    health_care_guide_tanshi .setText(detail.getString("health_care_guide_tanshi"));
+                                    health_care_guide_tanshi.setText(detail.getString("health_care_guide_tanshi"));
                                     TextView health_care_guide_extra_tanshi = (TextView) findViewById(R.id.health_care_guide_extra_tanshi);
-                                    health_care_guide_extra_tanshi .setText(detail.getString("health_care_guide_extra_tanshi"));
+                                    health_care_guide_extra_tanshi.setText(detail.getString("health_care_guide_extra_tanshi"));
                                     TextView points_shire = (TextView) findViewById(R.id.points_shire);
-                                    points_shire .setText(detail.getString("points_shire"));
-                                    if(!detail.getString("yes_trend_shire").equals("null")) {
+                                    points_shire.setText(detail.getString("points_shire"));
+                                    if (!detail.getString("yes_trend_shire").equals("null")) {
                                         TextView yes_trend_shire = (TextView) findViewById(R.id.yes_trend_shire);
                                         yes_trend_shire.setText(detail.getString("yes_trend_shire"));
                                     }
                                     TextView health_care_guide_shire = (TextView) findViewById(R.id.health_care_guide_shire);
                                     health_care_guide_shire.setText(detail.getString("health_care_guide_shire"));
                                     TextView health_care_guide_extra_shire = (TextView) findViewById(R.id.health_care_guide_extra_shire);
-                                    health_care_guide_extra_shire .setText(detail.getString("health_care_guide_extra_shire"));
+                                    health_care_guide_extra_shire.setText(detail.getString("health_care_guide_extra_shire"));
                                     TextView points_xueyu = (TextView) findViewById(R.id.points_xueyu);
-                                    points_xueyu .setText(detail.getString("points_xueyu"));
-                                    if(!detail.getString("yes_trend_xueyu").equals("null")) {
+                                    points_xueyu.setText(detail.getString("points_xueyu"));
+                                    if (!detail.getString("yes_trend_xueyu").equals("null")) {
                                         TextView yes_trend_xueyu = (TextView) findViewById(R.id.yes_trend_xueyu);
                                         yes_trend_xueyu.setText(detail.getString("yes_trend_xueyu"));
                                     }
                                     TextView health_care_guide_xueyu = (TextView) findViewById(R.id.health_care_guide_xueyu);
-                                    health_care_guide_xueyu .setText(detail.getString("health_care_guide_xueyu"));
+                                    health_care_guide_xueyu.setText(detail.getString("health_care_guide_xueyu"));
                                     TextView health_care_guide_extra_xueyu = (TextView) findViewById(R.id.health_care_guide_extra_xueyu);
-                                    health_care_guide_extra_xueyu .setText(detail.getString("health_care_guide_extra_xueyu"));
+                                    health_care_guide_extra_xueyu.setText(detail.getString("health_care_guide_extra_xueyu"));
                                     TextView points_qiyu = (TextView) findViewById(R.id.points_qiyu);
                                     points_qiyu.setText(detail.getString("points_qiyu"));
-                                    if(!detail.getString("yes_trend_qiyu").equals("null")) {
+                                    if (!detail.getString("yes_trend_qiyu").equals("null")) {
                                         TextView yes_trend_qiyu = (TextView) findViewById(R.id.yes_trend_qiyu);
                                         yes_trend_qiyu.setText(detail.getString("yes_trend_qiyu"));
                                     }
                                     TextView health_care_guide_qiyu = (TextView) findViewById(R.id.health_care_guide_qiyu);
-                                    health_care_guide_qiyu .setText(detail.getString("health_care_guide_qiyu"));
+                                    health_care_guide_qiyu.setText(detail.getString("health_care_guide_qiyu"));
                                     TextView health_care_guide_extra_qiyu = (TextView) findViewById(R.id.health_care_guide_extra_qiyu);
-                                    health_care_guide_extra_qiyu .setText(detail.getString("health_care_guide_extra_qiyu"));
+                                    health_care_guide_extra_qiyu.setText(detail.getString("health_care_guide_extra_qiyu"));
                                     TextView points_tebing = (TextView) findViewById(R.id.points_tebing);
-                                    points_tebing .setText(detail.getString("points_tebing"));
-                                    if(!detail.getString("yes_trend_tebing").equals("null")) {
+                                    points_tebing.setText(detail.getString("points_tebing"));
+                                    if (!detail.getString("yes_trend_tebing").equals("null")) {
                                         TextView yes_trend_tebing = (TextView) findViewById(R.id.yes_trend_tebing);
                                         yes_trend_tebing.setText(detail.getString("yes_trend_tebing"));
                                     }
                                     TextView health_care_guide_tebing = (TextView) findViewById(R.id.health_care_guide_tebing);
-                                    health_care_guide_tebing .setText(detail.getString("health_care_guide_tebing"));
+                                    health_care_guide_tebing.setText(detail.getString("health_care_guide_tebing"));
                                     TextView health_care_guide_extra_tebing = (TextView) findViewById(R.id.health_care_guide_extra_tebing);
-                                    health_care_guide_extra_tebing .setText(detail.getString("health_care_guide_extra_tebing"));
+                                    health_care_guide_extra_tebing.setText(detail.getString("health_care_guide_extra_tebing"));
                                     TextView doctor_signature = (TextView) findViewById(R.id.doctor_signature);
                                     doctor_signature.setText(detail.getString("doctor_signature"));
 
