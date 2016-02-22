@@ -1,4 +1,4 @@
-package com.seimun.logintwo;
+package com.seimun.logintwo.activity;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -14,8 +14,7 @@ import com.android.volley.Request;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
-import com.seimun.logintwo.activity.LoginActivity;
-import com.seimun.logintwo.activity.Main2Activity;
+import com.seimun.logintwo.R;
 import com.seimun.logintwo.app.AppConfig;
 import com.seimun.logintwo.app.AppController;
 import com.seimun.logintwo.helper.SQLiteHandler;

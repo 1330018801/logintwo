@@ -11,11 +11,11 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
 
-import com.seimun.logintwo.AboutActivity;
-import com.seimun.logintwo.LifeStyleActivity;
-import com.seimun.logintwo.PastHistoryActivity;
+import com.seimun.logintwo.activity.AboutActivity;
+import com.seimun.logintwo.activity.LifeStyleActivity;
+import com.seimun.logintwo.activity.PastHistoryActivity;
 import com.seimun.logintwo.R;
-import com.seimun.logintwo.ZiLiaoActivity;
+import com.seimun.logintwo.activity.ZiLiaoActivity;
 import com.seimun.logintwo.activity.LoginActivity;
 import com.seimun.logintwo.helper.SQLiteHandler;
 import com.seimun.logintwo.helper.SessionManager;

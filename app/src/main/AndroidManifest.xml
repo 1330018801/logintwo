@@ -162,19 +162,19 @@
             android:launchMode="singleTask"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".ZiLiaoActivity"
+            android:name=".activity.ZiLiaoActivity"
             android:label="@string/title_activity_zi_liao"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".LifeStyleActivity"
+            android:name=".activity.LifeStyleActivity"
             android:label="@string/title_activity_life_style"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".PastHistoryActivity"
+            android:name=".activity.PastHistoryActivity"
             android:label="@string/title_activity_past_history"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".AboutActivity"
+            android:name=".activity.AboutActivity"
             android:label="@string/title_activity_about"
             android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>

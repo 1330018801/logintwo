@@ -7,7 +7,7 @@
     android:background="@color/white"
     android:orientation="vertical"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context="com.seimun.logintwo.ZiLiaoActivity"
+    tools:context="com.seimun.logintwo.activity.ZiLiaoActivity"
     tools:showIn="@layout/activity_zi_liao">
 
     <LinearLayout
