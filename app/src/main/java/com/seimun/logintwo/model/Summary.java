@@ -10,18 +10,6 @@ public class Summary {
     public Summary () {
     }
 
-    public Summary(Integer record_id, String title, String clinic,
-                   String provider, String service_time, String type_alias,
-                   String item_alias) {
-        this.record_id = record_id;
-        this.title = title;
-        this.clinic = clinic;
-        this.provider = provider;
-        this.service_time = service_time;
-        this.type_alias = type_alias;
-        this.item_alias = item_alias;
-    }
-
     public Integer getRecordId() {
         return this.record_id;
     }

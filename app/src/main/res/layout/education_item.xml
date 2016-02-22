@@ -6,7 +6,7 @@
     android:padding="8dp">
 
     <TextView
-        android:id="@+id/service_title"
+        android:id="@+id/education_title"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
@@ -15,25 +15,10 @@
         android:textStyle="bold" />
 
     <TextView
-        android:id="@+id/clinic"
+        android:id="@+id/education_content"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/service_title"
+        android:layout_below="@id/education_title"
         android:textSize="@dimen/itemClinic" />
-
-    <TextView
-        android:id="@+id/provider"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/service_title"
-        android:layout_marginLeft="5dp"
-        android:layout_toEndOf="@id/clinic" />
-
-    <TextView
-        android:id="@+id/service_time"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/clinic"
-        android:layout_marginTop="5dp" />
 
 </RelativeLayout>

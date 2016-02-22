@@ -1,6 +1,5 @@
 package layout;
 
-
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
@@ -34,7 +33,6 @@ import com.seimun.logintwo.activity.AntenatalActivity;
 import com.seimun.logintwo.activity.BodyExamActivity;
 import com.seimun.logintwo.activity.DiabetesAftercareActivity;
 import com.seimun.logintwo.activity.LoginActivity;
-import com.seimun.logintwo.activity.Main2Activity;
 import com.seimun.logintwo.activity.NewbornFamilyVisitActivity;
 import com.seimun.logintwo.activity.OldIdentifyActivity;
 import com.seimun.logintwo.activity.Postpartum42ExamActivity;
@@ -59,9 +57,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-/**
- * A simple {@link Fragment} subclass.
- */
+
 public class ServicesFragment extends Fragment {
     private static final String TAG = ServicesFragment.class.getSimpleName();
 
@@ -82,9 +78,8 @@ public class ServicesFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
+        View view = inflater.inflate(R.layout.fragment_services, container, false);
 
-        View view = inflater.inflate(R.layout.fragment_services, null);
-        // Inflate the layout for this fragment
         ListView listView = (ListView) view.findViewById(R.id.services1);
         adapter = new SummaryListAdapter(getActivity(), summaryList);
         listView.setAdapter(adapter);
@@ -114,118 +109,95 @@ public class ServicesFragment extends Fragment {
                     Intent intent = new Intent(getActivity(), AntenatalActivity.class);
                     intent.putExtra("record_id", summary.getRecordId());
                     startActivity(intent);
-                    return;
                 } else if (type_alias.equals("pregnant") && item_alias.equals("postpartum_visit")) {
                     Intent intent = new Intent(getActivity(), PostpartumVisitActivity.class);
                     intent.putExtra("record_id", summary.getRecordId());
                     startActivity(intent);
-                    return;
                 } else if (type_alias.equals("hypertension") && (item_alias.equals("aftercare_1") || item_alias.equals("aftercare_2") || item_alias.equals("aftercare_3") || item_alias.equals("aftercare_4"))) {
                     Intent intent = new Intent(getActivity(), hypertension_aftercare.class);
                     intent.putExtra("record_id", summary.getRecordId());
                     startActivity(intent);
-                    return;
                 } else if (type_alias.equals("diabetes") && (item_alias.equals("aftercare_1") || item_alias.equals("aftercare_2") || item_alias.equals("aftercare_3") || item_alias.equals("aftercare_4"))) {
                     Intent intent = new Intent(getActivity(), DiabetesAftercareActivity.class);
                     intent.putExtra("record_id", summary.getRecordId());
                     startActivity(intent);
-                    return;
                 } else if (item_alias.equals("body_exam_table") || item_alias.equals("physical_examination")) {
                     Intent intent = new Intent(getActivity(), BodyExamActivity.class);
 
                     intent.putExtra("record_id", summary.getRecordId());
                     startActivity(intent);
-                    return;
                 } else if (type_alias.equals("pregnant") && (item_alias.equals("aftercare_2") || item_alias.equals("aftercare_3") || item_alias.equals("aftercare_4") || item_alias.equals("aftercare_5"))) {
                     Intent intent = new Intent(getActivity(), AftercareActivity.class);
                     intent.putExtra("record_id", summary.getRecordId());
                     startActivity(intent);
-                    return;
                 } else if (type_alias.equals("pregnant") && item_alias.equals("postpartum_42_day_examination")) {
                     Intent intent = new Intent(getActivity(), Postpartum42ExamActivity.class);
                     intent.putExtra("record_id", summary.getRecordId());
                     startActivity(intent);
-                    return;
                 } else if (type_alias.equals("vaccine") && item_alias.equals("vaccine_card")) {
                     Intent intent = new Intent(getActivity(), VaccineCardActivity.class);
                     intent.putExtra("record_id", summary.getRecordId());
                     startActivity(intent);
-                    return;
                 } else if (!item_alias.equals("vaccine_card") && type_alias.equals("vaccine")) {
                     Intent intent = new Intent(getActivity(), VaccinationActivity.class);
                     intent.putExtra("record_id", summary.getRecordId());
                     startActivity(intent);
-                    return;
                 } else if (type_alias.equals("child") && item_alias.equals("newborn_family_visit")) {
                     Intent intent = new Intent(getActivity(), NewbornFamilyVisitActivity.class);
                     intent.putExtra("record_id", summary.getRecordId());
                     startActivity(intent);
-                    return;
                 } else if (type_alias.equals("tcm") && (item_alias.equals("aftercare_6_month") || item_alias.equals("aftercare_12_month") || item_alias.equals("aftercare_18_month") || item_alias.equals("aftercare_24_month") || item_alias.equals("aftercare_30_month") || item_alias.equals("aftercare_3_year"))) {
                     Intent intent = new Intent(getActivity(), TcmAftercareActivity.class);
                     intent.putExtra("record_id", summary.getRecordId());
                     startActivity(intent);
-                    return;
                 } else if (type_alias.equals("child") && item_alias.equals("aftercare_1_month")) {
                     Intent intent = new Intent(getActivity(), Aftercare1Month.class);
                     intent.putExtra("record_id", summary.getRecordId());
                     startActivity(intent);
-                    return;
                 } else if (type_alias.equals("child") && item_alias.equals("aftercare_12_month")) {
                     Intent intent = new Intent(getActivity(), Aftercare12Month.class);
                     intent.putExtra("record_id", summary.getRecordId());
                     startActivity(intent);
-                    return;
                 } else if (type_alias.equals("child") && item_alias.equals("aftercare_18_month")) {
                     Intent intent = new Intent(getActivity(), Aftercare18Month.class);
                     intent.putExtra("record_id", summary.getRecordId());
                     startActivity(intent);
-                    return;
                 } else if (type_alias.equals("child") && item_alias.equals("aftercare_24_month")) {
                     Intent intent = new Intent(getActivity(), Aftercare24Month.class);
                     intent.putExtra("record_id", summary.getRecordId());
                     startActivity(intent);
-                    return;
                 } else if (type_alias.equals("child") && item_alias.equals("aftercare_30_month")) {
                     Intent intent = new Intent(getActivity(), Aftercare30Month.class);
                     intent.putExtra("record_id", summary.getRecordId());
                     startActivity(intent);
-                    return;
                 } else if (type_alias.equals("child") && (item_alias.equals("aftercare_4_year") || item_alias.equals("aftercare_5_year") || item_alias.equals("aftercare_6_year"))) {
                     Intent intent = new Intent(getActivity(), Aftercare4To6Year.class);
                     intent.putExtra("record_id", summary.getRecordId());
                     startActivity(intent);
-                    return;
                 } else if (type_alias.equals("child") && item_alias.equals("aftercare_3_year")) {
                     Intent intent = new Intent(getActivity(), Aftercare3Year.class);
                     intent.putExtra("record_id", summary.getRecordId());
                     startActivity(intent);
-                    return;
                 } else if (type_alias.equals("psychiatric") && (item_alias.equals("aftercare_1") || item_alias.equals("aftercare_2") || item_alias.equals("aftercare_3") || item_alias.equals("aftercare_4") || item_alias.equals("aftercare_5") || item_alias.equals("aftercare_6") || item_alias.equals("aftercare_7") || item_alias.equals("aftercare_8"))) {
                     Intent intent = new Intent(getActivity(), PsychiatricAftercareActivity.class);
                     intent.putExtra("record_id", summary.getRecordId());
                     startActivity(intent);
-                    return;
                 } else if (type_alias.equals("tcm") && item_alias.equals("constitution_identification")) {
                     Intent intent = new Intent(getActivity(), OldIdentifyActivity.class);
                     intent.putExtra("record_id", summary.getRecordId());
                     startActivity(intent);
-                    return;
                 } else if (type_alias.equals("child") && item_alias.equals("aftercare_3_month")) {
                     Intent intent = new Intent(getActivity(), Aftercare3Month.class);
                     intent.putExtra("record_id", summary.getRecordId());
                     startActivity(intent);
-                    return;
                 } else if (type_alias.equals("child") && item_alias.equals("aftercare_6_month")) {
                     Intent intent = new Intent(getActivity(), Aftercare6Month.class);
                     intent.putExtra("record_id", summary.getRecordId());
                     startActivity(intent);
-                    return;
                 } else if (type_alias.equals("child") && item_alias.equals("aftercare_8_month")) {
                     Intent intent = new Intent(getActivity(), Aftercare8Month.class);
                     intent.putExtra("record_id", summary.getRecordId());
                     startActivity(intent);
-                    return;
                 } else {
                     Toast.makeText(getContext(),
                             type_alias + ":" + item_alias + " not written",
@@ -279,7 +251,7 @@ public class ServicesFragment extends Fragment {
         }) {
             @Override
             protected Map<String, String> getParams() {
-                Map<String, String> params = new HashMap<String, String>();
+                Map<String, String> params = new HashMap<>();
                 params.put("resident_id", user.get("resident_id"));
 
                 return params;
@@ -296,7 +268,6 @@ public class ServicesFragment extends Fragment {
 
         Intent intent = new Intent(getActivity(), LoginActivity.class);
         startActivity(intent);
-        return;
     }
 
     @Override
@@ -311,8 +282,6 @@ public class ServicesFragment extends Fragment {
             pDialog = null;
         }
     }
-
-
 }
 
 

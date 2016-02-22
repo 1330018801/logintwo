@@ -49,7 +49,7 @@ public class Main2Activity extends AppCompatActivity {
                         mServicesFragment = new ServicesFragment();
                         getSupportFragmentManager().beginTransaction().replace(R.id.main_content, mServicesFragment).commit();
                         break;
-                    case R.id.id_tab_yangsheng:
+                    case R.id.id_tab_jiaoyu:
                         mHealthEducationFragment = new HealthEducationFragment();
                         getSupportFragmentManager().beginTransaction().replace(R.id.main_content, mHealthEducationFragment).commit();
                         break;
