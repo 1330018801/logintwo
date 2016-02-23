@@ -14,7 +14,7 @@ public class Education {
         this.item_id = id;
     }
 
-    public int getItemId() {
+    public Integer getItemId() {
         return this.item_id;
     }
 

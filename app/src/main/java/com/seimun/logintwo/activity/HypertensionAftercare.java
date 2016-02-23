@@ -27,7 +27,7 @@ import org.json.JSONObject;
 import java.util.HashMap;
 import java.util.Map;
 
-public class hypertension_aftercare extends AppCompatActivity {
+public class HypertensionAftercare extends AppCompatActivity {
     private static final String TAG = DetailActivity.class.getSimpleName();
 
 
@@ -45,7 +45,7 @@ public class hypertension_aftercare extends AppCompatActivity {
         toolbar.setNavigationOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(hypertension_aftercare.this, Main2Activity.class);
+                Intent intent = new Intent(HypertensionAftercare.this, Main2Activity.class);
                 startActivity(intent);
                 finish();
             }
@@ -220,7 +220,7 @@ public class hypertension_aftercare extends AppCompatActivity {
         session.setLogin(false);
         db.deleteUsers();
 
-        Intent intent = new Intent(hypertension_aftercare.this, LoginActivity.class);
+        Intent intent = new Intent(HypertensionAftercare.this, LoginActivity.class);
         startActivity(intent);
         finish();
     }

@@ -2,6 +2,7 @@ package layout;
 
 
 import android.app.ProgressDialog;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.util.Log;
@@ -18,17 +19,17 @@ import com.android.volley.VolleyError;
 import com.android.volley.VolleyLog;
 import com.android.volley.toolbox.StringRequest;
 import com.seimun.logintwo.R;
+import com.seimun.logintwo.activity.EducationDetail;
 import com.seimun.logintwo.adapter.EducationListAdapter;
 import com.seimun.logintwo.app.AppConfig;
 import com.seimun.logintwo.app.AppController;
+import com.seimun.logintwo.app.AppData;
 import com.seimun.logintwo.model.Education;
 
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 
 
@@ -36,7 +37,6 @@ public class HealthEducationFragment extends Fragment {
     private static final String TAG = ServicesFragment.class.getSimpleName();
 
     private ProgressDialog pDialog;
-    private List<Education> educationList = new ArrayList<>();
     private EducationListAdapter adapter;
 
     public HealthEducationFragment() {
@@ -51,7 +51,10 @@ public class HealthEducationFragment extends Fragment {
 
         View view = inflater.inflate(R.layout.fragment_health_education, container, false);
         ListView listView = (ListView) view.findViewById(R.id.education_list);
-        adapter = new EducationListAdapter(getActivity(), educationList);
+        if (AppData.educationList.size() > 0) {
+            AppData.educationList.clear();
+        }
+        adapter = new EducationListAdapter(getActivity(), AppData.educationList);
         listView.setAdapter(adapter);
 
         pDialog = new ProgressDialog(getActivity());
@@ -61,7 +64,9 @@ public class HealthEducationFragment extends Fragment {
 
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-
+                Intent intent = new Intent(getActivity(), EducationDetail.class);
+                intent.putExtra("position", position);
+                startActivity(intent);
             }
         });
 
@@ -70,7 +75,6 @@ public class HealthEducationFragment extends Fragment {
                 AppConfig.URL_EDUCATION, new Response.Listener<String>() {
             @Override
             public void onResponse(String response) {
-                Log.d(TAG, response);
                 hidePDialog();
                 try {
                     JSONObject obj = new JSONObject(response);
@@ -85,8 +89,8 @@ public class HealthEducationFragment extends Fragment {
                             education.setContent(item.getString("content"));
                             education.setCreateAt(item.getString("create_at"));
                             education.setCreateBy(item.getString("create_by"));
-                            educationList.add(education);
-                            Log.e(TAG, "summary length: " + educationList.size());
+                            AppData.educationList.add(education);
+                            Log.e(TAG, "summary length: " + AppData.educationList.size());
                         }
                     } else {
                         String errorMsg = obj.getString("error_msg");

@@ -94,7 +94,7 @@ public class ServicesActivity extends AppCompatActivity {
                     startActivity(intent);
                     finish();
                 } else if (type_alias.equals("hypertension") && (item_alias.equals("aftercare_1") || item_alias.equals("aftercare_2") || item_alias.equals("aftercare_3") || item_alias.equals("aftercare_4"))) {
-                    Intent intent = new Intent(ServicesActivity.this, hypertension_aftercare.class);
+                    Intent intent = new Intent(ServicesActivity.this, HypertensionAftercare.class);
                     intent.putExtra("record_id", summary.getRecordId());
                     startActivity(intent);
                     finish();

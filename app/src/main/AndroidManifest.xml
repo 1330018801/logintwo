@@ -49,7 +49,7 @@
             android:label="@string/title_activity_antenatal"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".activity.hypertension_aftercare"
+            android:name=".activity.HypertensionAftercare"
             android:label="@string/title_activity_hypertension_aftercare"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
@@ -147,6 +147,10 @@
         <activity
             android:name=".activity.Aftercare4To6Year"
             android:label="@string/title_activity_aftercare3_to6_year"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".activity.EducationDetail"
+            android:label="公共卫生健康教育"
             android:theme="@style/AppTheme.NoActionBar" />
         <!--
  ATTENTION: This was auto-generated to add Google Play services to your project for

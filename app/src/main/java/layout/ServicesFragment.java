@@ -41,7 +41,7 @@ import com.seimun.logintwo.activity.PsychiatricAftercareActivity;
 import com.seimun.logintwo.activity.TcmAftercareActivity;
 import com.seimun.logintwo.activity.VaccinationActivity;
 import com.seimun.logintwo.activity.VaccineCardActivity;
-import com.seimun.logintwo.activity.hypertension_aftercare;
+import com.seimun.logintwo.activity.HypertensionAftercare;
 import com.seimun.logintwo.adapter.SummaryListAdapter;
 import com.seimun.logintwo.app.AppConfig;
 import com.seimun.logintwo.app.AppController;
@@ -114,7 +114,7 @@ public class ServicesFragment extends Fragment {
                     intent.putExtra("record_id", summary.getRecordId());
                     startActivity(intent);
                 } else if (type_alias.equals("hypertension") && (item_alias.equals("aftercare_1") || item_alias.equals("aftercare_2") || item_alias.equals("aftercare_3") || item_alias.equals("aftercare_4"))) {
-                    Intent intent = new Intent(getActivity(), hypertension_aftercare.class);
+                    Intent intent = new Intent(getActivity(), HypertensionAftercare.class);
                     intent.putExtra("record_id", summary.getRecordId());
                     startActivity(intent);
                 } else if (type_alias.equals("diabetes") && (item_alias.equals("aftercare_1") || item_alias.equals("aftercare_2") || item_alias.equals("aftercare_3") || item_alias.equals("aftercare_4"))) {
