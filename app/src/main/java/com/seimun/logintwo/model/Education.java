@@ -14,7 +14,7 @@ public class Education {
         this.item_id = id;
     }
 
-    public Integer getItemId(Integer id) {
+    public int getItemId() {
         return this.item_id;
     }
 
@@ -32,6 +32,14 @@ public class Education {
 
     public String getContent() {
         return this.content;
+    }
+
+    public String getContentPreface() {
+        if (this.content.length() > 30) {
+            return this.content.substring(0, 30) + "...";
+        } else {
+            return this.content;
+        }
     }
 
     public void setCreateAt(String create_at) {

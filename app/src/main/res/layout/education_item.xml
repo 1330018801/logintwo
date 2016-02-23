@@ -15,10 +15,20 @@
         android:textStyle="bold" />
 
     <TextView
+        android:id="@+id/education_create_at"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="6dp"
+        android:layout_below="@id/education_title"
+        android:textSize="@dimen/itemClinic"
+        android:textStyle="bold" />
+
+    <TextView
         android:id="@+id/education_content"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/education_title"
+        android:layout_below="@id/education_create_at"
         android:textSize="@dimen/itemClinic" />
 
 </RelativeLayout>

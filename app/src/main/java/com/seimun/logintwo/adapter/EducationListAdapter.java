@@ -47,10 +47,12 @@ public class EducationListAdapter extends BaseAdapter {
             convertView = inflater.inflate(R.layout.education_item, null);
         TextView title = (TextView)convertView.findViewById(R.id.education_title);
         TextView content = (TextView)convertView.findViewById(R.id.education_content);
+        TextView create_at = (TextView)convertView.findViewById(R.id.education_create_at);
 
         Education s = educationItems.get(position);
         title.setText(s.getTitle());
-        content.setText(s.getContent());
+        create_at.setText("发布时间: " + s.getCreateAt());
+        content.setText(s.getContentPreface());
 
         return convertView;
     }
