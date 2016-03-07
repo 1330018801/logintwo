@@ -48,19 +48,6 @@
             android:paddingTop="10dp"
             android:text="健康教育"
             android:textColor="@color/tab_selector_color" />
-        <RadioButton
-            android:id="@+id/id_tab_yiliao"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_gravity="bottom"
-            android:layout_weight="1"
-            android:button="@null"
-            android:checked="true"
-            android:drawableTop="@drawable/tab_select_yiliao"
-            android:gravity="center_horizontal|bottom"
-            android:paddingTop="10dp"
-            android:text="医院诊疗"
-            android:textColor="@color/tab_selector_color" />
 
         <RadioButton
             android:id="@+id/id_tab_ziliao"

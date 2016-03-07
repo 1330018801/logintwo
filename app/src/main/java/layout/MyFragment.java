@@ -11,12 +11,11 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
 
-import com.seimun.logintwo.activity.AboutActivity;
-import com.seimun.logintwo.activity.LifeStyleActivity;
-import com.seimun.logintwo.activity.PastHistoryActivity;
 import com.seimun.logintwo.R;
-import com.seimun.logintwo.activity.ZiLiaoActivity;
+import com.seimun.logintwo.activity.LifeStyleActivity;
 import com.seimun.logintwo.activity.LoginActivity;
+import com.seimun.logintwo.activity.PastHistoryActivity;
+import com.seimun.logintwo.activity.ZiLiaoActivity;
 import com.seimun.logintwo.helper.SQLiteHandler;
 import com.seimun.logintwo.helper.SessionManager;
 
@@ -30,7 +29,7 @@ public class MyFragment extends Fragment {
     private TextView txtMobile;
     private Button btnLogout;
 
-    private TextView data, pasthistory, aboutus;
+    private TextView data, pasthistory;
     private Drawable zlxx, shxg, jwbs, gywm;
 
     private SQLiteHandler db;
@@ -81,18 +80,8 @@ public class MyFragment extends Fragment {
         });
 
 
-        aboutus = (TextView) view.findViewById(R.id.aboutus);
         gywm = getResources().getDrawable(R.drawable.gywm);
         gywm.setBounds(0,0,80,80);
-        aboutus.setCompoundDrawables(gywm,null,null,null);
-        aboutus.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(getActivity(), AboutActivity.class);
-                startActivity(intent);
-            }
-        });
-
 
         db = new SQLiteHandler(getContext());
         session = new SessionManager(getContext());

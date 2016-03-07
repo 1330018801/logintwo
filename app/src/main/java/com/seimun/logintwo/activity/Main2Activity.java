@@ -53,10 +53,6 @@ public class Main2Activity extends AppCompatActivity {
                         mHealthEducationFragment = new HealthEducationFragment();
                         getSupportFragmentManager().beginTransaction().replace(R.id.main_content, mHealthEducationFragment).commit();
                         break;
-                    case R.id.id_tab_yiliao:
-                        mHospitalFragment = new HospitalFragment();
-                        getSupportFragmentManager().beginTransaction().replace(R.id.main_content, mHospitalFragment).commit();
-                        break;
                     case R.id.id_tab_ziliao:
                         mMyFragment = new MyFragment();
                         getSupportFragmentManager().beginTransaction().replace(R.id.main_content, mMyFragment).commit();

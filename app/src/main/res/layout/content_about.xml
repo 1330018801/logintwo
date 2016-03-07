@@ -30,7 +30,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
-            android:text="宜健宝"
+            android:text="三河市公共卫生手机APP"
             android:textSize="24sp" />
     </LinearLayout>
 
@@ -39,7 +39,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="30dp"
 
-        android:text="        宜健宝APP致力打造一款守护您健康的APP。收集各方健康数据，发布健康教育知识，实时展现在您面前。"
+        android:text="        三河市公共卫生手机APP致力打造一款守护您健康的APP。收集各方健康数据，发布健康教育知识，实时展现在您面前。"
         android:textSize="16sp" />
 
 
